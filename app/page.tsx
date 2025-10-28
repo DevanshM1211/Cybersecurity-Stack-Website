@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import CoreFeatures from "@/components/CoreFeatures";
 import ResonanceProtocol from "@/components/ResonanceProtocol";
 import MBDR from "@/components/MBDR";
 import Partnership from "@/components/Partnership";
@@ -12,6 +13,7 @@ export default function Home() {
     <main id="top" className="min-h-screen">
       <Navbar />
       <Hero />
+      <CoreFeatures />
       <ResonanceProtocol />
       <MBDR />
       <Partnership />
