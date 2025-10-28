@@ -12,15 +12,15 @@ const Mission = () => {
   const values = [
     {
       icon: <Shield className="w-12 h-12" />,
-      title: "Uncompromising Security",
+      title: "Integrity-First Architecture",
       description:
-        "Building infrastructures that cannot be held to ransom through cryptographically verified trust.",
+        "Self-verifying hives where every layer proves its integrity through cryptographically signed Merkle tree blocks.",
     },
     {
       icon: <Zap className="w-12 h-12" />,
-      title: "Autonomous Operation",
+      title: "Real-Time Isolation",
       description:
-        "Self-defending systems that detect, respond, and adapt without human intervention.",
+        "Federated trust contracts ensure tampering is detected instantly. Compromised components are rejected and isolated automatically.",
     },
     {
       icon: <Globe className="w-12 h-12" />,
@@ -78,9 +78,13 @@ const Mission = () => {
             transition={{ delay: 0.4 }}
             className="text-2xl text-gray-300 leading-relaxed"
           >
-            Our mission is to give organizations infrastructures that cannot be
-            held to ransom. We're not just improving cybersecurity — we're
-            fundamentally reimagining it.
+            <strong className="text-cyber-blue">
+              Cyber Security Stack (CSS)
+            </strong>{" "}
+            is redefining resilience for enterprise IT, OT, and IoT
+            environments. Our mission: create ransomware-resistant,
+            integrity-first architectures where tampering is detected and
+            isolated in real time.
           </motion.p>
         </motion.div>
 
@@ -126,15 +130,15 @@ const Mission = () => {
               The Future of Cyber Defence
             </h3>
             <p className="text-xl text-gray-300 text-center max-w-4xl mx-auto leading-relaxed mb-8">
-              Achieving this vision requires a collaborative effort between
-              academia, manufacturers, and industry.{" "}
               <strong className="text-cyber-purple">
-                Cyber Security Stack
+                Cyber Security Stack (CSS)
               </strong>{" "}
-              is leading that movement, driving the establishment of the{" "}
-              <strong className="text-cyber-blue">Resonance Protocol</strong> as
-              the universal trust standard for the next generation of secure
-              digital infrastructure.
+              is pioneering the{" "}
+              <strong className="text-cyber-blue">Resonance Protocol</strong>—a
+              federated trust protocol creating ransomware-resistant
+              architectures for enterprise IT, OT, and IoT. Achieving this
+              vision requires collaboration between academia, manufacturers, and
+              industry to establish RP as the universal integrity standard.
             </p>
 
             <div className="flex flex-wrap justify-center gap-6 pt-6">

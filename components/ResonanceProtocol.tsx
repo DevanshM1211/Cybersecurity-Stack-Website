@@ -19,16 +19,16 @@ const ResonanceProtocol = () => {
     },
     {
       icon: <Lock className="w-8 h-8" />,
-      title: "Cryptographic Trust",
+      title: "Self-Verifying Hives",
       description:
-        "Merkle tree verification and federated trust contracts enforce verifiable trust between devices, processes, and services.",
+        "Every system layer generates cryptographically signed Merkle tree blocks, creating a chain of verifiable integrity that proves authenticity.",
       color: "cyber-purple",
     },
     {
       icon: <Network className="w-8 h-8" />,
-      title: "Self-Auditing Ecosystem",
+      title: "Federated Trust Contracts",
       description:
-        "Creates continuously self-auditing systems that detect tampering and isolate compromise in real time.",
+        "Adjacent hives establish trust only through scoped, signed contracts. If tampering occurs, the affected component is rejected and isolated in real time.",
       color: "cyber-pink",
     },
     {
@@ -40,9 +40,9 @@ const ResonanceProtocol = () => {
     },
     {
       icon: <Shield className="w-8 h-8" />,
-      title: "Zero Trust at Core",
+      title: "Ransomware-Resistant",
       description:
-        "True Zero Trust Architecture realized at the most fundamental level of digital infrastructure.",
+        "Integrity-first architecture prevents ransomware attacks by detecting and isolating compromised components before damage spreads.",
       color: "cyber-purple",
     },
     {
@@ -110,9 +110,11 @@ const ResonanceProtocol = () => {
             transition={{ delay: 0.4 }}
             className="text-xl text-gray-300 max-w-3xl mx-auto"
           >
-            Not a single product or agent, but a new paradigm in digital
-            architecture. Embedding verifiable trust and integrity deep into the
-            fabric of digital ecosystems.
+            A federated trust protocol where every system operates as a
+            self-verifying "hive." Each layer—hardware, firmware, kernel,
+            process, application—generates cryptographically signed Merkle tree
+            blocks to prove integrity. Adjacent hives only trust through scoped,
+            signed contracts.
           </motion.p>
         </motion.div>
 

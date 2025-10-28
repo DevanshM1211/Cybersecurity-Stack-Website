@@ -93,13 +93,14 @@ const Hero = () => {
               transition={{ delay: 0.4 }}
               className="text-xl text-gray-300 mb-8 leading-relaxed"
             >
-              Introducing{" "}
               <strong className="text-cyber-blue">
-                Merkle-Based Detection and Response (MBDR)
-              </strong>
-              — a revolutionary approach to autonomous cyber defence built on
-              the{" "}
-              <strong className="text-cyber-purple">Resonance Protocol</strong>.
+                Cyber Security Stack (CSS)
+              </strong>{" "}
+              pioneers next-generation cyber security with the{" "}
+              <strong className="text-cyber-purple">Resonance Protocol</strong>
+              —a federated trust protocol where every system becomes a
+              self-verifying "hive" using cryptographically signed Merkle tree
+              blocks.
             </motion.p>
 
             <motion.p
@@ -108,8 +109,9 @@ const Hero = () => {
               transition={{ delay: 0.5 }}
               className="text-lg text-gray-400 mb-10"
             >
-              Developed in partnership with the University of Oxford, we're
-              building infrastructures that cannot be held to ransom.
+              Developed with the University of Oxford, we create
+              ransomware-resistant, integrity-first architectures for enterprise
+              IT, OT, and IoT environments.
             </motion.p>
 
             <motion.div

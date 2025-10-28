@@ -53,13 +53,15 @@ const Partnership = () => {
               transition={{ delay: 0.4 }}
               className="text-lg text-gray-300 mb-8 leading-relaxed"
             >
-              The Resonance Protocol emerged from rigorous research and
-              development through the{" "}
+              <strong className="text-cyber-blue">
+                Cyber Security Stack (CSS)
+              </strong>{" "}
+              developed the Resonance Protocol through rigorous research at the{" "}
               <strong className="text-cyber-purple">
                 University of Oxford Innovation Incubator
               </strong>
-              . This partnership combines world-leading academic expertise with
-              cutting-edge industry application.
+              . This partnership combines world-leading cryptographic expertise
+              with cutting-edge federated trust architecture.
             </motion.p>
 
             <motion.div
@@ -181,10 +183,11 @@ const Partnership = () => {
             Join the Movement
           </h3>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Achieving this vision requires collaborative effort between
-            academia, manufacturers, and industry. We're leading the
-            establishment of the Resonance Protocol as the universal trust
-            standard.
+            <strong className="text-cyber-blue">CSS</strong> is leading the
+            establishment of the Resonance Protocol as the universal
+            integrity-first standard. Achieving this vision requires
+            collaboration between academia, manufacturers, and industry to
+            redefine resilience for IT, OT, and IoT.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <motion.button

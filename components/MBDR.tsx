@@ -24,15 +24,15 @@ const MBDR = () => {
     },
     {
       icon: <Activity className="w-6 h-6" />,
-      title: "Self-Auditing",
+      title: "Cryptographic Verification",
       description:
-        "Perpetual verification of system integrity through cryptographic validation.",
+        "Every layer generates signed Merkle tree blocks proving integrity. Perpetual validation across hardware, firmware, kernel, and application levels.",
     },
     {
       icon: <Lock className="w-6 h-6" />,
-      title: "Federated Trust",
+      title: "Trust Contracts",
       description:
-        "Distributed trust contracts ensuring verifiable security across all endpoints.",
+        "Hives establish scoped, signed trust contracts. Only verified components can communicate—tampering breaks the trust chain instantly.",
     },
   ];
 
@@ -87,9 +87,10 @@ const MBDR = () => {
             transition={{ delay: 0.4 }}
             className="text-xl text-gray-300 max-w-3xl mx-auto"
           >
-            A revolutionary paradigm in autonomous cyber defence. MBDR creates
-            infrastructures that detect, respond, and adapt without human
-            intervention.
+            Built on the Resonance Protocol, MBDR leverages cryptographic Merkle
+            tree verification across every system layer. When integrity is
+            compromised, affected components are automatically rejected and
+            isolated—no human intervention required.
           </motion.p>
         </motion.div>
 
@@ -212,21 +213,21 @@ const MBDR = () => {
             {[
               {
                 step: "01",
-                title: "Continuous Verification",
+                title: "Self-Verifying Hives",
                 description:
-                  "Every process, device, and service is continuously verified using Merkle tree cryptographic proofs.",
+                  "Each system layer generates cryptographically signed Merkle tree blocks, creating a verifiable chain of integrity across all components.",
               },
               {
                 step: "02",
-                title: "Anomaly Detection",
+                title: "Federated Trust Contracts",
                 description:
-                  "Any deviation from the verified state is instantly detected through hash chain validation.",
+                  "Adjacent hives establish trust through scoped, signed contracts. Any deviation from verified state breaks the trust chain.",
               },
               {
                 step: "03",
-                title: "Autonomous Isolation",
+                title: "Real-Time Rejection",
                 description:
-                  "Compromised elements are automatically isolated and contained without human intervention.",
+                  "Tampering is detected instantly. Affected components are automatically rejected and isolated before damage spreads.",
               },
             ].map((item, index) => (
               <motion.div
