@@ -7,6 +7,7 @@ import Solution from "@/components/Solution";
 import Partnership from "@/components/Partnership";
 import Team from "@/components/Team";
 import Mission from "@/components/Mission";
+import Community from "@/components/Community";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
       <Partnership />
       <Team />
       <Mission />
+      <Community />
       <Footer />
     </main>
   );
