@@ -22,6 +22,7 @@ const Navbar = () => {
     { name: "Resonance Protocol", href: "#resonance" },
     { name: "MBDR Technology", href: "#mbdr" },
     { name: "Partnership", href: "#partnership" },
+    { name: "Team", href: "#team" },
     { name: "Mission", href: "#mission" },
   ];
 

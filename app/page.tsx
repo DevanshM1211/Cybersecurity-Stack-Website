@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import ResonanceProtocol from "@/components/ResonanceProtocol";
 import MBDR from "@/components/MBDR";
 import Partnership from "@/components/Partnership";
+import Team from "@/components/Team";
 import Mission from "@/components/Mission";
 import Footer from "@/components/Footer";
 
@@ -14,6 +15,7 @@ export default function Home() {
       <ResonanceProtocol />
       <MBDR />
       <Partnership />
+      <Team />
       <Mission />
       <Footer />
     </main>
