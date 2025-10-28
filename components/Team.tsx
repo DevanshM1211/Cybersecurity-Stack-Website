@@ -3,7 +3,8 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Users, Linkedin, Mail } from "lucide-react";
+import { Linkedin, Mail } from "lucide-react";
+import Image from "next/image";
 
 const Team = () => {
   const ref = useRef(null);
@@ -13,12 +14,14 @@ const Team = () => {
     {
       name: "Luke Collinson",
       role: "Co-founder",
-      image: "/team/luke-collinson.jpg", // Placeholder path
+      image: "/luke collinson.png",
+      linkedin: "https://www.linkedin.com/in/luke-c-088b61121/",
     },
     {
       name: "Anna Wilson",
       role: "Co-founder",
-      image: "/team/anna-wilson.jpg", // Placeholder path
+      image: "/anna wilson.png",
+      linkedin: "https://www.linkedin.com/in/anna-wilson-889830226/",
     },
   ];
 
@@ -84,41 +87,15 @@ const Team = () => {
               whileHover={{ scale: 1.03, y: -10 }}
               className="glass-effect rounded-2xl overflow-hidden hover:glow-effect transition-all cursor-pointer group"
             >
-              {/* Image Placeholder */}
+              {/* Image */}
               <div className="relative h-80 bg-gradient-to-br from-cyber-blue/20 via-cyber-purple/20 to-cyber-pink/20 overflow-hidden">
-                {/* Decorative Pattern */}
-                <div className="absolute inset-0 opacity-10">
-                  <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:20px_20px]" />
-                </div>
-
-                {/* Floating Icon */}
-                <motion.div
-                  animate={{
-                    y: [0, -10, 0],
-                    rotate: [0, 5, 0],
-                  }}
-                  transition={{
-                    duration: 4,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                  }}
-                  className="absolute inset-0 flex items-center justify-center"
-                >
-                  <Users className="w-32 h-32 text-white/20" />
-                </motion.div>
-
-                {/* Placeholder Text */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center p-6">
-                    <p className="text-white/60 text-sm mb-2">
-                      Photo Coming Soon
-                    </p>
-                    <p className="text-white/40 text-xs">
-                      Add image to: /public/team/
-                      {member.name.toLowerCase().replace(" ", "-")}.jpg
-                    </p>
-                  </div>
-                </div>
+                <Image
+                  src={member.image}
+                  alt={`${member.name} - ${member.role}`}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
               </div>
 
               {/* Member Info */}
@@ -130,15 +107,18 @@ const Team = () => {
                   {member.role}
                 </p>
 
-                {/* Social Links Placeholder */}
+                {/* Social Links */}
                 <div className="flex gap-4 mt-6">
-                  <motion.button
+                  <motion.a
+                    href={member.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
                     className="p-2 glass-effect rounded-lg hover:bg-cyber-blue/20 transition-all"
                   >
                     <Linkedin className="w-5 h-5 text-gray-400 hover:text-cyber-blue transition-colors" />
-                  </motion.button>
+                  </motion.a>
                   <motion.button
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
