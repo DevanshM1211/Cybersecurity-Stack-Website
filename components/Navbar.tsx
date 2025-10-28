@@ -45,7 +45,7 @@ const Navbar = () => {
           >
             {!imgError ? (
               <Image
-                src="/logo.png"
+                src="/Logo.png"
                 alt="Cyber Security Stack logo"
                 width={36}
                 height={36}
