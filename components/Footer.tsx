@@ -165,9 +165,21 @@ const Footer = () => {
 
         {/* Extra Info */}
         <div className="mt-8 pt-8 border-t border-gray-800/50 text-center text-xs text-gray-500">
-          <p>
+          <p className="mb-2">
             The Resonance Protocol and MBDR are trademarks of Cyber Security
             Stack Ltd. This technology is protected by patents pending.
+          </p>
+          <p>
+            Website developed by{" "}
+            <motion.a
+              href="https://v0-aquos-website-design.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.05 }}
+              className="text-cyber-blue hover:text-cyber-purple transition-colors font-semibold"
+            >
+              AQUOS
+            </motion.a>
           </p>
         </div>
       </div>
