@@ -2,11 +2,13 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Menu, X, Shield } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import Image from "next/image";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [imgError, setImgError] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,15 +36,35 @@ const Navbar = () => {
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <motion.div
-            whileHover={{ scale: 1.05 }}
-            className="flex items-center gap-2 cursor-pointer"
+          <motion.a
+            href="#top"
+            whileHover={{ scale: 1.03 }}
+            className="flex items-center gap-3 cursor-pointer"
           >
-            <Shield className="w-8 h-8 text-cyber-blue" />
-            <span className="text-xl font-bold text-white">
-              Cyber Security Stack
-            </span>
-          </motion.div>
+            {!imgError ? (
+              <Image
+                src="/logo.png"
+                alt="Cyber Security Stack logo"
+                width={36}
+                height={36}
+                priority
+                className="rounded-md"
+                onError={() => setImgError(true)}
+              />
+            ) : (
+              <div className="w-9 h-9 rounded-md bg-gradient-to-br from-cyber-blue to-cyber-purple flex items-center justify-center text-white font-bold text-sm">
+                CSS
+              </div>
+            )}
+            <div className="flex flex-col leading-tight">
+              <span className="text-lg md:text-xl font-bold text-white">
+                Cyber Security Stack
+              </span>
+              <span className="hidden sm:block text-[11px] md:text-xs text-gray-400">
+                Trust as a Protocol, Not a Policy
+              </span>
+            </div>
+          </motion.a>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">

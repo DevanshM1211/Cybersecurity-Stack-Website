@@ -13,11 +13,14 @@ const robotoMono = Roboto_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Cyber Security Stack - Pioneering Autonomous Cyber Defence",
+  title: "Cyber Security Stack — Trust as a Protocol, Not a Policy",
   description:
-    "Leading the future of cybersecurity with Merkle-Based Detection and Response (MBDR) and the Resonance Protocol. Developed in partnership with the University of Oxford.",
+    "Trust as a Protocol, Not a Policy. Pioneering autonomous cyber defence with Merkle-Based Detection and Response (MBDR) and the Resonance Protocol. Developed with the University of Oxford.",
   keywords:
     "cybersecurity, MBDR, Resonance Protocol, Zero Trust Architecture, autonomous defence, Merkle tree, Oxford Innovation",
+  icons: {
+    icon: "/favicon.svg",
+  },
 };
 
 export default function RootLayout({

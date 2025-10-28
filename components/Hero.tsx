@@ -71,7 +71,7 @@ const Hero = () => {
               className="inline-block mb-4"
             >
               <span className="px-4 py-2 bg-cyber-blue/10 border border-cyber-blue/30 rounded-full text-cyber-blue text-sm font-semibold">
-                Pioneering Autonomous Cyber Defence
+                Trust as a Protocol, Not a Policy
               </span>
             </motion.div>
 
