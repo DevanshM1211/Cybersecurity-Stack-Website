@@ -6,26 +6,32 @@ import { motion } from "framer-motion";
 const Footer = () => {
   const footerLinks = {
     Product: [
-      "Resonance Protocol",
-      "MBDR Technology",
-      "Features",
-      "Documentation",
-      "Pricing",
+      { name: "Resonance Protocol", href: "/#resonance" },
+      { name: "MBDR Technology", href: "/#mbdr" },
+      { name: "Features", href: "/#features" },
+      { name: "Documentation", href: "/#" },
+      { name: "Pricing", href: "/#solution" },
     ],
-    Company: ["About Us", "Careers", "Blog", "Press Kit", "Contact"],
+    Company: [
+      { name: "About Us", href: "/#mission" },
+      { name: "Careers", href: "/#" },
+      { name: "Blog", href: "/#" },
+      { name: "Press Kit", href: "/#" },
+      { name: "Contact", href: "/#contact" },
+    ],
     Resources: [
-      "Research Papers",
-      "Case Studies",
-      "Whitepaper",
-      "API Docs",
-      "Support",
+      { name: "Research Papers", href: "/#" },
+      { name: "Case Studies", href: "/#" },
+      { name: "Whitepaper", href: "/#" },
+      { name: "API Docs", href: "/#" },
+      { name: "Support", href: "/#contact" },
     ],
     Legal: [
-      "Privacy Policy",
-      "Terms of Service",
-      "Security",
-      "Compliance",
-      "Cookies",
+      { name: "Privacy Policy", href: "/privacy" },
+      { name: "Terms of Service", href: "/#" },
+      { name: "Security", href: "/#" },
+      { name: "Compliance", href: "/#" },
+      { name: "Cookies", href: "/#" },
     ],
   };
 
@@ -89,10 +95,10 @@ const Footer = () => {
                   <li key={index}>
                     <motion.a
                       whileHover={{ x: 5 }}
-                      href="#"
+                      href={link.href}
                       className="text-gray-400 hover:text-cyber-blue transition-colors inline-block"
                     >
-                      {link}
+                      {link.name}
                     </motion.a>
                   </li>
                 ))}
