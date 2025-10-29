@@ -1,20 +1,33 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, Shield, Lock, Cpu } from "lucide-react";
 import MerkleTree from "./MerkleTree";
+import AnimatedCounter from "./AnimatedCounter";
 
 const Hero = () => {
+  const { scrollY } = useScroll();
+  const y1 = useTransform(scrollY, [0, 300], [0, 100]);
+  const y2 = useTransform(scrollY, [0, 300], [0, -50]);
+  const opacity = useTransform(scrollY, [0, 300], [1, 0]);
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-      {/* Animated Background */}
-      <div className="absolute inset-0 bg-mesh-gradient opacity-30" />
-
-      {/* Grid Pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(0,240,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,240,255,0.03)_1px,transparent_1px)] bg-[size:50px_50px]" />
-
-      {/* Floating Icons */}
+      {/* Animated Background with Parallax */}
       <motion.div
+        style={{ y: y2, opacity }}
+        className="absolute inset-0 bg-mesh-gradient opacity-30"
+      />
+
+      {/* Grid Pattern with Parallax */}
+      <motion.div
+        style={{ y: y1 }}
+        className="absolute inset-0 bg-[linear-gradient(rgba(0,240,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,240,255,0.03)_1px,transparent_1px)] bg-[size:50px_50px]"
+      />
+
+      {/* Floating Icons with Parallax */}
+      <motion.div
+        style={{ y: y1 }}
         animate={{
           y: [0, -20, 0],
         }}
@@ -29,6 +42,7 @@ const Hero = () => {
       </motion.div>
 
       <motion.div
+        style={{ y: y2 }}
         animate={{
           y: [0, 20, 0],
         }}
@@ -43,6 +57,7 @@ const Hero = () => {
       </motion.div>
 
       <motion.div
+        style={{ y: y1 }}
         animate={{
           y: [0, -15, 0],
         }}
@@ -138,7 +153,7 @@ const Hero = () => {
               </motion.button>
             </motion.div>
 
-            {/* Stats */}
+            {/* Stats with Animated Counters */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -147,21 +162,23 @@ const Hero = () => {
             >
               <div>
                 <div className="text-3xl font-bold text-cyber-blue mb-1">
-                  100%
+                  <AnimatedCounter end={100} suffix="%" />
                 </div>
                 <div className="text-sm text-gray-400">Autonomous</div>
               </div>
               <div>
                 <div className="text-3xl font-bold text-cyber-purple mb-1">
-                  Real-time
+                  &lt;
+                  <AnimatedCounter end={1} />
+                  ms
                 </div>
                 <div className="text-sm text-gray-400">Detection</div>
               </div>
               <div>
                 <div className="text-3xl font-bold text-cyber-pink mb-1">
-                  Zero Trust
+                  <AnimatedCounter end={0} />
                 </div>
-                <div className="text-sm text-gray-400">Architecture</div>
+                <div className="text-sm text-gray-400">Trust Assumed</div>
               </div>
             </motion.div>
           </motion.div>
