@@ -115,16 +115,24 @@ const Team = () => {
                     rel="noopener noreferrer"
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
-                    className="p-2 glass-effect rounded-lg hover:bg-cyber-blue/20 transition-all"
+                    className="p-2 glass-effect rounded-lg hover:bg-cyber-blue/20 transition-all focus:outline-none focus:ring-2 focus:ring-cyber-blue"
+                    aria-label={`${member.name}'s LinkedIn profile`}
                   >
-                    <Linkedin className="w-5 h-5 text-gray-400 hover:text-cyber-blue transition-colors" />
+                    <Linkedin
+                      className="w-5 h-5 text-gray-400 hover:text-cyber-blue transition-colors"
+                      aria-hidden="true"
+                    />
                   </motion.a>
                   <motion.button
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.95 }}
-                    className="p-2 glass-effect rounded-lg hover:bg-cyber-purple/20 transition-all"
+                    className="p-2 glass-effect rounded-lg hover:bg-cyber-purple/20 transition-all focus:outline-none focus:ring-2 focus:ring-cyber-purple"
+                    aria-label={`Email ${member.name}`}
                   >
-                    <Mail className="w-5 h-5 text-gray-400 hover:text-cyber-purple transition-colors" />
+                    <Mail
+                      className="w-5 h-5 text-gray-400 hover:text-cyber-purple transition-colors"
+                      aria-hidden="true"
+                    />
                   </motion.button>
                 </div>
               </div>
