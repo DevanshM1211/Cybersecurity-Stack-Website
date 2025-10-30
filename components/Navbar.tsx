@@ -27,6 +27,12 @@ const Navbar = () => {
     { name: "FAQ", href: "#faq" },
   ];
 
+  // Essential links for desktop nav (minimal)
+  const desktopLinks = [
+    { name: "About", href: "#about" },
+    { name: "Protocol", href: "#resonance" },
+  ];
+
   // Close mobile menu on escape key
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
@@ -55,70 +61,77 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-6 py-5 max-w-7xl">
         <div className="flex items-center justify-between">
-          {/* Logo - Simplified */}
+          {/* Logo - Ultra Minimal */}
           <motion.a
             href="#top"
-            whileHover={{ scale: 1.02 }}
+            whileHover={{ opacity: 0.8 }}
             className="flex items-center gap-3 cursor-pointer"
           >
             {!imgError ? (
               <Image
                 src="/Logo.png"
                 alt="Cyber Security Stack logo"
-                width={32}
-                height={32}
+                width={28}
+                height={28}
                 priority
                 className="rounded-md"
                 onError={() => setImgError(true)}
               />
             ) : (
-              <div className="w-8 h-8 rounded-md bg-gradient-to-br from-cyber-blue to-cyber-purple flex items-center justify-center text-white font-bold text-xs">
+              <div className="w-7 h-7 rounded-md bg-gradient-to-br from-cyber-blue to-cyber-purple flex items-center justify-center text-white font-bold text-xs">
                 CSS
               </div>
             )}
             <div className="flex flex-col leading-tight">
-              <span className="text-lg font-semibold text-white tracking-tight">
+              <span className="text-base font-light text-white tracking-tight">
                 Cyber Security Stack
-              </span>
-              <span className="hidden sm:block text-xs text-cyber-blue font-medium">
-                Trust as a Protocol, Not a Policy
               </span>
             </div>
           </motion.a>
 
-          {/* Desktop Navigation */}
+          {/* Desktop Navigation - Minimal & Clean */}
           <nav
-            className="hidden md:flex items-center gap-6"
+            className="hidden md:flex items-center gap-8"
             aria-label="Main navigation"
           >
-            {navLinks.map((link, index) => (
+            {desktopLinks.map((link, index) => (
               <motion.a
                 key={index}
                 href={link.href}
                 whileHover={{ y: -2 }}
-                className="text-gray-300 hover:text-white transition-colors text-sm font-medium focus:outline-none focus:text-cyber-blue"
+                className="text-gray-300 hover:text-white transition-colors text-sm font-light focus:outline-none focus:text-cyber-blue"
               >
                 {link.name}
               </motion.a>
             ))}
             <motion.a
               href="#contact"
-              whileHover={{ scale: 1.02 }}
+              whileHover={{ y: -2 }}
               whileTap={{ scale: 0.98 }}
-              className="ml-2 px-6 py-2.5 bg-gradient-to-r from-cyber-blue to-cyber-purple rounded-lg text-white text-sm font-semibold hover:shadow-lg hover:shadow-cyber-blue/30 transition-all focus:outline-none focus:ring-2 focus:ring-cyber-blue"
+              className="px-6 py-2.5 bg-white/[0.03] border border-white/10 rounded-xl text-white text-sm font-light hover:bg-white/[0.06] hover:border-cyber-blue/50 transition-all focus:outline-none focus:ring-1 focus:ring-cyber-blue/50 backdrop-blur-sm"
             >
               Contact
             </motion.a>
+
+            {/* Hamburger for remaining items on desktop too */}
+            <button
+              className="p-2 hover:bg-white/[0.05] rounded-lg transition-colors"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+              aria-expanded={isMobileMenuOpen}
+            >
+              {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
+            </button>
           </nav>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-white p-2 hover:bg-gray-800/50 rounded-lg transition-colors"
+            className="md:hidden text-white p-2 hover:bg-white/[0.05] rounded-lg transition-colors"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
             aria-expanded={isMobileMenuOpen}
           >
-            {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
 
@@ -140,35 +153,37 @@ const Navbar = () => {
 
               {/* Menu */}
               <motion.div
-                initial={{ opacity: 0, x: "100%" }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: "100%" }}
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
                 transition={{ type: "spring", damping: 25, stiffness: 200 }}
-                className="fixed right-0 top-[80px] bottom-0 w-[280px] md:hidden glass-effect border-l border-gray-700 p-6 overflow-y-auto"
+                className="fixed right-6 top-[90px] w-[280px] glass-effect border border-white/10 rounded-xl p-6 overflow-y-auto shadow-2xl"
               >
-                <nav aria-label="Mobile navigation">
-                  {navLinks.map((link, index) => (
-                    <motion.a
-                      key={index}
-                      href={link.href}
-                      initial={{ opacity: 0, x: 20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: index * 0.05 }}
-                      className="block py-4 px-4 text-gray-300 hover:text-cyber-blue hover:bg-gray-800/30 rounded-lg transition-all border-b border-gray-800/50"
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      {link.name}
-                    </motion.a>
-                  ))}
+                <nav aria-label="Navigation menu">
+                  <div className="space-y-1">
+                    {navLinks.map((link, index) => (
+                      <motion.a
+                        key={index}
+                        href={link.href}
+                        initial={{ opacity: 0, x: -10 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: index * 0.05 }}
+                        className="block py-3 px-4 text-gray-300 hover:text-white hover:bg-white/[0.05] rounded-lg transition-all text-sm font-light"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        {link.name}
+                      </motion.a>
+                    ))}
+                  </div>
                   <motion.a
                     href="#contact"
-                    initial={{ opacity: 0, y: 20 }}
+                    initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.3 }}
-                    className="block w-full mt-6 px-6 py-3 bg-gradient-to-r from-cyber-blue to-cyber-purple rounded-full text-white font-semibold text-center hover:shadow-lg hover:shadow-cyber-blue/50 transition-all"
+                    className="block w-full mt-6 px-6 py-3 bg-gradient-to-r from-cyber-blue/10 to-cyber-purple/10 border border-cyber-blue/30 rounded-xl text-cyber-blue font-light text-center hover:from-cyber-blue/20 hover:to-cyber-purple/20 transition-all"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    Contact Us
+                    Get in Touch
                   </motion.a>
                 </nav>
               </motion.div>
