@@ -13,80 +13,36 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-32 pb-24">
-      {/* Animated Background with Parallax */}
-      <motion.div
-        style={{ y: y2, opacity }}
-        className="absolute inset-0 bg-mesh-gradient opacity-20"
+      {/* Subtle Grid Background - Ultra Minimal */}
+      <div
+        className="absolute inset-0 opacity-[0.015]"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px)",
+          backgroundSize: "80px 80px",
+        }}
       />
 
-      {/* Grid Pattern with Parallax - more subtle */}
-      <motion.div
-        style={{ y: y1 }}
-        className="absolute inset-0 bg-[linear-gradient(rgba(0,240,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,240,255,0.02)_1px,transparent_1px)] bg-[size:60px_60px]"
-      />
-
-      {/* Floating Icons with Parallax - more subtle */}
-      <motion.div
-        style={{ y: y1 }}
-        animate={{
-          y: [0, -20, 0],
-        }}
-        transition={{
-          duration: 4,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-        className="absolute top-32 left-10 text-cyber-blue opacity-10"
-      >
-        <Shield size={60} />
-      </motion.div>
-
-      <motion.div
-        style={{ y: y2 }}
-        animate={{
-          y: [0, 20, 0],
-        }}
-        transition={{
-          duration: 5,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-        className="absolute bottom-32 right-20 text-cyber-purple opacity-10"
-      >
-        <Lock size={50} />
-      </motion.div>
-
-      <motion.div
-        style={{ y: y1 }}
-        animate={{
-          y: [0, -15, 0],
-        }}
-        transition={{
-          duration: 3.5,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
-        className="absolute top-1/2 right-10 text-cyber-pink opacity-10"
-      >
-        <Cpu size={55} />
-      </motion.div>
+      {/* Minimal Gradient Glow */}
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-cyber-blue/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyber-purple/5 rounded-full blur-3xl" />
 
       <div className="container mx-auto px-6 relative z-10 max-w-7xl">
         <div className="grid lg:grid-cols-2 gap-20 items-center">
           {/* Left Column - Text Content */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="space-y-8"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="space-y-10"
           >
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
+              transition={{ delay: 0.1 }}
               className="inline-block"
             >
-              <span className="px-6 py-3 bg-gradient-to-r from-cyber-blue/20 to-cyber-purple/20 border border-cyber-blue/30 rounded-full text-cyber-blue text-base font-semibold tracking-wide shadow-lg shadow-cyber-blue/20">
+              <span className="text-xs tracking-[0.2em] text-cyber-blue/70 uppercase font-medium">
                 Trust as a Protocol, Not a Policy
               </span>
             </motion.div>
@@ -94,11 +50,11 @@ const Hero = () => {
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 }}
-              className="text-6xl md:text-7xl lg:text-8xl font-bold leading-[1.1] tracking-tight"
+              transition={{ delay: 0.2 }}
+              className="text-6xl md:text-7xl lg:text-8xl font-light leading-[1.05] tracking-tight"
             >
               Redefining{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyber-blue via-blue-400 to-cyber-purple">
+              <span className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-cyber-blue via-blue-400 to-cyber-purple">
                 Digital Trust
               </span>
             </motion.h1>
@@ -106,55 +62,36 @@ const Hero = () => {
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 }}
-              className="text-xl md:text-2xl text-gray-300 leading-relaxed max-w-2xl"
+              transition={{ delay: 0.3 }}
+              className="text-xl md:text-2xl text-gray-400 leading-relaxed font-light max-w-2xl"
             >
-              <strong className="text-cyber-blue font-semibold">
-                Cyber Security Stack (CSS)
-              </strong>{" "}
-              pioneers next-generation cyber security with the{" "}
-              <strong className="text-cyber-purple font-semibold">
-                Resonance Protocol
-              </strong>
-              —a federated trust protocol where every system becomes a
-              self-verifying "hive" using cryptographically signed Merkle tree
-              blocks.
-            </motion.p>
-
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5 }}
-              className="text-lg md:text-xl text-gray-400"
-            >
-              Developed with the University of Oxford, we create
-              ransomware-resistant, integrity-first architectures for enterprise
-              IT, OT, and IoT environments.
+              Autonomous cyber defence powered by the{" "}
+              <span className="text-white font-normal">Resonance Protocol</span>
+              —real-time integrity verification through federated trust.
             </motion.p>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6 }}
+              transition={{ delay: 0.4 }}
               className="flex flex-wrap gap-4 pt-4"
             >
               <motion.a
                 href="#mbdr"
-                whileHover={{ scale: 1.02 }}
+                whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.98 }}
-                className="px-8 py-4 bg-gradient-to-r from-cyber-blue to-cyber-purple rounded-lg text-white font-semibold flex items-center gap-2 shadow-lg shadow-cyber-blue/20 hover:shadow-cyber-blue/40 transition-all"
+                className="px-8 py-4 bg-white/[0.03] border border-white/10 rounded-xl text-white font-light hover:bg-white/[0.06] hover:border-cyber-blue/50 transition-all backdrop-blur-sm"
               >
                 Explore MBDR
-                <ArrowRight size={20} />
               </motion.a>
 
               <motion.a
                 href="#resonance"
-                whileHover={{ scale: 1.02 }}
+                whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.98 }}
-                className="px-8 py-4 minimal-card rounded-lg text-white font-semibold transition-all"
+                className="px-8 py-4 bg-gradient-to-r from-cyber-blue/10 to-cyber-purple/10 border border-cyber-blue/30 rounded-xl text-cyber-blue font-light hover:from-cyber-blue/20 hover:to-cyber-purple/20 transition-all backdrop-blur-sm"
               >
-                Learn About Resonance
+                Resonance Protocol
               </motion.a>
             </motion.div>
 
@@ -162,33 +99,33 @@ const Hero = () => {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.7 }}
-              className="grid grid-cols-3 gap-8 pt-8"
+              transition={{ delay: 0.5 }}
+              className="grid grid-cols-3 gap-8 pt-12 border-t border-white/5"
             >
               <div>
-                <div className="text-4xl md:text-5xl font-bold text-cyber-blue mb-2">
+                <div className="text-4xl md:text-5xl font-light text-white mb-2">
                   <AnimatedCounter end={100} suffix="%" />
                 </div>
-                <div className="text-sm md:text-base text-gray-400">
-                  Autonomous
+                <div className="text-xs md:text-sm text-gray-500 tracking-wide">
+                  AUTONOMOUS
                 </div>
               </div>
               <div>
-                <div className="text-4xl md:text-5xl font-bold text-cyber-purple mb-2">
+                <div className="text-4xl md:text-5xl font-light text-white mb-2">
                   &lt;
                   <AnimatedCounter end={1} />
                   ms
                 </div>
-                <div className="text-sm md:text-base text-gray-400">
-                  Detection
+                <div className="text-xs md:text-sm text-gray-500 tracking-wide">
+                  DETECTION
                 </div>
               </div>
               <div>
-                <div className="text-4xl md:text-5xl font-bold text-cyber-pink mb-2">
+                <div className="text-4xl md:text-5xl font-light text-white mb-2">
                   <AnimatedCounter end={0} />
                 </div>
-                <div className="text-sm md:text-base text-gray-400">
-                  Trust Assumed
+                <div className="text-xs md:text-sm text-gray-500 tracking-wide">
+                  TRUST ASSUMED
                 </div>
               </div>
             </motion.div>

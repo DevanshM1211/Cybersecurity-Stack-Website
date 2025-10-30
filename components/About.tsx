@@ -3,110 +3,108 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Mail, ArrowRight } from "lucide-react";
+import { Mail } from "lucide-react";
 
 const About = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.3 });
 
   return (
-    <section
-      id="about"
-      ref={ref}
-      className="py-32 relative overflow-hidden bg-gradient-to-b from-cyber-darker to-cyber-dark"
-    >
-      <div className="container mx-auto px-6 relative z-10 max-w-5xl">
-        {/* Section Header */}
+    <section id="about" ref={ref} className="py-40 relative overflow-hidden">
+      {/* Subtle Grid Background */}
+      <div
+        className="absolute inset-0 opacity-[0.02]"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px)",
+          backgroundSize: "50px 50px",
+        }}
+      />
+
+      <div className="container mx-auto px-6 relative z-10 max-w-4xl">
+        {/* Minimalist Badge */}
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          transition={{ duration: 0.4 }}
+          className="text-center mb-20"
         >
-          <motion.span
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ delay: 0.2 }}
-            className="inline-block px-5 py-2.5 bg-cyber-blue/10 border border-cyber-blue/20 rounded-full text-cyber-blue text-sm font-medium tracking-wide mb-6"
-          >
-            About Us
-          </motion.span>
-
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ delay: 0.3 }}
-            className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight tracking-tight"
-          >
-            Who We{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyber-blue via-blue-400 to-cyber-purple">
-              Are
-            </span>
-          </motion.h2>
-
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ delay: 0.4 }}
-            className="text-xl md:text-2xl text-cyber-blue font-semibold mb-4"
-          >
-            Trust as a Protocol, Not a Policy
-          </motion.p>
+          <span className="text-xs tracking-[0.2em] text-cyber-blue/60 uppercase font-medium">
+            About
+          </span>
         </motion.div>
 
-        {/* Main Content */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
+        {/* Tagline */}
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          className="space-y-8 text-center max-w-4xl mx-auto"
+          transition={{ delay: 0.1, duration: 0.5 }}
+          className="text-4xl md:text-5xl lg:text-6xl font-light text-center mb-8 leading-tight tracking-tight"
         >
-          <p className="text-xl md:text-2xl text-gray-300 leading-relaxed">
-            <strong className="text-cyber-blue font-semibold">
-              Cyber Security Stack (CSS)
-            </strong>{" "}
-            is a cyber security startup pioneering next-generation solutions
-            with the{" "}
-            <strong className="text-cyber-purple font-semibold">
-              Resonance Protocol (RP)
-            </strong>
-            —a federated trust protocol that creates ransomware-resistant,
-            integrity-first architectures.
+          Trust as a{" "}
+          <span className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-cyber-blue to-cyber-purple">
+            Protocol
+          </span>
+          ,<br />
+          Not a Policy
+        </motion.h2>
+
+        {/* Main Content - Ultra Clean */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="text-center space-y-8 mb-16"
+        >
+          <p className="text-lg md:text-xl text-gray-400 leading-relaxed font-light max-w-3xl mx-auto">
+            We're pioneering next-generation cyber security with the{" "}
+            <span className="text-white font-medium">Resonance Protocol</span>
+            —a federated trust system that creates ransomware-resistant,
+            integrity-first architectures where tampering is detected and
+            isolated in real time.
+          </p>
+        </motion.div>
+
+        {/* Divider Line */}
+        <motion.div
+          initial={{ scaleX: 0 }}
+          animate={isInView ? { scaleX: 1 } : {}}
+          transition={{ delay: 0.4, duration: 0.8 }}
+          className="h-px bg-gradient-to-r from-transparent via-cyber-blue/30 to-transparent mb-16"
+        />
+
+        {/* CTA - Minimal & Futuristic */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ delay: 0.5 }}
+          className="text-center space-y-8"
+        >
+          <p className="text-sm tracking-wide text-gray-500 uppercase">
+            Get in Touch
           </p>
 
-          <p className="text-lg md:text-xl text-gray-400 leading-relaxed">
-            Every system becomes a self-verifying "hive" where tampering is
-            detected and isolated in real time, redefining resilience for
-            enterprise IT, OT, and IoT environments.
-          </p>
-
-          {/* CTA Section */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ delay: 0.7 }}
-            className="pt-12 space-y-6"
+          {/* Sleek Email Button */}
+          <motion.a
+            href="mailto:hello@cybersecuritystack.co.uk"
+            whileHover={{ y: -2 }}
+            whileTap={{ scale: 0.98 }}
+            className="inline-block group"
           >
-            <p className="text-2xl md:text-3xl font-semibold text-white">
-              Ready to transform your security?
-            </p>
+            <div className="relative px-10 py-5 bg-white/[0.02] border border-white/10 rounded-xl overflow-hidden backdrop-blur-sm transition-all duration-300 hover:bg-white/[0.04] hover:border-cyber-blue/50">
+              {/* Glow Effect on Hover */}
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                <div className="absolute inset-0 bg-gradient-to-r from-cyber-blue/10 to-cyber-purple/10" />
+              </div>
 
-            {/* Email Contact */}
-            <motion.a
-              href="mailto:hello@cybersecuritystack.co.uk"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-cyber-blue to-cyber-purple rounded-lg text-white text-lg font-semibold shadow-lg shadow-cyber-blue/30 hover:shadow-cyber-blue/50 transition-all group"
-            >
-              <Mail className="w-6 h-6" />
-              hello@cybersecuritystack.co.uk
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </motion.a>
-
-            <p className="text-sm text-gray-500">
-              Or use the contact form below
-            </p>
-          </motion.div>
+              <div className="relative flex items-center gap-4">
+                <Mail className="w-5 h-5 text-cyber-blue" />
+                <span className="text-lg text-white font-light tracking-wide">
+                  hello@cybersecuritystack.co.uk
+                </span>
+              </div>
+            </div>
+          </motion.a>
         </motion.div>
       </div>
     </section>
