@@ -140,24 +140,7 @@ const Team = () => {
           ))}
         </motion.div>
 
-        {/* Optional CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ delay: 1.2 }}
-          className="mt-20 text-center"
-        >
-          <p className="text-lg text-gray-300 mb-6">
-            Want to join the mission?
-          </p>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="px-8 py-4 glass-effect rounded-full text-white font-semibold hover:glow-effect transition-all"
-          >
-            Explore Careers
-          </motion.button>
-        </motion.div>
+        {/* CTA removed per request */}
       </div>
     </section>
   );
