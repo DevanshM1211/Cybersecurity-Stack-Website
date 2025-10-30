@@ -61,7 +61,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-6 py-5 max-w-7xl">
         <div className="flex items-center justify-between">
-          {/* Logo - Ultra Minimal */}
+          {/* Logo - Visible & Clean */}
           <motion.a
             href="#top"
             whileHover={{ opacity: 0.8 }}
@@ -71,19 +71,19 @@ const Navbar = () => {
               <Image
                 src="/Logo.png"
                 alt="Cyber Security Stack logo"
-                width={28}
-                height={28}
+                width={40}
+                height={40}
                 priority
                 className="rounded-md"
                 onError={() => setImgError(true)}
               />
             ) : (
-              <div className="w-7 h-7 rounded-md bg-gradient-to-br from-cyber-blue to-cyber-purple flex items-center justify-center text-white font-bold text-xs">
+              <div className="w-10 h-10 rounded-md bg-gradient-to-br from-cyber-blue to-cyber-purple flex items-center justify-center text-white font-bold text-sm">
                 CSS
               </div>
             )}
             <div className="flex flex-col leading-tight">
-              <span className="text-base font-light text-white tracking-tight">
+              <span className="text-lg font-light text-white tracking-tight">
                 Cyber Security Stack
               </span>
             </div>
