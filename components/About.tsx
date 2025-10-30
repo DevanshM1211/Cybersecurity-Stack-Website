@@ -58,14 +58,26 @@ const About = () => {
         >
           <p className="text-lg md:text-xl text-gray-400 leading-relaxed font-light max-w-3xl mx-auto">
             We're pioneering next-generation cyber security with the{" "}
-            <span className="text-white font-medium">Resonance Protocol (RP)</span>
+            <span className="text-white font-medium">
+              Resonance Protocol (RP)
+            </span>
             —a federated trust system that creates ransomware-resistant,
             integrity-first architectures where tampering is detected and
             isolated in real time.
           </p>
 
           <p className="text-base md:text-lg text-gray-400 leading-relaxed max-w-3xl mx-auto">
-            Cyber Security Stack (CSS) is a cyber security startup pioneering next-generation solutions, with its flagship innovation being the Resonance Protocol (RP). RP is a federated trust protocol that treats every system as a self-verifying “hive,” where each layer (hardware, firmware, kernel, process, application) generates cryptographically signed Merkle tree blocks to prove integrity. Adjacent hives only establish trust through scoped, signed “trust contracts,” meaning that if tampering occurs the affected component is rejected and isolated in real time. Together, CSS and RP aim to redefine resilience for enterprise IT, OT, and IoT environments by creating a ransomware-resistant, integrity-first architecture.
+            Cyber Security Stack (CSS) is a cyber security startup pioneering
+            next-generation solutions, with its flagship innovation being the
+            Resonance Protocol (RP). RP is a federated trust protocol that
+            treats every system as a self-verifying “hive,” where each layer
+            (hardware, firmware, kernel, process, application) generates
+            cryptographically signed Merkle tree blocks to prove integrity.
+            Adjacent hives only establish trust through scoped, signed “trust
+            contracts,” meaning that if tampering occurs the affected component
+            is rejected and isolated in real time. Together, CSS and RP aim to
+            redefine resilience for enterprise IT, OT, and IoT environments by
+            creating a ransomware-resistant, integrity-first architecture.
           </p>
         </motion.div>
 

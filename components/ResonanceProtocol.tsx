@@ -125,18 +125,34 @@ const ResonanceProtocol = () => {
             className="mt-12 max-w-4xl mx-auto grid md:grid-cols-3 gap-6 text-center"
           >
             <div>
-              <h4 className="text-sm text-cyber-blue uppercase tracking-widest mb-2">Problem</h4>
-              <p className="text-gray-400">Ransomware causes operational outages and costly rebuilds. Existing tools detect behaviours late and struggle with unknown threats.</p>
+              <h4 className="text-sm text-cyber-blue uppercase tracking-widest mb-2">
+                Problem
+              </h4>
+              <p className="text-gray-400">
+                Ransomware causes operational outages and costly rebuilds.
+                Existing tools detect behaviours late and struggle with unknown
+                threats.
+              </p>
             </div>
 
             <div>
-              <h4 className="text-sm text-cyber-blue uppercase tracking-widest mb-2">Solution</h4>
-              <p className="text-gray-400">A deep‑tech immune system that detects unwanted change instantly and reverts to a trusted state so businesses continue as normal.</p>
+              <h4 className="text-sm text-cyber-blue uppercase tracking-widest mb-2">
+                Solution
+              </h4>
+              <p className="text-gray-400">
+                A deep‑tech immune system that detects unwanted change instantly
+                and reverts to a trusted state so businesses continue as normal.
+              </p>
             </div>
 
             <div>
-              <h4 className="text-sm text-cyber-blue uppercase tracking-widest mb-2">Vision</h4>
-              <p className="text-gray-400">Start as an agent & SaaS in IT, then become the universal tamper‑proofing protocol embedded across endpoints from day one.</p>
+              <h4 className="text-sm text-cyber-blue uppercase tracking-widest mb-2">
+                Vision
+              </h4>
+              <p className="text-gray-400">
+                Start as an agent & SaaS in IT, then become the universal
+                tamper‑proofing protocol embedded across endpoints from day one.
+              </p>
             </div>
           </motion.div>
 
@@ -147,32 +163,50 @@ const ResonanceProtocol = () => {
             transition={{ delay: 0.8 }}
             className="mt-16 max-w-6xl mx-auto"
           >
-            <h3 className="text-2xl font-semibold text-center text-white mb-8">How the Resonance Protocol Works</h3>
+            <h3 className="text-2xl font-semibold text-center text-white mb-8">
+              How the Resonance Protocol Works
+            </h3>
 
             <div className="grid grid-cols-1 sm:grid-cols-5 gap-6 items-start text-center">
               <div className="space-y-3">
-                <div className="w-14 h-14 rounded-full bg-white/5 flex items-center justify-center mx-auto text-cyber-blue font-bold">1</div>
+                <div className="w-14 h-14 rounded-full bg-white/5 flex items-center justify-center mx-auto text-cyber-blue font-bold">
+                  1
+                </div>
                 <p className="text-sm text-gray-400">Merkle tree formation</p>
               </div>
 
               <div className="space-y-3">
-                <div className="w-14 h-14 rounded-full bg-white/5 flex items-center justify-center mx-auto text-cyber-blue font-bold">2</div>
-                <p className="text-sm text-gray-400">Stack propagation, subsumption hive formed</p>
+                <div className="w-14 h-14 rounded-full bg-white/5 flex items-center justify-center mx-auto text-cyber-blue font-bold">
+                  2
+                </div>
+                <p className="text-sm text-gray-400">
+                  Stack propagation, subsumption hive formed
+                </p>
               </div>
 
               <div className="space-y-3">
-                <div className="w-14 h-14 rounded-full bg-white/5 flex items-center justify-center mx-auto text-cyber-blue font-bold">3</div>
-                <p className="text-sm text-gray-400">Peer-to-peer contracts form adjacent hives</p>
+                <div className="w-14 h-14 rounded-full bg-white/5 flex items-center justify-center mx-auto text-cyber-blue font-bold">
+                  3
+                </div>
+                <p className="text-sm text-gray-400">
+                  Peer-to-peer contracts form adjacent hives
+                </p>
               </div>
 
               <div className="space-y-3">
-                <div className="w-14 h-14 rounded-full bg-white/5 flex items-center justify-center mx-auto text-cyber-blue font-bold">4</div>
+                <div className="w-14 h-14 rounded-full bg-white/5 flex items-center justify-center mx-auto text-cyber-blue font-bold">
+                  4
+                </div>
                 <p className="text-sm text-gray-400">Node compromised</p>
               </div>
 
               <div className="space-y-3">
-                <div className="w-14 h-14 rounded-full bg-white/5 flex items-center justify-center mx-auto text-cyber-blue font-bold">5</div>
-                <p className="text-sm text-gray-400">Compromised subsumption hive isolated</p>
+                <div className="w-14 h-14 rounded-full bg-white/5 flex items-center justify-center mx-auto text-cyber-blue font-bold">
+                  5
+                </div>
+                <p className="text-sm text-gray-400">
+                  Compromised subsumption hive isolated
+                </p>
               </div>
             </div>
           </motion.div>
