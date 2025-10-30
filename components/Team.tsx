@@ -14,13 +14,13 @@ const Team = () => {
     {
       name: "Luke Collinson",
       role: "Co-founder",
-      image: "/luke collinson.png",
+      image: "/team/luke-collinson.jpg",
       linkedin: "https://www.linkedin.com/in/luke-c-088b61121/",
     },
     {
       name: "Anna Wilson",
       role: "Co-founder",
-      image: "/anna wilson.png",
+      image: "/team/anna-wilson.jpg",
       linkedin: "https://www.linkedin.com/in/anna-wilson-889830226/",
     },
   ];
