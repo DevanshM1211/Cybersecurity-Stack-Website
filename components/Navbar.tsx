@@ -19,6 +19,7 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
+    { name: "About", href: "#about" },
     { name: "Protocol", href: "#resonance" },
     { name: "MBDR", href: "#mbdr" },
     { name: "Solution", href: "#solution" },
