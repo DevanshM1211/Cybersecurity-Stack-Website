@@ -19,10 +19,9 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { name: "Resonance Protocol", href: "#resonance" },
-    { name: "MBDR Technology", href: "#mbdr" },
+    { name: "Protocol", href: "#resonance" },
+    { name: "MBDR", href: "#mbdr" },
     { name: "Solution", href: "#solution" },
-    { name: "Partnership", href: "#partnership" },
     { name: "Team", href: "#team" },
     { name: "FAQ", href: "#faq" },
   ];
@@ -48,66 +47,61 @@ const Navbar = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "glass-effect shadow-lg" : "bg-transparent"
+        isScrolled
+          ? "glass-effect shadow-lg border-b border-white/5"
+          : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-6 py-4">
+      <div className="container mx-auto px-6 py-5 max-w-7xl">
         <div className="flex items-center justify-between">
-          {/* Logo */}
+          {/* Logo - Simplified */}
           <motion.a
             href="#top"
-            whileHover={{ scale: 1.03 }}
+            whileHover={{ scale: 1.02 }}
             className="flex items-center gap-3 cursor-pointer"
           >
             {!imgError ? (
               <Image
                 src="/Logo.png"
                 alt="Cyber Security Stack logo"
-                width={36}
-                height={36}
+                width={32}
+                height={32}
                 priority
                 className="rounded-md"
                 onError={() => setImgError(true)}
               />
             ) : (
-              <div className="w-9 h-9 rounded-md bg-gradient-to-br from-cyber-blue to-cyber-purple flex items-center justify-center text-white font-bold text-sm">
+              <div className="w-8 h-8 rounded-md bg-gradient-to-br from-cyber-blue to-cyber-purple flex items-center justify-center text-white font-bold text-xs">
                 CSS
               </div>
             )}
-            <div className="flex flex-col leading-tight">
-              <span className="text-lg md:text-xl font-bold text-white">
-                Cyber Security Stack
-              </span>
-              <span className="hidden sm:block text-[11px] md:text-xs text-gray-400">
-                Trust as a Protocol, Not a Policy
-              </span>
-            </div>
+            <span className="text-lg font-semibold text-white tracking-tight">
+              Cyber Security Stack
+            </span>
           </motion.a>
 
           {/* Desktop Navigation */}
           <nav
-            className="hidden md:flex items-center gap-8"
+            className="hidden md:flex items-center gap-6"
             aria-label="Main navigation"
           >
             {navLinks.map((link, index) => (
               <motion.a
                 key={index}
                 href={link.href}
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.95 }}
-                className="text-gray-300 hover:text-cyber-blue transition-colors relative group focus:outline-none focus:ring-2 focus:ring-cyber-blue focus:ring-offset-2 focus:ring-offset-gray-900 rounded px-2 py-1"
+                whileHover={{ y: -2 }}
+                className="text-gray-300 hover:text-white transition-colors text-sm font-medium focus:outline-none focus:text-cyber-blue"
               >
                 {link.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyber-blue transition-all group-hover:w-full" />
               </motion.a>
             ))}
             <motion.a
               href="#contact"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-6 py-2 bg-gradient-to-r from-cyber-blue to-cyber-purple rounded-full text-white font-semibold hover:shadow-lg hover:shadow-cyber-blue/50 transition-all focus:outline-none focus:ring-2 focus:ring-cyber-blue focus:ring-offset-2 focus:ring-offset-gray-900"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="ml-2 px-6 py-2.5 bg-gradient-to-r from-cyber-blue to-cyber-purple rounded-lg text-white text-sm font-semibold hover:shadow-lg hover:shadow-cyber-blue/30 transition-all focus:outline-none focus:ring-2 focus:ring-cyber-blue"
             >
-              Contact Us
+              Contact
             </motion.a>
           </nav>
 

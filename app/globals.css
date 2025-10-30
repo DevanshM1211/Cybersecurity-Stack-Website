@@ -16,6 +16,7 @@
 
 html {
   scroll-behavior: smooth;
+  font-size: 16px;
 }
 
 body {
@@ -27,6 +28,8 @@ body {
     )
     rgb(var(--background-start-rgb));
   overflow-x: hidden;
+  line-height: 1.6;
+  letter-spacing: -0.01em;
 }
 
 @layer utilities {
@@ -34,26 +37,55 @@ body {
     text-wrap: balance;
   }
 
+  /* Refined glassmorphism - lighter, more elegant */
   .glass-effect {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
   }
 
+  /* Subtle glow - less intense */
   .glow-effect {
-    box-shadow: 0 0 20px rgba(30, 58, 138, 0.4),
-      0 0 40px rgba(99, 102, 241, 0.3);
+    box-shadow: 0 0 30px rgba(30, 58, 138, 0.2),
+      0 0 60px rgba(99, 102, 241, 0.15);
   }
 
+  /* Refined text glow */
   .text-glow {
-    text-shadow: 0 0 10px rgba(30, 58, 138, 0.6),
-      0 0 20px rgba(99, 102, 241, 0.4);
+    text-shadow: 0 0 20px rgba(30, 58, 138, 0.4),
+      0 0 40px rgba(99, 102, 241, 0.2);
+  }
+
+  /* New: Minimal card style */
+  .minimal-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    transition: all 0.3s ease;
+  }
+
+  .minimal-card:hover {
+    background: rgba(255, 255, 255, 0.04);
+    border-color: rgba(30, 58, 138, 0.3);
+    transform: translateY(-2px);
+  }
+
+  /* Screen reader only utility */
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
   }
 }
 
-/* Custom scrollbar */
+/* Custom scrollbar - more subtle */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 8px;
 }
 
 ::-webkit-scrollbar-track {
@@ -62,9 +94,15 @@ body {
 
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(180deg, #1e3a8a, #6366f1);
-  border-radius: 5px;
+  border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(180deg, #3b82f6, #1e3a8a);
+}
+
+/* Better focus indicators for accessibility */
+:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
 }

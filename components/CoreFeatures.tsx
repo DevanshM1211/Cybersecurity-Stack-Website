@@ -43,24 +43,24 @@ const CoreFeatures = () => {
     <section
       id="core-features"
       ref={ref}
-      className="py-24 relative overflow-hidden"
+      className="py-32 relative overflow-hidden"
     >
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-b from-cyber-darker via-cyber-dark to-cyber-darker opacity-50" />
+      <div className="absolute inset-0 bg-gradient-to-b from-cyber-darker via-cyber-dark to-cyber-darker opacity-30" />
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-6 relative z-10 max-w-7xl">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-20"
         >
           <motion.span
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.2 }}
-            className="inline-block px-4 py-2 bg-cyber-blue/10 border border-cyber-blue/30 rounded-full text-cyber-blue text-sm font-semibold mb-4"
+            className="inline-block px-5 py-2.5 bg-cyber-blue/10 border border-cyber-blue/20 rounded-full text-cyber-blue text-sm font-medium tracking-wide mb-6"
           >
             Core Capabilities
           </motion.span>
@@ -69,10 +69,10 @@ const CoreFeatures = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.3 }}
-            className="text-4xl md:text-6xl font-bold mb-6"
+            className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight tracking-tight"
           >
             See Some{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyber-blue via-cyber-purple to-cyber-pink">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyber-blue via-blue-400 to-cyber-purple">
               Core Features
             </span>
           </motion.h2>
@@ -81,7 +81,7 @@ const CoreFeatures = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.4 }}
-            className="text-2xl md:text-3xl font-bold text-white mb-4"
+            className="text-2xl md:text-3xl font-semibold text-white/90 mb-6"
           >
             Of the Resonance Protocol
           </motion.h3>
@@ -90,13 +90,13 @@ const CoreFeatures = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.5 }}
-            className="text-xl text-gray-300 max-w-3xl mx-auto"
+            className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
           >
             Core capabilities built to contain ransomware and enforce trust.
           </motion.p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
+        <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
           {/* Left: Image/Visualization */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -104,9 +104,9 @@ const CoreFeatures = () => {
             transition={{ delay: 0.6 }}
             className="relative"
           >
-            <div className="glass-effect rounded-2xl p-8 overflow-hidden relative">
+            <div className="minimal-card rounded-2xl p-12 overflow-hidden relative">
               {/* Decorative Background */}
-              <div className="absolute inset-0 bg-gradient-to-br from-cyber-blue/10 via-cyber-purple/10 to-cyber-pink/10" />
+              <div className="absolute inset-0 bg-gradient-to-br from-cyber-blue/5 via-cyber-purple/5 to-cyber-pink/5" />
 
               {/* Image Placeholder */}
               <div className="relative aspect-square flex items-center justify-center bg-gradient-to-br from-cyber-blue/20 via-cyber-purple/20 to-cyber-pink/20 rounded-xl overflow-hidden">
@@ -183,18 +183,17 @@ const CoreFeatures = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: 0.8 + index * 0.1 }}
-                whileHover={{ scale: 1.05, y: -5 }}
-                className="glass-effect rounded-xl p-6 hover:glow-effect transition-all cursor-pointer group"
+                className="minimal-card rounded-xl p-8 hover:shadow-lg hover:shadow-cyber-blue/10 transition-all group"
               >
                 <div
-                  className={`inline-flex p-3 rounded-lg bg-gradient-to-br ${feature.color} bg-opacity-10 mb-4 group-hover:scale-110 transition-transform`}
+                  className={`inline-flex p-4 rounded-lg bg-gradient-to-br ${feature.color} bg-opacity-10 mb-6 group-hover:scale-105 transition-transform`}
                 >
                   <div className="text-white">{feature.icon}</div>
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-cyber-blue group-hover:to-cyber-purple transition-all">
+                <h3 className="text-xl font-semibold text-white mb-3">
                   {feature.title}
                 </h3>
-                <p className="text-gray-400 leading-relaxed text-sm">
+                <p className="text-gray-400 leading-relaxed">
                   {feature.description}
                 </p>
               </motion.div>
@@ -209,13 +208,14 @@ const CoreFeatures = () => {
           transition={{ delay: 1.4 }}
           className="text-center"
         >
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="px-10 py-5 bg-gradient-to-r from-cyber-blue to-cyber-purple rounded-full text-white font-bold text-lg glow-effect"
+          <motion.a
+            href="#solution"
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+            className="inline-block px-10 py-4 bg-gradient-to-r from-cyber-blue to-cyber-purple rounded-lg text-white font-semibold text-lg shadow-lg shadow-cyber-blue/20 hover:shadow-cyber-blue/40 transition-all"
           >
             Discover More Features
-          </motion.button>
+          </motion.a>
         </motion.div>
       </div>
     </section>

@@ -12,20 +12,20 @@ const Hero = () => {
   const opacity = useTransform(scrollY, [0, 300], [1, 0]);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-32 pb-24">
       {/* Animated Background with Parallax */}
       <motion.div
         style={{ y: y2, opacity }}
-        className="absolute inset-0 bg-mesh-gradient opacity-30"
+        className="absolute inset-0 bg-mesh-gradient opacity-20"
       />
 
-      {/* Grid Pattern with Parallax */}
+      {/* Grid Pattern with Parallax - more subtle */}
       <motion.div
         style={{ y: y1 }}
-        className="absolute inset-0 bg-[linear-gradient(rgba(0,240,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(0,240,255,0.03)_1px,transparent_1px)] bg-[size:50px_50px]"
+        className="absolute inset-0 bg-[linear-gradient(rgba(0,240,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,240,255,0.02)_1px,transparent_1px)] bg-[size:60px_60px]"
       />
 
-      {/* Floating Icons with Parallax */}
+      {/* Floating Icons with Parallax - more subtle */}
       <motion.div
         style={{ y: y1 }}
         animate={{
@@ -36,7 +36,7 @@ const Hero = () => {
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="absolute top-32 left-10 text-cyber-blue opacity-20"
+        className="absolute top-32 left-10 text-cyber-blue opacity-10"
       >
         <Shield size={60} />
       </motion.div>
@@ -51,7 +51,7 @@ const Hero = () => {
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="absolute bottom-32 right-20 text-cyber-purple opacity-20"
+        className="absolute bottom-32 right-20 text-cyber-purple opacity-10"
       >
         <Lock size={50} />
       </motion.div>
@@ -66,26 +66,27 @@ const Hero = () => {
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="absolute top-1/2 right-10 text-cyber-pink opacity-20"
+        className="absolute top-1/2 right-10 text-cyber-pink opacity-10"
       >
         <Cpu size={55} />
       </motion.div>
 
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto px-6 relative z-10 max-w-7xl">
+        <div className="grid lg:grid-cols-2 gap-20 items-center">
           {/* Left Column - Text Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
+            className="space-y-8"
           >
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="inline-block mb-4"
+              className="inline-block"
             >
-              <span className="px-4 py-2 bg-cyber-blue/10 border border-cyber-blue/30 rounded-full text-cyber-blue text-sm font-semibold">
+              <span className="px-5 py-2.5 bg-cyber-blue/10 border border-cyber-blue/20 rounded-full text-cyber-blue text-sm font-medium tracking-wide">
                 Trust as a Protocol, Not a Policy
               </span>
             </motion.div>
@@ -94,10 +95,10 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="text-5xl md:text-7xl font-bold mb-6 leading-tight"
+              className="text-6xl md:text-7xl lg:text-8xl font-bold leading-[1.1] tracking-tight"
             >
               Redefining{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyber-blue to-cyber-purple text-glow">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyber-blue via-blue-400 to-cyber-purple">
                 Digital Trust
               </span>
             </motion.h1>
@@ -106,13 +107,15 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="text-xl text-gray-300 mb-8 leading-relaxed"
+              className="text-xl md:text-2xl text-gray-300 leading-relaxed max-w-2xl"
             >
-              <strong className="text-cyber-blue">
+              <strong className="text-cyber-blue font-semibold">
                 Cyber Security Stack (CSS)
               </strong>{" "}
               pioneers next-generation cyber security with the{" "}
-              <strong className="text-cyber-purple">Resonance Protocol</strong>
+              <strong className="text-cyber-purple font-semibold">
+                Resonance Protocol
+              </strong>
               —a federated trust protocol where every system becomes a
               self-verifying "hive" using cryptographically signed Merkle tree
               blocks.
@@ -122,7 +125,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
-              className="text-lg text-gray-400 mb-10"
+              className="text-lg md:text-xl text-gray-400"
             >
               Developed with the University of Oxford, we create
               ransomware-resistant, integrity-first architectures for enterprise
@@ -133,24 +136,26 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6 }}
-              className="flex flex-wrap gap-4"
+              className="flex flex-wrap gap-4 pt-4"
             >
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 bg-gradient-to-r from-cyber-blue to-cyber-purple rounded-full text-white font-semibold flex items-center gap-2 glow-effect"
+              <motion.a
+                href="#mbdr"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="px-8 py-4 bg-gradient-to-r from-cyber-blue to-cyber-purple rounded-lg text-white font-semibold flex items-center gap-2 shadow-lg shadow-cyber-blue/20 hover:shadow-cyber-blue/40 transition-all"
               >
                 Explore MBDR
                 <ArrowRight size={20} />
-              </motion.button>
+              </motion.a>
 
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className="px-8 py-4 glass-effect rounded-full text-white font-semibold hover:bg-white/10 transition-all"
+              <motion.a
+                href="#resonance"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="px-8 py-4 minimal-card rounded-lg text-white font-semibold transition-all"
               >
                 Learn About Resonance
-              </motion.button>
+              </motion.a>
             </motion.div>
 
             {/* Stats with Animated Counters */}
@@ -158,27 +163,33 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7 }}
-              className="grid grid-cols-3 gap-6 mt-12"
+              className="grid grid-cols-3 gap-8 pt-8"
             >
               <div>
-                <div className="text-3xl font-bold text-cyber-blue mb-1">
+                <div className="text-4xl md:text-5xl font-bold text-cyber-blue mb-2">
                   <AnimatedCounter end={100} suffix="%" />
                 </div>
-                <div className="text-sm text-gray-400">Autonomous</div>
+                <div className="text-sm md:text-base text-gray-400">
+                  Autonomous
+                </div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-cyber-purple mb-1">
+                <div className="text-4xl md:text-5xl font-bold text-cyber-purple mb-2">
                   &lt;
                   <AnimatedCounter end={1} />
                   ms
                 </div>
-                <div className="text-sm text-gray-400">Detection</div>
+                <div className="text-sm md:text-base text-gray-400">
+                  Detection
+                </div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-cyber-pink mb-1">
+                <div className="text-4xl md:text-5xl font-bold text-cyber-pink mb-2">
                   <AnimatedCounter end={0} />
                 </div>
-                <div className="text-sm text-gray-400">Trust Assumed</div>
+                <div className="text-sm md:text-base text-gray-400">
+                  Trust Assumed
+                </div>
               </div>
             </motion.div>
           </motion.div>
@@ -188,9 +199,11 @@ const Hero = () => {
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="hidden lg:block"
+            className="hidden lg:flex items-center justify-center"
           >
-            <MerkleTree />
+            <div className="w-full max-w-lg">
+              <MerkleTree />
+            </div>
           </motion.div>
         </div>
       </div>
