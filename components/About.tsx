@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Building2, Shield, Network } from "lucide-react";
+import { Mail, ArrowRight } from "lucide-react";
 
 const About = () => {
   const ref = useRef(null);
@@ -15,13 +15,13 @@ const About = () => {
       ref={ref}
       className="py-32 relative overflow-hidden bg-gradient-to-b from-cyber-darker to-cyber-dark"
     >
-      <div className="container mx-auto px-6 relative z-10 max-w-7xl">
+      <div className="container mx-auto px-6 relative z-10 max-w-5xl">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="text-center mb-20"
+          className="text-center mb-16"
         >
           <motion.span
             initial={{ opacity: 0, y: 20 }}
@@ -54,114 +54,60 @@ const About = () => {
           </motion.p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left: Main Content */}
+        {/* Main Content */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.6, delay: 0.5 }}
+          className="space-y-8 text-center max-w-4xl mx-auto"
+        >
+          <p className="text-xl md:text-2xl text-gray-300 leading-relaxed">
+            <strong className="text-cyber-blue font-semibold">
+              Cyber Security Stack (CSS)
+            </strong>{" "}
+            is a cyber security startup pioneering next-generation solutions
+            with the{" "}
+            <strong className="text-cyber-purple font-semibold">
+              Resonance Protocol (RP)
+            </strong>
+            —a federated trust protocol that creates ransomware-resistant,
+            integrity-first architectures.
+          </p>
+
+          <p className="text-lg md:text-xl text-gray-400 leading-relaxed">
+            Every system becomes a self-verifying "hive" where tampering is
+            detected and isolated in real time, redefining resilience for
+            enterprise IT, OT, and IoT environments.
+          </p>
+
+          {/* CTA Section */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="space-y-6"
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ delay: 0.7 }}
+            className="pt-12 space-y-6"
           >
-            <p className="text-xl md:text-2xl text-gray-300 leading-relaxed">
-              <strong className="text-cyber-blue font-semibold">
-                Cyber Security Stack (CSS)
-              </strong>{" "}
-              is a cyber security startup pioneering next-generation solutions,
-              with its flagship innovation being the{" "}
-              <strong className="text-cyber-purple font-semibold">
-                Resonance Protocol (RP)
-              </strong>
-              .
+            <p className="text-2xl md:text-3xl font-semibold text-white">
+              Ready to transform your security?
             </p>
 
-            <p className="text-lg md:text-xl text-gray-400 leading-relaxed">
-              RP is a federated trust protocol that treats every system as a
-              self-verifying "hive," where each layer (hardware, firmware,
-              kernel, process, application) generates cryptographically signed
-              Merkle tree blocks to prove integrity.
-            </p>
+            {/* Email Contact */}
+            <motion.a
+              href="mailto:hello@cybersecuritystack.co.uk"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-cyber-blue to-cyber-purple rounded-lg text-white text-lg font-semibold shadow-lg shadow-cyber-blue/30 hover:shadow-cyber-blue/50 transition-all group"
+            >
+              <Mail className="w-6 h-6" />
+              hello@cybersecuritystack.co.uk
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </motion.a>
 
-            <p className="text-lg md:text-xl text-gray-400 leading-relaxed">
-              Adjacent hives only establish trust through scoped, signed "trust
-              contracts," meaning that if tampering occurs the affected
-              component is rejected and isolated in real time.
-            </p>
-
-            <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
-              Together, CSS and RP aim to redefine resilience for enterprise IT,
-              OT, and IoT environments by creating a{" "}
-              <strong className="text-white font-semibold">
-                ransomware-resistant, integrity-first architecture
-              </strong>
-              .
+            <p className="text-sm text-gray-500">
+              Or use the contact form below
             </p>
           </motion.div>
-
-          {/* Right: Key Points */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.6 }}
-            className="space-y-6"
-          >
-            {/* Card 1 */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ delay: 0.7 }}
-              className="minimal-card rounded-xl p-8 space-y-4"
-            >
-              <div className="inline-flex p-4 rounded-lg bg-gradient-to-br from-cyber-blue to-blue-400 bg-opacity-10">
-                <Building2 className="w-8 h-8 text-cyber-blue" />
-              </div>
-              <h3 className="text-2xl font-semibold text-white">
-                Next-Gen Startup
-              </h3>
-              <p className="text-gray-400 leading-relaxed">
-                A pioneering cyber security startup focused on innovative,
-                resilient solutions for modern threats.
-              </p>
-            </motion.div>
-
-            {/* Card 2 */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ delay: 0.8 }}
-              className="minimal-card rounded-xl p-8 space-y-4"
-            >
-              <div className="inline-flex p-4 rounded-lg bg-gradient-to-br from-cyber-purple to-purple-400 bg-opacity-10">
-                <Shield className="w-8 h-8 text-cyber-purple" />
-              </div>
-              <h3 className="text-2xl font-semibold text-white">
-                Federated Trust
-              </h3>
-              <p className="text-gray-400 leading-relaxed">
-                Self-verifying hives with cryptographically signed Merkle blocks
-                ensuring integrity at every layer.
-              </p>
-            </motion.div>
-
-            {/* Card 3 */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ delay: 0.9 }}
-              className="minimal-card rounded-xl p-8 space-y-4"
-            >
-              <div className="inline-flex p-4 rounded-lg bg-gradient-to-br from-cyber-pink to-pink-400 bg-opacity-10">
-                <Network className="w-8 h-8 text-cyber-pink" />
-              </div>
-              <h3 className="text-2xl font-semibold text-white">
-                Real-Time Isolation
-              </h3>
-              <p className="text-gray-400 leading-relaxed">
-                Tampered components are instantly rejected and isolated through
-                scoped trust contracts.
-              </p>
-            </motion.div>
-          </motion.div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
