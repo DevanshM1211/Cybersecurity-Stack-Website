@@ -86,7 +86,7 @@ const Hero = () => {
               transition={{ delay: 0.2 }}
               className="inline-block"
             >
-              <span className="px-5 py-2.5 bg-cyber-blue/10 border border-cyber-blue/20 rounded-full text-cyber-blue text-sm font-medium tracking-wide">
+              <span className="px-6 py-3 bg-gradient-to-r from-cyber-blue/20 to-cyber-purple/20 border border-cyber-blue/30 rounded-full text-cyber-blue text-base font-semibold tracking-wide shadow-lg shadow-cyber-blue/20">
                 Trust as a Protocol, Not a Policy
               </span>
             </motion.div>

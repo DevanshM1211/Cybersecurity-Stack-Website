@@ -76,9 +76,14 @@ const Navbar = () => {
                 CSS
               </div>
             )}
-            <span className="text-lg font-semibold text-white tracking-tight">
-              Cyber Security Stack
-            </span>
+            <div className="flex flex-col leading-tight">
+              <span className="text-lg font-semibold text-white tracking-tight">
+                Cyber Security Stack
+              </span>
+              <span className="hidden sm:block text-xs text-cyber-blue font-medium">
+                Trust as a Protocol, Not a Policy
+              </span>
+            </div>
           </motion.a>
 
           {/* Desktop Navigation */}

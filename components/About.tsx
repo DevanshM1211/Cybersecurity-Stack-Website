@@ -43,6 +43,15 @@ const About = () => {
               Are
             </span>
           </motion.h2>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ delay: 0.4 }}
+            className="text-xl md:text-2xl text-cyber-blue font-semibold mb-4"
+          >
+            Trust as a Protocol, Not a Policy
+          </motion.p>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-16 items-center">
