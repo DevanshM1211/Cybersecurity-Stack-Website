@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     template: "%s | Cyber Security Stack",
   },
   description:
-    "Cyber Security Stack pioneers next-generation cybersecurity with the Resonance Protocol (RP)—a federated trust protocol creating ransomware-resistant, integrity-first architectures. Every system becomes a self-verifying 'hive' where tampering is detected and isolated in real time.",
+    "Deep-tech immune system for ransomware protection. Cyber Security Stack's Resonance Protocol detects unwanted changes instantly and reverts to trusted state, preventing operational outages and billion-pound losses like JLR experienced. A federated trust protocol creating ransomware-resistant architectures.",
   keywords: [
     "cybersecurity",
     "cyber security",
@@ -33,11 +33,18 @@ export const metadata: Metadata = {
     "Merkle-Based Detection and Response",
     "Zero Trust Architecture",
     "ransomware protection",
+    "ransomware prevention",
     "ransomware-resistant",
+    "operational outage prevention",
     "integrity verification",
     "autonomous cyber defence",
     "real-time threat detection",
+    "instant threat detection",
     "cryptographic verification",
+    "tamper-proofing",
+    "deep-tech security",
+    "cyber immune system",
+    "trusted state recovery",
     "Oxford Innovation",
     "University of Oxford",
     "cyber security startup",
@@ -45,6 +52,9 @@ export const metadata: Metadata = {
     "OT security",
     "IoT security",
     "IT security",
+    "SaaS security platform",
+    "security agent",
+    "endpoint protection",
   ],
   authors: [
     { name: "Cyber Security Stack", url: "https://cybersecuritystack.co.uk" },
@@ -75,7 +85,7 @@ export const metadata: Metadata = {
     url: "https://cybersecuritystack.co.uk",
     title: "Cyber Security Stack — Trust as a Protocol, Not a Policy",
     description:
-      "Pioneering ransomware-resistant cyber security with the Resonance Protocol. Self-verifying hives detect and isolate tampering in real time.",
+      "Deep-tech immune system preventing ransomware outages. Detects unwanted changes instantly and reverts to trusted state. Starting as SaaS platform, aiming to be the new standard for tamper-proofing businesses.",
     siteName: "Cyber Security Stack",
     images: [
       {
@@ -90,7 +100,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Cyber Security Stack — Trust as a Protocol, Not a Policy",
     description:
-      "Pioneering ransomware-resistant cyber security with the Resonance Protocol. Self-verifying hives detect and isolate tampering in real time.",
+      "Deep-tech immune system preventing ransomware outages. Detects unwanted changes instantly and reverts to trusted state. Starting as SaaS platform, aiming to be the new standard for tamper-proofing businesses.",
     images: ["/og-image.png"],
     creator: "@CyberSecStack",
   },
@@ -129,7 +139,8 @@ export default function RootLayout({
     url: "https://cybersecuritystack.co.uk",
     logo: "https://cybersecuritystack.co.uk/Logo.png",
     description:
-      "Cyber Security Stack pioneers next-generation cybersecurity with the Resonance Protocol—a federated trust protocol creating ransomware-resistant, integrity-first architectures.",
+      "A deep-tech immune system that detects unwanted changes instantly and reverts back to trusted state. Starting as an agent and SaaS platform for ransomware prevention, aiming to be the new standard for tamper-proofing businesses.",
+    slogan: "Trust as a Protocol, Not a Policy",
     email: "hello@cybersecuritystack.co.uk",
     address: {
       "@type": "PostalAddress",
@@ -152,8 +163,22 @@ export default function RootLayout({
       "Merkle-Based Detection and Response",
       "Zero Trust Architecture",
       "Ransomware Protection",
+      "Ransomware Prevention",
       "Federated Trust",
+      "Tamper-proofing",
+      "Operational Outage Prevention",
+      "Instant Threat Detection",
+      "Trusted State Recovery",
     ],
+    makesOffer: {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "Service",
+        name: "Resonance Protocol - Ransomware Protection",
+        description:
+          "Deep-tech immune system that knows exactly what should and shouldn't be there. Not only detecting unwanted change instantly, but reverting back to the trusted state so businesses can continue as normal.",
+      },
+    },
   };
 
   const websiteStructuredData = {
@@ -168,6 +193,31 @@ export default function RootLayout({
     },
   };
 
+  // Problem-Solution Structured Data
+  const softwareApplicationData = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: "Cyber Security Stack",
+    applicationCategory: "SecurityApplication",
+    operatingSystem: "Cross-platform",
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "GBP",
+    },
+    description:
+      "A deep-tech immune system preventing ransomware-caused operational outages and costly rebuilds. Detects behaviours instantly and handles unknown threats, taking security to the next level.",
+    featureList: [
+      "Instant unwanted change detection",
+      "Automatic revert to trusted state",
+      "Ransomware prevention",
+      "Operational continuity",
+      "Real-time threat isolation",
+      "Zero trust verification",
+      "Tamper-proof architecture",
+    ],
+  };
+
   return (
     <html lang="en" className={`${inter.variable} ${robotoMono.variable}`}>
       <head>
@@ -180,6 +230,12 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(websiteStructuredData),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(softwareApplicationData),
           }}
         />
       </head>

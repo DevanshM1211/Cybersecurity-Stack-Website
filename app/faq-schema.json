@@ -1,0 +1,54 @@
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What problem does Cyber Security Stack solve?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ransomware causes operational outages and costly rebuilds, leaving companies like JLR with losses of close to a billion pounds. Existing tools detect behaviours late and struggle with unknown threats. As cyberattacks evolve, industry leaders are seeking solutions that can take security to the next level."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does Cyber Security Stack's solution work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A deep-tech immune system that knows exactly what should and shouldn't be there. Not only detecting unwanted change instantly, but reverting back to the trusted state so businesses can continue as normal. The Resonance Protocol creates self-verifying hives where tampering is detected and isolated in real time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the vision for Cyber Security Stack?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Starting as an agent and SaaS platform, primarily in IT spaces, CSS has big plans looking forward. We aim to be the new standard for tamper-proofing businesses and baked in to all hackable endpoints from day 1."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the Resonance Protocol?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Resonance Protocol (RP) is a federated trust protocol that treats every system as a self-verifying 'hive,' where each layer generates cryptographically signed Merkle tree blocks to prove integrity. Adjacent hives only establish trust through scoped, signed trust contracts, meaning that if tampering occurs the affected component is rejected and isolated in real time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does Cyber Security Stack prevent billion-pound ransomware losses?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Unlike existing tools that detect behaviors late and struggle with unknown threats, our deep-tech immune system detects unwanted changes instantly and automatically reverts to the trusted state. This prevents operational outages and allows businesses to continue as normal, avoiding massive losses like those experienced by JLR."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What makes Cyber Security Stack different from traditional security tools?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Traditional tools focus on detection after the fact. Our Resonance Protocol provides real-time verification and instant remediation. It's not just about detecting threats - it's about maintaining a trusted state continuously and reverting automatically when tampering is detected. This is a fundamental shift from reactive to proactive security."
+      }
+    }
+  ]
+}
