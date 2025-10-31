@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Mail } from "lucide-react";
-import Image from "next/image";
 import MerkleTree from "@/components/MerkleTree";
 
 const About = () => {
@@ -61,45 +60,51 @@ const About = () => {
           {/* Text column */}
           <div className="space-y-6 text-left">
             <p className="text-lg md:text-xl leading-relaxed font-light text-gray-700 dark:text-gray-400">
-              We're pioneering next-generation cyber security with the{" "}
-              <span className="font-medium text-gray-900 dark:text-white">
-                Resonance Protocol (RP)
-              </span>
-              —a federated trust system that creates ransomware-resistant,
-              integrity-first architectures where tampering is detected and
-              isolated in real time.
+              Cyber Security Stack is a deep-tech cybersecurity company
+              pioneering Merkle-Based Detection and Response (MBDR), a new
+              paradigm in autonomous cyber defence built upon the Resonance
+              Protocol.
             </p>
 
             <p className="text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-400">
-              Cyber Security Stack (CSS) is a cyber security startup pioneering
-              next-generation solutions, with its flagship innovation being the
-              Resonance Protocol (RP). RP is a federated trust protocol that
-              treats every system as a self-verifying “hive,” where each layer
-              (hardware, firmware, kernel, process, application) generates
-              cryptographically signed Merkle tree blocks to prove integrity.
-              Adjacent hives only establish trust through scoped, signed “trust
-              contracts,” meaning that if tampering occurs the affected
-              component is rejected and isolated in real time. Together, CSS and
-              RP aim to redefine resilience for enterprise IT, OT, and IoT
-              environments by creating a ransomware-resistant, integrity-first
-              architecture.
+              Developed in partnership with the University of Oxford via its
+              Innovation Incubator, the Resonance Protocol is not a single
+              product or agent. It represents a new approach to digital
+              architecture, embedding verifiable trust and integrity deep into
+              the fabric of digital ecosystems. This is Zero Trust Architecture
+              realised at its most fundamental level, extending from firmware,
+              kernel, and chip, through operating systems and runtime
+              environments, and across IoT, OT, and IT infrastructures.
+            </p>
+
+            <p className="text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-400">
+              The Resonance Protocol and MBDR framework provide a lightweight
+              and highly adaptable technology designed to integrate seamlessly
+              across diverse environments. Using Merkle tree verification and
+              federated trust contracts, it enforces cryptographic trust between
+              devices, processes, and services. This creates a continuously
+              self-auditing ecosystem that detects tampering, isolates
+              compromise in real time, and maintains operational integrity
+              autonomously.
+            </p>
+
+            <p className="text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-400">
+              Achieving this vision requires a collaborative effort between
+              academia, manufacturers, and industry. Cyber Security Stack is
+              leading that movement, driving the establishment of the Resonance
+              Protocol as the universal trust standard for the next generation
+              of secure digital infrastructure.
+            </p>
+
+            <p className="text-base md:text-lg leading-relaxed text-gray-900 dark:text-gray-300">
+              Our mission is to redefine how digital trust is built and
+              maintained, giving organisations infrastructures that cannot be
+              held to ransom.
             </p>
           </div>
 
           {/* Imagery column */}
           <div className="space-y-6">
-            {/* Logo image */}
-            <div className="glass-effect rounded-xl border border-white/10 dark:border-white/10 p-6 flex items-center justify-center bg-black/5 dark:bg-white/[0.02]">
-              <Image
-                src="/logo.png"
-                alt="Cyber Security Stack Logo"
-                width={320}
-                height={320}
-                className="w-auto h-20 md:h-24"
-                priority
-              />
-            </div>
-
             {/* Merkle diagram preview */}
             <div className="rounded-xl overflow-hidden border border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/[0.02]">
               <div className="max-h-72 overflow-hidden">
