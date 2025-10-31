@@ -1,4 +1,5 @@
 import ContactForm from "@/components/ContactForm";
+import BackButton from "@/components/BackButton";
 
 export const metadata = {
   title: "Contact Us | Cyber Security Stack",
@@ -9,6 +10,7 @@ export const metadata = {
 export default function ContactPage() {
   return (
     <main className="min-h-screen bg-cyber-dark">
+      <BackButton />
       <ContactForm />
     </main>
   );

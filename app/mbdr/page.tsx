@@ -1,4 +1,5 @@
 import MBDR from "@/components/MBDR";
+import BackButton from "@/components/BackButton";
 
 export const metadata = {
   title: "MBDR | Cyber Security Stack",
@@ -9,6 +10,7 @@ export const metadata = {
 export default function MBDRPage() {
   return (
     <main className="min-h-screen bg-cyber-dark">
+      <BackButton />
       <MBDR />
     </main>
   );

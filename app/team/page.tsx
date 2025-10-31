@@ -1,4 +1,5 @@
 import Team from "@/components/Team";
+import BackButton from "@/components/BackButton";
 
 export const metadata = {
   title: "Our Team | Cyber Security Stack",
@@ -9,6 +10,7 @@ export const metadata = {
 export default function TeamPage() {
   return (
     <main className="min-h-screen bg-cyber-dark">
+      <BackButton />
       <Team />
     </main>
   );

@@ -1,4 +1,5 @@
 import Solution from "@/components/Solution";
+import BackButton from "@/components/BackButton";
 
 export const metadata = {
   title: "Our Solution | Cyber Security Stack",
@@ -9,6 +10,7 @@ export const metadata = {
 export default function SolutionPage() {
   return (
     <main className="min-h-screen bg-cyber-dark">
+      <BackButton />
       <Solution />
     </main>
   );

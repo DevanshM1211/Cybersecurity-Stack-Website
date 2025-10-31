@@ -1,4 +1,5 @@
 import About from "@/components/About";
+import BackButton from "@/components/BackButton";
 
 export const metadata = {
   title: "About | Cyber Security Stack",
@@ -9,6 +10,7 @@ export const metadata = {
 export default function AboutPage() {
   return (
     <main className="min-h-screen bg-cyber-dark">
+      <BackButton />
       <About />
     </main>
   );

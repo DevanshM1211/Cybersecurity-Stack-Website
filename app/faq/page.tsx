@@ -1,4 +1,5 @@
 import FAQ from "@/components/FAQ";
+import BackButton from "@/components/BackButton";
 
 export const metadata = {
   title: "FAQ | Cyber Security Stack",
@@ -9,6 +10,7 @@ export const metadata = {
 export default function FAQPage() {
   return (
     <main className="min-h-screen bg-cyber-dark">
+      <BackButton />
       <FAQ />
     </main>
   );
