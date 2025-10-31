@@ -2,15 +2,17 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Sun, Moon } from "lucide-react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { useTheme } from "@/contexts/ThemeContext";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [imgError, setImgError] = useState(false);
   const pathname = usePathname();
+  const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -123,7 +125,29 @@ const Navbar = () => {
               Contact
             </motion.a>
 
-            {/* Hamburger for remaining items on desktop too */}
+            {/* Theme Toggle Button */}
+            <motion.button
+              onClick={toggleTheme}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="p-2 hover:bg-white/[0.05] rounded-lg transition-colors"
+              aria-label="Toggle theme"
+              title={
+                theme === "dark"
+                  ? "Switch to light mode"
+                  : "Switch to dark mode"
+              }
+            >
+              <motion.div
+                initial={false}
+                animate={{ rotate: theme === "dark" ? 0 : 180 }}
+                transition={{ duration: 0.3 }}
+              >
+                {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
+              </motion.div>
+            </motion.button>
+
+            {/* Hamburger for remaining items on desktop */}
             <button
               className="p-2 hover:bg-white/[0.05] rounded-lg transition-colors"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -134,15 +158,38 @@ const Navbar = () => {
             </button>
           </nav>
 
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden text-white p-2 hover:bg-white/[0.05] rounded-lg transition-colors"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
-            aria-expanded={isMobileMenuOpen}
-          >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          {/* Mobile - Theme Toggle and Menu Button */}
+          <div className="md:hidden flex items-center gap-2">
+            <motion.button
+              onClick={toggleTheme}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="text-white p-2 hover:bg-white/[0.05] rounded-lg transition-colors"
+              aria-label="Toggle theme"
+              title={
+                theme === "dark"
+                  ? "Switch to light mode"
+                  : "Switch to dark mode"
+              }
+            >
+              <motion.div
+                initial={false}
+                animate={{ rotate: theme === "dark" ? 0 : 180 }}
+                transition={{ duration: 0.3 }}
+              >
+                {theme === "dark" ? <Sun size={24} /> : <Moon size={24} />}
+              </motion.div>
+            </motion.button>
+
+            <button
+              className="text-white p-2 hover:bg-white/[0.05] rounded-lg transition-colors"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+              aria-expanded={isMobileMenuOpen}
+            >
+              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Menu */}
