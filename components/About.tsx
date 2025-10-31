@@ -106,10 +106,8 @@ const About = () => {
           {/* Imagery column */}
           <div className="space-y-6">
             {/* Merkle diagram preview */}
-            <div className="rounded-xl overflow-hidden border border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/[0.02]">
-              <div className="max-h-72 overflow-hidden">
-                <MerkleTree />
-              </div>
+            <div className="rounded-xl border border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/[0.02] p-6">
+              <MerkleTree />
             </div>
           </div>
         </motion.div>
