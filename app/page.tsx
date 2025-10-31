@@ -4,7 +4,7 @@ import Hero from "@/components/Hero";
 import LogoLoop from "@/components/LogoLoop";
 import CoreFeatures from "@/components/CoreFeatures";
 import TrustSignals from "@/components/TrustSignals";
-import SiteMap from "@/components/SiteMap";
+import LinkedInFeed from "@/components/LinkedInFeed";
 import Footer from "@/components/Footer";
 import BackToTop from "@/components/BackToTop";
 
@@ -15,7 +15,7 @@ export default function Home() {
       <LogoLoop />
       <CoreFeatures />
       <TrustSignals />
-      <SiteMap />
+      <LinkedInFeed />
       <Footer />
       <BackToTop />
     </main>
