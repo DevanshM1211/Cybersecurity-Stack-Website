@@ -8,7 +8,7 @@ import Footer from "@/components/Footer";
 import BackToTop from "@/components/BackToTop";
 import dynamic from "next/dynamic";
 
-const ThemeToggle = dynamic(() => import("@/components/ThemeToggle"), {
+const QuickActions = dynamic(() => import("@/components/QuickActions"), {
   ssr: false,
 });
 
@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <main id="main-content" className="min-h-screen">
       <Navbar />
-      <ThemeToggle />
+      <QuickActions />
       <Hero />
       <LogoLoop />
       <CoreFeatures />
