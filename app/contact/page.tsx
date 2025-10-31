@@ -1,6 +1,5 @@
 import ContactForm from "@/components/ContactForm";
 import BackButton from "@/components/BackButton";
-import Breadcrumbs from "@/components/Breadcrumbs";
 import PageNavigation from "@/components/PageNavigation";
 
 export const metadata = {
@@ -13,7 +12,6 @@ export default function ContactPage() {
   return (
     <main className="min-h-screen bg-cyber-dark">
       <BackButton />
-      <Breadcrumbs />
       <ContactForm />
       <PageNavigation
         previousPage={{

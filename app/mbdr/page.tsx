@@ -1,6 +1,5 @@
 import MBDR from "@/components/MBDR";
 import BackButton from "@/components/BackButton";
-import Breadcrumbs from "@/components/Breadcrumbs";
 import PageNavigation from "@/components/PageNavigation";
 
 export const metadata = {
@@ -13,7 +12,6 @@ export default function MBDRPage() {
   return (
     <main className="min-h-screen bg-cyber-dark">
       <BackButton />
-      <Breadcrumbs />
       <MBDR />
       <PageNavigation
         previousPage={{
