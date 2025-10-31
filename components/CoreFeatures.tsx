@@ -67,7 +67,7 @@ const CoreFeatures = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.1 }}
-            className="text-xs tracking-[0.2em] text-cyber-blue/60 uppercase font-medium mb-8 block"
+            className="text-xs tracking-[0.2em] text-cyber-blue uppercase font-medium mb-8 block"
           >
             Core Capabilities
           </motion.span>

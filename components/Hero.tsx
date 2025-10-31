@@ -33,7 +33,7 @@ const Hero = () => {
             transition={{ delay: 0.1 }}
             className="inline-block"
           >
-            <span className="text-xs tracking-[0.2em] text-cyber-blue/70 uppercase font-medium">
+            <span className="text-xs tracking-[0.2em] text-cyber-blue uppercase font-medium">
               Trust as a Protocol, Not a Policy
             </span>
           </motion.div>
