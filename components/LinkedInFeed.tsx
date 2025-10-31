@@ -25,18 +25,29 @@ export default function LinkedInFeed() {
         });
         if (!res.ok) throw new Error("Failed to load LinkedIn feed");
         const data = await res.json();
-        if (mounted) setItems(data.items);
+        if (mounted) {
+          if (Array.isArray(data.items) && data.items.length > 0) {
+            setItems(data.items);
+          } else {
+            // Fallback to static manual list if API returns empty
+            const staticRes = await fetch("/api/linkedin-static", {
+              next: { revalidate: 60 },
+            });
+            const staticData = await staticRes.json();
+            setItems(staticData.items || []);
+          }
+        }
       } catch (e: any) {
         if (mounted) {
+          try {
+            // Fallback to static manual list
+            const staticRes = await fetch("/api/linkedin-static", {
+              next: { revalidate: 60 },
+            });
+            const staticData = await staticRes.json();
+            setItems(staticData.items || []);
+          } catch {}
           setError(e?.message || "Unable to load feed");
-          // Minimal graceful fallback
-          setItems([
-            {
-              id: "fallback-1",
-              text: "Follow us on LinkedIn for the latest updates on the Resonance Protocol and MBDR.",
-              url: "https://www.linkedin.com/company/cybersecuritystack/",
-            },
-          ]);
         }
       }
     })();
