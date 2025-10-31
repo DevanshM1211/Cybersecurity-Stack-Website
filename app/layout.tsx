@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import { Inter, Roboto_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/contexts/ThemeContext";
+import dynamic from "next/dynamic";
+
+// Client-only Navbar to avoid SSR context issues
+const Navbar = dynamic(() => import("@/components/Navbar"), { ssr: false });
 
 const inter = Inter({
   subsets: ["latin"],
@@ -242,6 +246,7 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <ThemeProvider>
+          <Navbar />
           {/* Skip to main content link for accessibility */}
           <a
             href="#main-content"

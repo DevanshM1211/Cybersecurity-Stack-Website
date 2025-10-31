@@ -105,7 +105,7 @@ const Navbar = () => {
                 whileHover={{ y: -2 }}
                 className={`transition-colors text-sm font-light focus:outline-none focus:text-cyber-blue ${
                   pathname === link.href
-                    ? "text-cyber-blue font-medium"
+                    ? "text-cyber-blue font-medium underline underline-offset-8 decoration-2"
                     : "text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"
                 }`}
               >
@@ -229,7 +229,7 @@ const Navbar = () => {
                         transition={{ delay: index * 0.05 }}
                         className={`block py-3 px-4 rounded-lg transition-all text-sm font-light ${
                           pathname === link.href
-                            ? "text-cyber-blue bg-black/5 dark:bg-white/[0.08]"
+                            ? "text-cyber-blue underline underline-offset-4 decoration-2 bg-black/5 dark:bg-white/[0.08]"
                             : "text-gray-700 hover:text-gray-900 hover:bg-black/5 dark:text-gray-300 dark:hover:text-white dark:hover:bg-white/[0.05]"
                         }`}
                         onClick={() => setIsMobileMenuOpen(false)}
