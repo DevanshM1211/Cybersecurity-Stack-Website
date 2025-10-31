@@ -1,18 +1,8 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import About from "@/components/About";
 import CoreFeatures from "@/components/CoreFeatures";
-import ResonanceProtocol from "@/components/ResonanceProtocol";
-import MBDR from "@/components/MBDR";
-import Solution from "@/components/Solution";
-import Partnership from "@/components/Partnership";
-import Team from "@/components/Team";
-import Mission from "@/components/Mission";
-import FAQ from "@/components/FAQ";
-import Community from "@/components/Community";
-import Footer from "@/components/Footer";
 import TrustSignals from "@/components/TrustSignals";
-import ContactForm from "@/components/ContactForm";
+import Footer from "@/components/Footer";
 import BackToTop from "@/components/BackToTop";
 
 export default function Home() {
@@ -20,18 +10,8 @@ export default function Home() {
     <main id="main-content" className="min-h-screen">
       <Navbar />
       <Hero />
-      <About />
-      <TrustSignals />
       <CoreFeatures />
-      <ResonanceProtocol />
-      <MBDR />
-      <Solution />
-      <Partnership />
-      <Team />
-      <Mission />
-      <FAQ />
-      <ContactForm />
-      <Community />
+      <TrustSignals />
       <Footer />
       <BackToTop />
     </main>

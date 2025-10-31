@@ -77,7 +77,7 @@ const Hero = () => {
               className="flex flex-wrap gap-4 pt-4"
             >
               <motion.a
-                href="#mbdr"
+                href="/mbdr"
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.98 }}
                 className="px-8 py-4 bg-white/[0.03] border border-white/10 rounded-xl text-white font-light hover:bg-white/[0.06] hover:border-cyber-blue/50 transition-all backdrop-blur-sm"
@@ -86,7 +86,7 @@ const Hero = () => {
               </motion.a>
 
               <motion.a
-                href="#resonance"
+                href="/protocol"
                 whileHover={{ y: -2 }}
                 whileTap={{ scale: 0.98 }}
                 className="px-8 py-4 bg-gradient-to-r from-cyber-blue/10 to-cyber-purple/10 border border-cyber-blue/30 rounded-xl text-cyber-blue font-light hover:from-cyber-blue/20 hover:to-cyber-purple/20 transition-all backdrop-blur-sm"

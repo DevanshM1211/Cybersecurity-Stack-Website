@@ -19,18 +19,18 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { name: "About", href: "#about" },
-    { name: "Protocol", href: "#resonance" },
-    { name: "MBDR", href: "#mbdr" },
-    { name: "Solution", href: "#solution" },
-    { name: "Team", href: "#team" },
-    { name: "FAQ", href: "#faq" },
+    { name: "About", href: "/about" },
+    { name: "Protocol", href: "/protocol" },
+    { name: "MBDR", href: "/mbdr" },
+    { name: "Solution", href: "/solution" },
+    { name: "Team", href: "/team" },
+    { name: "FAQ", href: "/faq" },
   ];
 
   // Essential links for desktop nav (minimal)
   const desktopLinks = [
-    { name: "About", href: "#about" },
-    { name: "Protocol", href: "#resonance" },
+    { name: "About", href: "/about" },
+    { name: "Protocol", href: "/protocol" },
   ];
 
   // Close mobile menu on escape key
@@ -63,7 +63,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           {/* Logo - Visible & Clean */}
           <motion.a
-            href="#top"
+            href="/"
             whileHover={{ opacity: 0.8 }}
             className="flex items-center gap-3 cursor-pointer"
           >
@@ -105,7 +105,7 @@ const Navbar = () => {
               </motion.a>
             ))}
             <motion.a
-              href="#contact"
+              href="/contact"
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.98 }}
               className="px-6 py-2.5 bg-white/[0.03] border border-white/10 rounded-xl text-white text-sm font-light hover:bg-white/[0.06] hover:border-cyber-blue/50 transition-all focus:outline-none focus:ring-1 focus:ring-cyber-blue/50 backdrop-blur-sm"
@@ -176,7 +176,7 @@ const Navbar = () => {
                     ))}
                   </div>
                   <motion.a
-                    href="#contact"
+                    href="/contact"
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.3 }}
