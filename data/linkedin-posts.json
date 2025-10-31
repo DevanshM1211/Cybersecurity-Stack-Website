@@ -1,9 +1,24 @@
 {
   "items": [
     {
-      "id": "feed-page",
-      "text": "See our latest updates on LinkedIn — posts and reposts.",
-      "url": "https://www.linkedin.com/company/cyber-security-stack/posts/?feedView=all"
+      "id": "post-1",
+      "text": "Exciting developments in cybersecurity innovation and deep tech — follow our journey as we redefine digital trust.",
+      "url": "https://www.linkedin.com/posts/luke-c-088b61121_cybersecurity-innovation-deeptech-activity-7389624386942840833-CPBv"
+    },
+    {
+      "id": "post-2",
+      "text": "Latest insights on data security and cybersecurity awareness from the CSO Security Summit UK.",
+      "url": "https://www.linkedin.com/posts/cio-online_csosecuritysummituk-datasecurity-cybersecurityawareness-activity-7389617525682032641-Itb1"
+    },
+    {
+      "id": "post-3",
+      "text": "Exploring the intersection of cybersecurity, innovation, and blockchain technology.",
+      "url": "https://www.linkedin.com/posts/davidloaderaiimsearch_cybersecurity-innovation-blockchain-activity-7388869708579512320-CaRc"
+    },
+    {
+      "id": "post-4",
+      "text": "Supply chain security and cybersecurity best practices from the CSO Summit.",
+      "url": "https://www.linkedin.com/posts/luke-c-088b61121_cybersecurity-supplychainsecurity-csosummit-activity-7387525575919161344-b3E-"
     }
   ]
 }
