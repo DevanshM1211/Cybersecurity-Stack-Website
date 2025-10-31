@@ -6,6 +6,7 @@ const config: Config = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  darkMode: "class",
   theme: {
     extend: {
       colors: {
@@ -30,6 +31,8 @@ const config: Config = {
           darker: "#050814", // Darker background
           navy: "#1e3a8a", // Navy blue alias
           lightNavy: "#3b82f6", // Lighter navy for hover states
+          light: "#f8fafc", // Light background
+          lighter: "#ffffff", // Lighter background
         },
       },
       backgroundImage: {
