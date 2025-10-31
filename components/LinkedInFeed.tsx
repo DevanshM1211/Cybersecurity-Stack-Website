@@ -82,9 +82,6 @@ export default function LinkedInFeed() {
               LinkedIn <Linkedin size={28} />
             </span>
           </h2>
-          <p className="mt-4 text-gray-600 dark:text-gray-400 text-lg">
-            New posts and reposts update here automatically.
-          </p>
         </div>
 
         {/* Grid of posts */}
