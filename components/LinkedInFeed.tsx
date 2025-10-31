@@ -6,6 +6,10 @@ import { ExternalLink, Linkedin } from "lucide-react";
 
 type FeedItem = {
   id: string;
+  title?: string;
+  preview?: string;
+  author?: string;
+  date?: string;
   text?: string;
   url: string;
   createdAt?: string;
@@ -85,37 +89,45 @@ export default function LinkedInFeed() {
 
         {/* Grid of posts */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {(items || []).map((item, i) => (
-            <motion.a
+          {(items || []).slice(0, 3).map((item, i) => (
+            <motion.div
               key={item.id}
-              href={item.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ y: -4 }}
-              className="group block p-6 rounded-xl border bg-black/5 border-black/10 dark:bg-white/[0.02] dark:border-white/10 transition-all hover:bg-black/10 dark:hover:bg-white/[0.04]"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.1 }}
+              className="group p-6 rounded-xl border bg-black/5 border-black/10 dark:bg-white/[0.02] dark:border-white/10 transition-all hover:border-cyber-blue/30 dark:hover:border-cyber-blue/30"
             >
-              {item.imageUrl && (
-                <div className="mb-4 overflow-hidden rounded-lg max-h-48">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={item.imageUrl}
-                    alt="LinkedIn post"
-                    className="w-full object-cover"
-                  />
+              {/* Author & Date */}
+              {(item.author || item.date) && (
+                <div className="flex items-center justify-between mb-4 text-sm text-gray-500 dark:text-gray-400">
+                  {item.author && <span>{item.author}</span>}
+                  {item.date && <span>{item.date}</span>}
                 </div>
               )}
-              <div className="text-sm text-gray-500 dark:text-gray-400 mb-2">
-                {item.createdAt
-                  ? new Date(item.createdAt).toLocaleString()
-                  : "Recent"}
-              </div>
-              <div className="text-base text-gray-900 dark:text-white line-clamp-4">
-                {item.text || "View on LinkedIn"}
-              </div>
-              <div className="mt-4 inline-flex items-center gap-2 text-cyber-blue">
-                Open post <ExternalLink size={16} />
-              </div>
-            </motion.a>
+
+              {/* Title */}
+              {item.title && (
+                <h3 className="text-xl font-semibold mb-3 text-gray-900 dark:text-white group-hover:text-cyber-blue transition-colors">
+                  {item.title}
+                </h3>
+              )}
+
+              {/* Preview text */}
+              <p className="text-base leading-relaxed text-gray-700 dark:text-gray-400 mb-6 line-clamp-4">
+                {item.preview || item.text || "Read more on LinkedIn..."}
+              </p>
+
+              {/* Read More CTA */}
+              <motion.a
+                href={item.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ x: 4 }}
+                className="inline-flex items-center gap-2 text-cyber-blue font-medium group-hover:gap-3 transition-all"
+              >
+                Read more on LinkedIn <ExternalLink size={16} />
+              </motion.a>
+            </motion.div>
           ))}
 
           {!items &&

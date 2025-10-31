@@ -2,23 +2,27 @@
   "items": [
     {
       "id": "post-1",
-      "text": "Exciting developments in cybersecurity innovation and deep tech — follow our journey as we redefine digital trust.",
+      "title": "Cybersecurity Innovation & Deep Tech",
+      "preview": "Exciting developments in cybersecurity innovation and deep tech — follow our journey as we redefine digital trust through the Resonance Protocol and MBDR framework.",
+      "author": "Luke C.",
+      "date": "October 2025",
       "url": "https://www.linkedin.com/posts/luke-c-088b61121_cybersecurity-innovation-deeptech-activity-7389624386942840833-CPBv"
     },
     {
       "id": "post-2",
-      "text": "Latest insights on data security and cybersecurity awareness from the CSO Security Summit UK.",
+      "title": "CSO Security Summit UK Insights",
+      "preview": "Latest insights on data security and cybersecurity awareness from the CSO Security Summit UK. Exploring how federated trust architectures are reshaping enterprise defense.",
+      "author": "CIO Online",
+      "date": "October 2025",
       "url": "https://www.linkedin.com/posts/cio-online_csosecuritysummituk-datasecurity-cybersecurityawareness-activity-7389617525682032641-Itb1"
     },
     {
       "id": "post-3",
-      "text": "Exploring the intersection of cybersecurity, innovation, and blockchain technology.",
+      "title": "Innovation at the Intersection",
+      "preview": "Exploring the intersection of cybersecurity, innovation, and blockchain technology. How cryptographic trust contracts enable real-time threat isolation.",
+      "author": "David Loader",
+      "date": "October 2025",
       "url": "https://www.linkedin.com/posts/davidloaderaiimsearch_cybersecurity-innovation-blockchain-activity-7388869708579512320-CaRc"
-    },
-    {
-      "id": "post-4",
-      "text": "Supply chain security and cybersecurity best practices from the CSO Summit.",
-      "url": "https://www.linkedin.com/posts/luke-c-088b61121_cybersecurity-supplychainsecurity-csosummit-activity-7387525575919161344-b3E-"
     }
   ]
 }
