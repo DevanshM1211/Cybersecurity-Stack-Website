@@ -87,7 +87,7 @@ const Navbar = () => {
               </div>
             )}
             <div className="flex flex-col leading-tight">
-              <span className="text-lg font-light text-white tracking-tight">
+              <span className="text-lg font-light tracking-tight text-gray-900 dark:text-white">
                 Cyber Security Stack
               </span>
             </div>
@@ -106,7 +106,7 @@ const Navbar = () => {
                 className={`transition-colors text-sm font-light focus:outline-none focus:text-cyber-blue ${
                   pathname === link.href
                     ? "text-cyber-blue font-medium"
-                    : "text-gray-300 hover:text-white"
+                    : "text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"
                 }`}
               >
                 {link.name}
@@ -118,19 +118,29 @@ const Navbar = () => {
               whileTap={{ scale: 0.98 }}
               className={`px-6 py-2.5 border rounded-xl text-sm font-light transition-all focus:outline-none focus:ring-1 focus:ring-cyber-blue/50 backdrop-blur-sm ${
                 pathname === "/contact"
-                  ? "bg-cyber-blue/20 border-cyber-blue text-white"
-                  : "bg-white/[0.03] border-white/10 text-white hover:bg-white/[0.06] hover:border-cyber-blue/50"
+                  ? "bg-cyber-blue/10 border-cyber-blue text-gray-900 dark:text-white"
+                  : "bg-black/5 border-black/10 text-gray-900 hover:bg-black/10 dark:bg-white/[0.03] dark:border-white/10 dark:text-white dark:hover:bg-white/[0.06] dark:hover:border-cyber-blue/50"
               }`}
             >
               Contact
             </motion.a>
 
-            {/* Theme Toggle Button */}
+            {/* Hamburger for remaining items on desktop */}
+            <button
+              className="p-2 hover:bg-white/[0.05] rounded-lg transition-colors"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+              aria-expanded={isMobileMenuOpen}
+            >
+              {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
+            </button>
+
+            {/* Theme Toggle Button - moved to the right of hamburger */}
             <motion.button
               onClick={toggleTheme}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="p-2 hover:bg-white/[0.05] rounded-lg transition-colors"
+              className="p-2 hover:bg-black/5 rounded-lg transition-colors dark:hover:bg-white/[0.05]"
               aria-label="Toggle theme"
               title={
                 theme === "dark"
@@ -146,25 +156,26 @@ const Navbar = () => {
                 {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
               </motion.div>
             </motion.button>
-
-            {/* Hamburger for remaining items on desktop */}
-            <button
-              className="p-2 hover:bg-white/[0.05] rounded-lg transition-colors"
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
-              aria-expanded={isMobileMenuOpen}
-            >
-              {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
-            </button>
           </nav>
 
           {/* Mobile - Theme Toggle and Menu Button */}
           <div className="md:hidden flex items-center gap-2">
+            {/* Hamburger first */}
+            <button
+              className="p-2 rounded-lg transition-colors hover:bg-black/5 dark:text-white dark:hover:bg-white/[0.05]"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+              aria-expanded={isMobileMenuOpen}
+            >
+              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+
+            {/* Theme toggle to the right of hamburger */}
             <motion.button
               onClick={toggleTheme}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="text-white p-2 hover:bg-white/[0.05] rounded-lg transition-colors"
+              className="p-2 rounded-lg transition-colors hover:bg-black/5 dark:text-white dark:hover:bg-white/[0.05]"
               aria-label="Toggle theme"
               title={
                 theme === "dark"
@@ -180,15 +191,6 @@ const Navbar = () => {
                 {theme === "dark" ? <Sun size={24} /> : <Moon size={24} />}
               </motion.div>
             </motion.button>
-
-            <button
-              className="text-white p-2 hover:bg-white/[0.05] rounded-lg transition-colors"
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
-              aria-expanded={isMobileMenuOpen}
-            >
-              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
           </div>
         </div>
 
@@ -227,8 +229,8 @@ const Navbar = () => {
                         transition={{ delay: index * 0.05 }}
                         className={`block py-3 px-4 rounded-lg transition-all text-sm font-light ${
                           pathname === link.href
-                            ? "text-cyber-blue bg-white/[0.08]"
-                            : "text-gray-300 hover:text-white hover:bg-white/[0.05]"
+                            ? "text-cyber-blue bg-black/5 dark:bg-white/[0.08]"
+                            : "text-gray-700 hover:text-gray-900 hover:bg-black/5 dark:text-gray-300 dark:hover:text-white dark:hover:bg-white/[0.05]"
                         }`}
                         onClick={() => setIsMobileMenuOpen(false)}
                       >

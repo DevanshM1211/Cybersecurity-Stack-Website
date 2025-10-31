@@ -109,10 +109,10 @@ const CoreFeatures = () => {
                 <div className="mb-6 text-cyber-blue group-hover:scale-110 transition-transform">
                   {feature.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-white mb-3">
+                <h3 className="text-xl font-semibold mb-3 text-gray-900 dark:text-white">
                   {feature.title}
                 </h3>
-                <p className="text-sm text-gray-400 leading-relaxed">
+                <p className="text-sm leading-relaxed text-gray-600 dark:text-gray-400">
                   {feature.description}
                 </p>
               </div>

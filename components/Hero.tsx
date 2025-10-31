@@ -54,10 +54,12 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="text-xl md:text-2xl text-gray-400 leading-relaxed font-light max-w-3xl mx-auto"
+            className="text-xl md:text-2xl leading-relaxed font-light max-w-3xl mx-auto text-gray-700 dark:text-gray-400"
           >
             Autonomous cyber defence powered by the{" "}
-            <span className="text-white font-normal">Resonance Protocol</span>
+            <span className="font-normal text-gray-900 dark:text-white">
+              Resonance Protocol
+            </span>
             —real-time integrity verification through federated trust.
           </motion.p>
 
@@ -71,7 +73,7 @@ const Hero = () => {
               href="/mbdr"
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.98 }}
-              className="px-8 py-4 bg-white/[0.03] border border-white/10 rounded-xl text-white font-light hover:bg-white/[0.06] hover:border-cyber-blue/50 transition-all backdrop-blur-sm"
+              className="px-8 py-4 rounded-xl font-light transition-all backdrop-blur-sm border text-gray-900 hover:bg-black/10 border-black/10 bg-black/5 dark:text-white dark:hover:bg-white/[0.06] dark:border-white/10 dark:bg-white/[0.03]"
             >
               Explore MBDR
             </motion.a>

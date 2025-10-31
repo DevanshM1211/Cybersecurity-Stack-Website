@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Mail } from "lucide-react";
+import Image from "next/image";
+import MerkleTree from "@/components/MerkleTree";
 
 const About = () => {
   const ref = useRef(null);
@@ -21,7 +23,7 @@ const About = () => {
         }}
       />
 
-      <div className="container mx-auto px-6 relative z-10 max-w-4xl">
+      <div className="container mx-auto px-6 relative z-10 max-w-6xl">
         {/* Minimalist Badge */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -49,36 +51,62 @@ const About = () => {
           Not a Policy
         </motion.h2>
 
-        {/* Main Content - Ultra Clean */}
+        {/* Main Content with imagery */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-center space-y-6 mb-16"
+          className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start mb-16"
         >
-          <p className="text-lg md:text-xl text-gray-400 leading-relaxed font-light max-w-3xl mx-auto">
-            We're pioneering next-generation cyber security with the{" "}
-            <span className="text-white font-medium">
-              Resonance Protocol (RP)
-            </span>
-            —a federated trust system that creates ransomware-resistant,
-            integrity-first architectures where tampering is detected and
-            isolated in real time.
-          </p>
+          {/* Text column */}
+          <div className="space-y-6 text-left">
+            <p className="text-lg md:text-xl leading-relaxed font-light text-gray-700 dark:text-gray-400">
+              We're pioneering next-generation cyber security with the{" "}
+              <span className="font-medium text-gray-900 dark:text-white">
+                Resonance Protocol (RP)
+              </span>
+              —a federated trust system that creates ransomware-resistant,
+              integrity-first architectures where tampering is detected and
+              isolated in real time.
+            </p>
 
-          <p className="text-base md:text-lg text-gray-400 leading-relaxed max-w-3xl mx-auto">
-            Cyber Security Stack (CSS) is a cyber security startup pioneering
-            next-generation solutions, with its flagship innovation being the
-            Resonance Protocol (RP). RP is a federated trust protocol that
-            treats every system as a self-verifying “hive,” where each layer
-            (hardware, firmware, kernel, process, application) generates
-            cryptographically signed Merkle tree blocks to prove integrity.
-            Adjacent hives only establish trust through scoped, signed “trust
-            contracts,” meaning that if tampering occurs the affected component
-            is rejected and isolated in real time. Together, CSS and RP aim to
-            redefine resilience for enterprise IT, OT, and IoT environments by
-            creating a ransomware-resistant, integrity-first architecture.
-          </p>
+            <p className="text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-400">
+              Cyber Security Stack (CSS) is a cyber security startup pioneering
+              next-generation solutions, with its flagship innovation being the
+              Resonance Protocol (RP). RP is a federated trust protocol that
+              treats every system as a self-verifying “hive,” where each layer
+              (hardware, firmware, kernel, process, application) generates
+              cryptographically signed Merkle tree blocks to prove integrity.
+              Adjacent hives only establish trust through scoped, signed “trust
+              contracts,” meaning that if tampering occurs the affected
+              component is rejected and isolated in real time. Together, CSS and
+              RP aim to redefine resilience for enterprise IT, OT, and IoT
+              environments by creating a ransomware-resistant, integrity-first
+              architecture.
+            </p>
+          </div>
+
+          {/* Imagery column */}
+          <div className="space-y-6">
+            {/* Logo image */}
+            <div className="glass-effect rounded-xl border border-white/10 dark:border-white/10 p-6 flex items-center justify-center bg-black/5 dark:bg-white/[0.02]">
+              <Image
+                src="/logo.png"
+                alt="Cyber Security Stack Logo"
+                width={320}
+                height={320}
+                className="w-auto h-20 md:h-24"
+                priority
+              />
+            </div>
+
+            {/* Merkle diagram preview */}
+            <div className="rounded-xl overflow-hidden border border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/[0.02]">
+              <div className="max-h-72 overflow-hidden">
+                <MerkleTree />
+              </div>
+            </div>
+          </div>
         </motion.div>
 
         {/* Divider Line */}
@@ -115,7 +143,7 @@ const About = () => {
 
               <div className="relative flex items-center gap-4">
                 <Mail className="w-5 h-5 text-cyber-blue" />
-                <span className="text-lg text-white font-light tracking-wide">
+                <span className="text-lg font-light tracking-wide text-gray-900 dark:text-white">
                   hello@cybersecuritystack.co.uk
                 </span>
               </div>
