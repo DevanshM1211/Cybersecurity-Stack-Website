@@ -4,11 +4,13 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [imgError, setImgError] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -99,7 +101,11 @@ const Navbar = () => {
                 key={index}
                 href={link.href}
                 whileHover={{ y: -2 }}
-                className="text-gray-300 hover:text-white transition-colors text-sm font-light focus:outline-none focus:text-cyber-blue"
+                className={`transition-colors text-sm font-light focus:outline-none focus:text-cyber-blue ${
+                  pathname === link.href
+                    ? "text-cyber-blue font-medium"
+                    : "text-gray-300 hover:text-white"
+                }`}
               >
                 {link.name}
               </motion.a>
@@ -108,7 +114,11 @@ const Navbar = () => {
               href="/contact"
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.98 }}
-              className="px-6 py-2.5 bg-white/[0.03] border border-white/10 rounded-xl text-white text-sm font-light hover:bg-white/[0.06] hover:border-cyber-blue/50 transition-all focus:outline-none focus:ring-1 focus:ring-cyber-blue/50 backdrop-blur-sm"
+              className={`px-6 py-2.5 border rounded-xl text-sm font-light transition-all focus:outline-none focus:ring-1 focus:ring-cyber-blue/50 backdrop-blur-sm ${
+                pathname === "/contact"
+                  ? "bg-cyber-blue/20 border-cyber-blue text-white"
+                  : "bg-white/[0.03] border-white/10 text-white hover:bg-white/[0.06] hover:border-cyber-blue/50"
+              }`}
             >
               Contact
             </motion.a>
@@ -168,7 +178,11 @@ const Navbar = () => {
                         initial={{ opacity: 0, x: -10 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: index * 0.05 }}
-                        className="block py-3 px-4 text-gray-300 hover:text-white hover:bg-white/[0.05] rounded-lg transition-all text-sm font-light"
+                        className={`block py-3 px-4 rounded-lg transition-all text-sm font-light ${
+                          pathname === link.href
+                            ? "text-cyber-blue bg-white/[0.08]"
+                            : "text-gray-300 hover:text-white hover:bg-white/[0.05]"
+                        }`}
                         onClick={() => setIsMobileMenuOpen(false)}
                       >
                         {link.name}
