@@ -12,45 +12,81 @@ const FAQ = () => {
 
   const faqs = [
     {
+      question: "What is Cyber Security Stack (CSS)?",
+      answer:
+        "Cyber Security Stack is a UK-based cyber innovation company pioneering the Resonance Protocol — a trust contract framework that ensures system integrity using Merkle-tree-based verification. Our mission is to make digital systems verifiably trustworthy.",
+    },
+    {
       question: "What is the Resonance Protocol?",
       answer:
-        "The Resonance Protocol (RP) is a federated trust protocol that treats every system as a self-verifying 'hive.' Each layer—hardware, firmware, kernel, process, and application—generates cryptographically signed Merkle tree blocks to prove integrity. Adjacent hives establish trust through scoped, signed contracts, meaning tampering is detected and isolated in real time.",
+        "The Resonance Protocol is a federated trust protocol that enables systems (devices, applications, or networks) to verify their internal integrity and establish trust contracts with other systems. It detects tampering in real time and isolates compromised components automatically.",
     },
     {
       question:
-        "How does MBDR differ from traditional cybersecurity solutions?",
+        "How is CSS different from traditional cybersecurity solutions?",
       answer:
-        "Unlike traditional signature-based or behavior-based detection, MBDR (Merkle-Based Detection and Response) provides cryptographic proof of system integrity at every layer. It operates autonomously without human intervention, detecting and isolating compromised components in real time—often in under 1 millisecond. This makes it ransomware-resistant by design.",
-    },
-    {
-      question: "Which environments does the Resonance Protocol support?",
-      answer:
-        "The Resonance Protocol is designed to work seamlessly across IT, OT (Operational Technology), and IoT environments. It's lightweight and flexible enough to run on everything from enterprise servers to industrial control systems and IoT devices, adapting to diverse infrastructures without compromising performance.",
+        "Traditional security tools detect or prevent attacks after they happen. The Resonance Protocol builds security into the system's DNA — continuously verifying integrity and revoking trust if anomalies are detected.",
     },
     {
       question: "Is the Resonance Protocol open source?",
       answer:
-        "Yes! We maintain an open GitHub repository with whitepapers, proof-of-concept implementations, and documentation. We invite security professionals, researchers, and innovators to explore, test, and even try to break it. Transparency is core to building trust in our technology.",
+        "Yes, part of it is. The foundational layer (Passive Mode) is open source and being positioned for IETF standardisation to promote adoption. The enterprise version (Active Mode) includes orchestration, network isolation, and advanced telemetry for commercial use.",
     },
     {
-      question: "How was Cyber Security Stack developed?",
+      question:
+        "How does CSS complement initiatives like Cloudflare's Merkle Tree Certificates?",
       answer:
-        "Cyber Security Stack (CSS) developed the Resonance Protocol through rigorous research at the University of Oxford. This partnership combines world-leading cryptographic expertise with cutting-edge federated trust architecture, backed by academic rigor and peer-reviewed security protocols.",
+        "Both approaches aim to increase transparency and trust on the internet. CSS extends this principle beyond certificates into full-system trust verification, enabling endpoints and IoT devices to self-verify and establish real-time trust boundaries.",
     },
     {
-      question: "What makes the solution 'ransomware-resistant'?",
+      question: "Who are CSS's target clients?",
       answer:
-        "The integrity-first architecture means every component continuously proves its authenticity through cryptographic verification. If ransomware attempts to tamper with any layer, the trust chain breaks instantly, and the affected component is automatically rejected and isolated before it can spread—making traditional ransomware attacks ineffective.",
+        "CSS primarily works with enterprise IT, OT, and IoT sectors — especially those with complex infrastructures that require verifiable integrity such as councils, manufacturers, and service providers.",
     },
     {
-      question: "How do I get started with Cyber Security Stack?",
+      question: "What stage of development is CSS in?",
       answer:
-        "Getting started is simple: our solution includes lightweight agents for endpoint protection, a SaaS platform for centralized management and dashboards, and professional services for onboarding, technical review, and ongoing support. Contact us to schedule a demo and see the Resonance Protocol in action.",
+        "CSS has completed the first-generation prototype of the Resonance Protocol, is onboarding early design partners, and is preparing its MVP for pre-seed investment.",
     },
     {
-      question: "What is the performance impact of MBDR?",
+      question: "What is a 'trust contract'?",
       answer:
-        "MBDR is engineered for speed without sacrificing security. Our lightweight agents have minimal footprint, and detection happens in real time (typically under 1ms). The system is designed to be 'super fast'—providing enterprise-grade protection without adding complexity or slowing down operations.",
+        "A trust contract is a digitally signed agreement between two verified systems, based on their validated Merkle roots and defined communication policies. It allows only trusted systems to exchange data.",
+    },
+    {
+      question: "What happens when tampering is detected?",
+      answer:
+        "If a system deviates from its baseline (indicating tampering), the protocol immediately revokes its trust contract and isolates it from the network until revalidation occurs.",
+    },
+    {
+      question: "How does CSS generate revenue?",
+      answer:
+        "Through enterprise licensing, managed trust orchestration services, and integration consultancy for companies adopting the Resonance Protocol in Active Mode.",
+    },
+    {
+      question: "Who are your partners or supporters?",
+      answer:
+        "CSS collaborates with innovation hubs such as Plexal, Innovate UK, and regional academic and industry networks to accelerate adoption and research in trust-based security.",
+    },
+    {
+      question: "How can organisations get involved?",
+      answer:
+        "Organisations can apply to become design partners or pilot sites, gaining early access to the technology and influencing its development roadmap.",
+    },
+    {
+      question: "How can investors participate?",
+      answer:
+        "CSS is currently in its pre-seed phase and open to investment discussions with angels, VCs, and strategic partners aligned with cyber resilience and IoT security innovation.",
+    },
+    {
+      question: "Where is CSS based?",
+      answer:
+        "CSS is headquartered in Manchester, UK, with a network of partners and collaborators across the country.",
+    },
+    {
+      question: "How can I contact CSS?",
+      answer:
+        "You can reach us through the website's contact form or by emailing the team at info@cybersecuritystack.io.",
     },
   ];
 
