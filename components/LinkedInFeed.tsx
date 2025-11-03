@@ -33,23 +33,40 @@ export default function LinkedInFeed() {
           if (Array.isArray(data.items) && data.items.length > 0) {
             setItems(data.items);
           } else {
-            // Fallback to static manual list if API returns empty
-            const staticRes = await fetch("/api/linkedin-static", {
-              next: { revalidate: 60 },
+            // Try Google Sheet-based source next
+            const sheetRes = await fetch("/api/linkedin-sheet", {
+              next: { revalidate: 120 },
             });
-            const staticData = await staticRes.json();
-            setItems(staticData.items || []);
+            const sheetData = await sheetRes.json();
+            if (Array.isArray(sheetData.items) && sheetData.items.length > 0) {
+              setItems(sheetData.items);
+            } else {
+              // Fallback to static manual list if others empty
+              const staticRes = await fetch("/api/linkedin-static", {
+                next: { revalidate: 60 },
+              });
+              const staticData = await staticRes.json();
+              setItems(staticData.items || []);
+            }
           }
         }
       } catch (e: any) {
         if (mounted) {
           try {
-            // Fallback to static manual list
-            const staticRes = await fetch("/api/linkedin-static", {
-              next: { revalidate: 60 },
+            // Try sheet fallback first on error as well
+            const sheetRes = await fetch("/api/linkedin-sheet", {
+              next: { revalidate: 120 },
             });
-            const staticData = await staticRes.json();
-            setItems(staticData.items || []);
+            const sheetData = await sheetRes.json();
+            if (Array.isArray(sheetData.items) && sheetData.items.length > 0) {
+              setItems(sheetData.items || []);
+            } else {
+              const staticRes = await fetch("/api/linkedin-static", {
+                next: { revalidate: 60 },
+              });
+              const staticData = await staticRes.json();
+              setItems(staticData.items || []);
+            }
           } catch {}
           setError(e?.message || "Unable to load feed");
         }
