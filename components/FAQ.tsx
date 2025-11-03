@@ -88,6 +88,32 @@ const FAQ = () => {
       answer:
         "You can reach us through the website's contact form or by emailing the team at info@cybersecuritystack.io.",
     },
+    // Additional FAQs (kept from the original set)
+    {
+      question: "Which environments does the Resonance Protocol support?",
+      answer:
+        "The Resonance Protocol is designed to work seamlessly across IT, OT (Operational Technology), and IoT environments. It's lightweight and flexible enough to run on everything from enterprise servers to industrial control systems and IoT devices, adapting to diverse infrastructures without compromising performance.",
+    },
+    {
+      question: "What is the performance impact of MBDR?",
+      answer:
+        "MBDR is engineered for speed without sacrificing security. Our lightweight agents have minimal footprint, and detection happens in real time (typically under 1ms). The system is designed to be 'super fast'—providing enterprise-grade protection without adding complexity or slowing down operations.",
+    },
+    {
+      question: "How do I get started with Cyber Security Stack?",
+      answer:
+        "Getting started is simple: our solution includes lightweight agents for endpoint protection, a SaaS platform for centralized management and dashboards, and professional services for onboarding, technical review, and ongoing support. Contact us to schedule a demo and see the Resonance Protocol in action.",
+    },
+    {
+      question: "What makes the solution 'ransomware-resistant'?",
+      answer:
+        "The integrity-first architecture means every component continuously proves its authenticity through cryptographic verification. If ransomware attempts to tamper with any layer, the trust chain breaks instantly, and the affected component is automatically rejected and isolated before it can spread—making traditional ransomware attacks ineffective.",
+    },
+    {
+      question: "How was Cyber Security Stack developed?",
+      answer:
+        "Cyber Security Stack (CSS) developed the Resonance Protocol through rigorous research at the University of Oxford. This partnership combines world-leading cryptographic expertise with cutting-edge federated trust architecture, backed by academic rigor and peer-reviewed security protocols.",
+    },
   ];
 
   return (
