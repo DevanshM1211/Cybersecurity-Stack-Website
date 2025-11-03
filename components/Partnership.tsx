@@ -58,7 +58,7 @@ const Partnership = () => {
               </strong>{" "}
               developed the Resonance Protocol through rigorous research at the{" "}
               <strong className="text-cyber-purple">
-                University of Oxford Innovation Incubator
+                University of Oxford
               </strong>
               . This partnership combines world-leading cryptographic expertise
               with cutting-edge federated trust architecture.
@@ -141,9 +141,9 @@ const Partnership = () => {
                 <div className="text-center mb-8">
                   <GraduationCap className="w-24 h-24 mx-auto text-cyber-purple mb-4" />
                   <h3 className="text-2xl font-bold text-white mb-2">
-                    Innovation Incubator
+                    University of Oxford
                   </h3>
-                  <p className="text-gray-400">University of Oxford</p>
+                  <p className="text-gray-400">Research Partnership</p>
                 </div>
 
                 <div className="grid grid-cols-2 gap-6">

@@ -16,7 +16,7 @@ See [DEPLOYMENT.md](./DEPLOYMENT.md) for detailed deployment instructions.
 
 ## 🚀 About
 
-Cyber Security Stack is a deep-tech cybersecurity company pioneering a new paradigm in autonomous cyber defence. Developed in partnership with the University of Oxford via its Innovation Incubator, we're building the next generation of Zero Trust Architecture through the Resonance Protocol and MBDR framework.
+Cyber Security Stack is a deep-tech cybersecurity company pioneering a new paradigm in autonomous cyber defence. Developed in partnership with the University of Oxford, we're building the next generation of Zero Trust Architecture through the Resonance Protocol and MBDR framework.
 
 ## ✨ Features
 
@@ -202,7 +202,7 @@ This project is proprietary software of Cyber Security Stack Ltd.
 ## 🔗 Links
 
 - **GitHub Repository**: https://github.com/DevanshM1211/Cybersecurity-Stack-Website
-- **University of Oxford Innovation Incubator**: https://innovation.ox.ac.uk/
+- **University of Oxford**: https://www.ox.ac.uk/
 
 ## 📧 Contact
 

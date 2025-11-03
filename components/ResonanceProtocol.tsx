@@ -312,8 +312,7 @@ const ResonanceProtocol = () => {
           className="mt-16 text-center"
         >
           <p className="text-lg text-gray-300 mb-6">
-            Developed in partnership with the University of Oxford via its
-            Innovation Incubator
+            Developed in partnership with the University of Oxford
           </p>
           <motion.button
             whileHover={{ scale: 1.05 }}

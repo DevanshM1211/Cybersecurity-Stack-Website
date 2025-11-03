@@ -67,14 +67,14 @@ const About = () => {
             </p>
 
             <p className="text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-400">
-              Developed in partnership with the University of Oxford via its
-              Innovation Incubator, the Resonance Protocol is not a single
-              product or agent. It represents a new approach to digital
-              architecture, embedding verifiable trust and integrity deep into
-              the fabric of digital ecosystems. This is Zero Trust Architecture
-              realised at its most fundamental level, extending from firmware,
-              kernel, and chip, through operating systems and runtime
-              environments, and across IoT, OT, and IT infrastructures.
+              Developed in partnership with the University of Oxford, the
+              Resonance Protocol is not a single product or agent. It represents
+              a new approach to digital architecture, embedding verifiable trust
+              and integrity deep into the fabric of digital ecosystems. This is
+              Zero Trust Architecture realised at its most fundamental level,
+              extending from firmware, kernel, and chip, through operating
+              systems and runtime environments, and across IoT, OT, and IT
+              infrastructures.
             </p>
 
             <p className="text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-400">
