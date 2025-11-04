@@ -6,6 +6,7 @@ import dynamic from "next/dynamic";
 
 // Client-only Navbar to avoid SSR context issues
 const Navbar = dynamic(() => import("@/components/Navbar"), { ssr: false });
+const Footer = dynamic(() => import("@/components/Footer"), { ssr: false });
 
 const inter = Inter({
   subsets: ["latin"],
@@ -255,6 +256,7 @@ export default function RootLayout({
             Skip to main content
           </a>
           {children}
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
