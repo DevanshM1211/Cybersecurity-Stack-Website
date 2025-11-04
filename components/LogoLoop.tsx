@@ -6,43 +6,38 @@ const LogoLoop = () => {
   // Partner/certification logos - you can replace these with actual logo paths
   const logos = [
     {
-      name: "Plexal",
-      src: "/team/plexal.png",
-      alt: "Plexal",
-    },
-    {
       name: "Oxford University",
       src: "/team/oxford.png",
       alt: "Oxford University",
     },
     {
       name: "Innovate UK",
-      src: "/team/innovateuk.png",
+      src: "/team/Innovate UK.png",
       alt: "Innovate UK",
     },
     {
       name: "Breakthrough Founders",
-      src: "/team/breakthroughfounders.png",
+      src: "/team/Breakthrough founders.png",
       alt: "Breakthrough Founders",
     },
     {
       name: "NatWest Accelerator",
-      src: "/team/natwest.png",
+      src: "/team/Natwest Acelerator.png",
       alt: "NatWest Accelerator",
     },
     {
       name: "Barclays Digital Eagle",
-      src: "/team/barclays.png",
+      src: "/team/Barclays digital eagle.png",
       alt: "Barclays Digital Eagle",
     },
     {
       name: "Manchester DiSH",
-      src: "/team/manchester.png",
+      src: "/team/Manchester dish.png",
       alt: "Manchester DiSH",
     },
     {
       name: "Google for Startups",
-      src: "/team/google.png",
+      src: "/team/Google for startups.png",
       alt: "Google for Startups",
     },
   ];
