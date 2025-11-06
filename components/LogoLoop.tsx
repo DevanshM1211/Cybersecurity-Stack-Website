@@ -77,14 +77,13 @@ const LogoLoop = () => {
           {duplicatedLogos.map((logo, index) => (
             <div
               key={index}
-              className="flex-shrink-0 w-40 h-20 flex items-center justify-center grayscale hover:grayscale-0 opacity-50 hover:opacity-100 transition-all duration-300"
+              className="flex-shrink-0 w-40 h-20 flex items-center justify-center hover:scale-105 transition-all duration-300"
             >
               <div className="glass-effect rounded-lg p-4 w-full h-full flex items-center justify-center border border-white/5">
                 <img
                   src={logo.src}
                   alt={logo.alt}
                   className="max-w-full max-h-full object-contain"
-                  style={{ width: "100%", height: "100%" }}
                 />
               </div>
             </div>

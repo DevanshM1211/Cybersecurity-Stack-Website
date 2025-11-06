@@ -107,8 +107,8 @@ const Footer = () => {
           ))}
         </div>
 
-        {/* Newsletter */}
-        <div className="glass-effect rounded-xl p-8 mb-12">
+        {/* Newsletter - Hidden for now */}
+        {/* <div className="glass-effect rounded-xl p-8 mb-12">
           <div className="max-w-2xl mx-auto text-center">
             <h3 className="text-2xl font-bold text-white mb-4">
               Stay Updated on the Future of Cybersecurity
@@ -132,7 +132,7 @@ const Footer = () => {
               </motion.button>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-gray-800">

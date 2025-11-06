@@ -11,26 +11,26 @@ const config: Config = {
     extend: {
       colors: {
         primary: {
-          50: "#f0f4ff",
-          100: "#e0e9ff",
-          200: "#c7d7fe",
-          300: "#a5b9fc",
-          400: "#8091f9",
-          500: "#6366f1",
-          600: "#4f46e5",
-          700: "#4338ca",
-          800: "#3730a3",
-          900: "#312e81",
-          950: "#1e1b4b",
+          50: "#e6f5ff",
+          100: "#b3e0ff",
+          200: "#80ccff",
+          300: "#4db8ff",
+          400: "#1aa3ff",
+          500: "#008fff", // Brand primary
+          600: "#0077cc",
+          700: "#005ab2", // Brand secondary
+          800: "#004d99",
+          900: "#00397c", // Brand tertiary
+          950: "#002855",
         },
         cyber: {
-          blue: "#1e3a8a", // Navy blue - primary brand color
-          purple: "#6366f1", // Indigo/purple accent
-          pink: "#ec4899", // Keep pink accent
+          blue: "#008fff", // Brand primary color
+          purple: "#005ab2", // Brand secondary accent
+          pink: "#008fff", // Using brand primary
           dark: "#0a0e27", // Dark background
           darker: "#050814", // Darker background
-          navy: "#1e3a8a", // Navy blue alias
-          lightNavy: "#3b82f6", // Lighter navy for hover states
+          navy: "#00397c", // Brand tertiary - darkest
+          lightNavy: "#008fff", // Brand primary for hover states
           light: "#f8fafc", // Light background
           lighter: "#ffffff", // Lighter background
         },
@@ -39,9 +39,9 @@ const config: Config = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-        "cyber-gradient": "linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%)",
+        "cyber-gradient": "linear-gradient(135deg, #00397c 0%, #008fff 100%)",
         "mesh-gradient":
-          "radial-gradient(at 40% 20%, hsla(220,70%,30%,0.5) 0px, transparent 50%), radial-gradient(at 80% 0%, hsla(240,60%,40%,0.5) 0px, transparent 50%), radial-gradient(at 0% 50%, hsla(220,80%,35%,0.5) 0px, transparent 50%)",
+          "radial-gradient(at 40% 20%, hsla(200,100%,50%,0.3) 0px, transparent 50%), radial-gradient(at 80% 0%, hsla(210,100%,35%,0.3) 0px, transparent 50%), radial-gradient(at 0% 50%, hsla(205,100%,25%,0.3) 0px, transparent 50%)",
       },
       animation: {
         "pulse-slow": "pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",

@@ -23,18 +23,14 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
+    { name: "Home", href: "/" },
     { name: "About", href: "/about" },
     { name: "Protocol", href: "/protocol" },
     { name: "MBDR", href: "/mbdr" },
     { name: "Solution", href: "/solution" },
     { name: "Team", href: "/team" },
     { name: "FAQ", href: "/faq" },
-  ];
-
-  // Essential links for desktop nav (minimal)
-  const desktopLinks = [
-    { name: "About", href: "/about" },
-    { name: "Protocol", href: "/protocol" },
+    { name: "Contact", href: "/contact" },
   ];
 
   // Close mobile menu on escape key
@@ -93,49 +89,9 @@ const Navbar = () => {
             </div>
           </motion.a>
 
-          {/* Desktop Navigation - Minimal & Clean */}
-          <nav
-            className="hidden md:flex items-center gap-8"
-            aria-label="Main navigation"
-          >
-            {desktopLinks.map((link, index) => (
-              <motion.a
-                key={index}
-                href={link.href}
-                whileHover={{ y: -2 }}
-                className={`transition-colors text-sm font-light focus:outline-none focus:text-cyber-blue ${
-                  pathname === link.href
-                    ? "text-cyber-blue font-medium underline underline-offset-8 decoration-2"
-                    : "text-gray-700 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"
-                }`}
-              >
-                {link.name}
-              </motion.a>
-            ))}
-            <motion.a
-              href="/contact"
-              whileHover={{ y: -2 }}
-              whileTap={{ scale: 0.98 }}
-              className={`px-6 py-2.5 border rounded-xl text-sm font-light transition-all focus:outline-none focus:ring-1 focus:ring-cyber-blue/50 backdrop-blur-sm ${
-                pathname === "/contact"
-                  ? "bg-cyber-blue/10 border-cyber-blue text-gray-900 dark:text-white"
-                  : "bg-black/5 border-black/10 text-gray-900 hover:bg-black/10 dark:bg-white/[0.03] dark:border-white/10 dark:text-white dark:hover:bg-white/[0.06] dark:hover:border-cyber-blue/50"
-              }`}
-            >
-              Contact
-            </motion.a>
-
-            {/* Hamburger for remaining items on desktop */}
-            <button
-              className="p-2 hover:bg-white/[0.05] rounded-lg transition-colors"
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
-              aria-expanded={isMobileMenuOpen}
-            >
-              {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
-            </button>
-
-            {/* Theme Toggle Button - moved to the right of hamburger */}
+          {/* Desktop Navigation - Simple & Elegant */}
+          <div className="hidden md:flex items-center gap-4">
+            {/* Theme Toggle Button */}
             <motion.button
               onClick={toggleTheme}
               whileHover={{ scale: 1.05 }}
@@ -156,21 +112,21 @@ const Navbar = () => {
                 {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
               </motion.div>
             </motion.button>
-          </nav>
 
-          {/* Mobile - Theme Toggle and Menu Button */}
-          <div className="md:hidden flex items-center gap-2">
-            {/* Hamburger first */}
+            {/* Hamburger Menu Button */}
             <button
-              className="p-2 rounded-lg transition-colors hover:bg-black/5 dark:text-white dark:hover:bg-white/[0.05]"
+              className="p-2 hover:bg-white/[0.05] rounded-lg transition-colors"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
               aria-expanded={isMobileMenuOpen}
             >
-              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
             </button>
+          </div>
 
-            {/* Theme toggle to the right of hamburger */}
+          {/* Mobile - Theme Toggle and Menu Button */}
+          <div className="md:hidden flex items-center gap-2">
+            {/* Theme toggle */}
             <motion.button
               onClick={toggleTheme}
               whileHover={{ scale: 1.05 }}
@@ -191,6 +147,16 @@ const Navbar = () => {
                 {theme === "dark" ? <Sun size={24} /> : <Moon size={24} />}
               </motion.div>
             </motion.button>
+
+            {/* Hamburger Menu Button */}
+            <button
+              className="p-2 rounded-lg transition-colors hover:bg-black/5 dark:text-white dark:hover:bg-white/[0.05]"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+              aria-expanded={isMobileMenuOpen}
+            >
+              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
           </div>
         </div>
 
@@ -238,16 +204,6 @@ const Navbar = () => {
                       </motion.a>
                     ))}
                   </div>
-                  <motion.a
-                    href="/contact"
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.3 }}
-                    className="block w-full mt-6 px-6 py-3 bg-gradient-to-r from-cyber-blue/10 to-cyber-purple/10 border border-cyber-blue/30 rounded-xl text-cyber-blue font-light text-center hover:from-cyber-blue/20 hover:to-cyber-purple/20 transition-all"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                  >
-                    Get in Touch
-                  </motion.a>
                 </nav>
               </motion.div>
             </>
