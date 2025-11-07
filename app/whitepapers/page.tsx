@@ -40,7 +40,7 @@ export default function WhitepapersPage() {
   return (
     <main className="min-h-screen bg-cyber-dark">
       <BackButton />
-      
+
       <section className="py-24 relative overflow-hidden">
         {/* Background Effects */}
         <div className="absolute inset-0 bg-gradient-to-b from-cyber-darker via-cyber-dark to-cyber-darker opacity-50" />
@@ -51,13 +51,13 @@ export default function WhitepapersPage() {
             <div className="inline-flex p-4 bg-primary-500/10 rounded-full mb-6">
               <FileText className="w-12 h-12 text-primary-500" />
             </div>
-            
+
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyber-blue via-cyber-purple to-primary-500">
                 Whitepapers
               </span>
             </h1>
-            
+
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Technical research and detailed documentation on the Resonance
               Protocol, MBDR technology, and our approach to ransomware
@@ -91,7 +91,7 @@ export default function WhitepapersPage() {
                       </div>
                     </div>
                   </div>
-                  
+
                   <a
                     href={paper.downloadUrl}
                     className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-primary-700 to-cyber-purple rounded-lg text-white font-semibold hover:from-primary-600 hover:to-primary-700 transition-all whitespace-nowrap"

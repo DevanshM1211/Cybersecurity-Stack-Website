@@ -25,7 +25,7 @@ const Navbar = () => {
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "About", href: "/about" },
-    { name: "Protocol", href: "/protocol" },
+    { name: "Resonance Protocol", href: "/protocol" },
     { name: "MBDR", href: "/mbdr" },
     { name: "Solution", href: "/solution" },
     { name: "Team", href: "/team" },
