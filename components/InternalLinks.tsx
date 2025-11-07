@@ -41,9 +41,7 @@ export default function InternalLinks({
                 <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-primary-500 transition-colors">
                   {link.title}
                 </h3>
-                <p className="text-gray-400 text-sm mb-4">
-                  {link.description}
-                </p>
+                <p className="text-gray-400 text-sm mb-4">{link.description}</p>
                 <div className="flex items-center text-primary-500 text-sm font-medium">
                   Learn more
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />

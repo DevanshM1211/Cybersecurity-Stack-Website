@@ -160,7 +160,7 @@ export default function LinkedInFeed() {
         {/* Follow CTA */}
         <div className="text-center mt-10">
           <a
-            href="https://www.linkedin.com/company/cybersecuritystack/"
+            href="https://www.linkedin.com/company/cyber-security-stack/"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-medium text-white bg-gradient-to-r from-cyber-blue to-cyber-purple hover:shadow-lg hover:shadow-cyber-blue/40 transition-all"

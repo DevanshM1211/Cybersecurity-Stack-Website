@@ -25,7 +25,7 @@ const Community = () => {
       description:
         "We've set up a dedicated LinkedIn page for Cyber Security Stack where we'll be sharing the latest updates, insights, and progress on the Resonance Protocol. This will be the main space to follow our journey, from new whitepapers and proof-of-concepts through to events, partnerships, and milestones.",
       cta: "Follow on LinkedIn",
-      url: "https://www.linkedin.com/company/108569527/",
+      url: "https://www.linkedin.com/company/cyber-security-stack/",
       features: [
         {
           icon: <BookOpen className="w-5 h-5" />,
