@@ -32,7 +32,7 @@ const MBDR = () => {
       icon: <Lock className="w-6 h-6" />,
       title: "Trust Contracts",
       description:
-        "Hives establish scoped, signed trust contracts. Only verified components can communicate-tampering breaks the trust chain instantly.",
+        "Hives establish scoped, signed trust contracts. Only verified components can communicate-tampering breaks the trust chain instantly, effectively isolating compromised endpoints and preventing ransomware spreading.",
     },
   ];
 
