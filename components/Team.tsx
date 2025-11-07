@@ -28,14 +28,14 @@ const Team = () => {
     {
       name: "Devansh Mehrotra",
       role: "Founder's Associate",
-      image: "/team/devansh-mehrotra.jpg",
+      image: "/team/devansh-mehrotra.png",
       linkedin: "https://www.linkedin.com/in/devanshmehrotra12/",
       email: "devansh@cybersecuritystack.co.uk",
     },
     {
       name: "Ebun Idowu",
       role: "Founder's Associate",
-      image: "/team/ebun-idowu.jpg",
+      image: "/team/ebun-idowu.png",
       linkedin: "https://www.linkedin.com/in/ebun-idowu/",
       email: "ebun@cybersecuritystack.co.uk",
     },
