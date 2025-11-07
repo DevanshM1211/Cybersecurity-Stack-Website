@@ -6,39 +6,39 @@ import { motion } from "framer-motion";
 const Footer = () => {
   const footerLinks = {
     Product: [
-      { name: "Resonance Protocol", href: "/#resonance" },
-      { name: "MBDR Technology", href: "/#mbdr" },
-      { name: "Features", href: "/#features" },
-      { name: "Documentation", href: "/#" },
-      { name: "Pricing", href: "/#solution" },
+      { name: "Resonance Protocol", href: "/protocol" },
+      { name: "MBDR Technology", href: "/mbdr" },
+      { name: "Features", href: "/#core-features" },
+      { name: "Documentation", href: "/documentation" },
+      { name: "Pricing", href: "/solution" },
     ],
     Company: [
-      { name: "About Us", href: "/#mission" },
-      { name: "Careers", href: "/#" },
+      { name: "About Us", href: "/about" },
+      { name: "Careers", href: "/contact" },
       { name: "Blog", href: "/#" },
-      { name: "Press Kit", href: "/#" },
-      { name: "Contact", href: "/#contact" },
+      { name: "Press Kit", href: "/contact" },
+      { name: "Contact", href: "/contact" },
     ],
     Resources: [
-      { name: "Research Papers", href: "/#" },
-      { name: "Case Studies", href: "/#" },
-      { name: "Whitepaper", href: "/#" },
-      { name: "API Docs", href: "/#" },
-      { name: "Support", href: "/#contact" },
+      { name: "Research Papers", href: "/documentation" },
+      { name: "Case Studies", href: "/solution" },
+      { name: "Whitepaper", href: "/documentation" },
+      { name: "API Docs", href: "/documentation" },
+      { name: "Support", href: "/faq" },
     ],
     Legal: [
       { name: "Privacy Policy", href: "/privacy" },
-      { name: "Terms of Service", href: "/#" },
-      { name: "Security", href: "/#" },
-      { name: "Compliance", href: "/#" },
-      { name: "Cookies", href: "/#" },
+      { name: "Terms of Service", href: "/terms" },
+      { name: "Security", href: "/documentation" },
+      { name: "Compliance", href: "/documentation" },
+      { name: "Cookies", href: "/cookies" },
     ],
   };
 
   const socialLinks = [
     {
       icon: <Linkedin size={20} />,
-      href: "https://www.linkedin.com/company/cybersecuritystack/",
+      href: "https://www.linkedin.com/company/cyber-security-stack/",
       label: "LinkedIn",
     },
     {
