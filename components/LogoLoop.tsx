@@ -85,7 +85,7 @@ const LogoLoop = () => {
                 alt={logo.alt}
                 width={160}
                 height={80}
-                className="max-w-full max-h-full object-contain filter dark:brightness-0 dark:invert"
+                className="max-w-full max-h-full object-contain filter brightness-0 invert dark:brightness-100 dark:invert-0"
                 priority={index < 7}
               />
             </div>
