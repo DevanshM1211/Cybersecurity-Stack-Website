@@ -138,7 +138,7 @@ const MBDR = () => {
             <div className="flex items-center gap-3 mb-6">
               <Shield className="w-8 h-8 text-cyber-purple" />
               <h3 className="text-2xl font-bold text-white">
-                Threat Prevention Matrix
+                Threat Mitigation Matrix
               </h3>
             </div>
 
