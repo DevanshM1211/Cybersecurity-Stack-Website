@@ -47,9 +47,9 @@ const LogoLoop = () => {
   const duplicatedLogos = [...logos, ...logos];
 
   return (
-    <section className="py-16 relative overflow-hidden border-y border-gray-200/50 dark:border-white/5 bg-white dark:bg-gradient-to-b dark:from-cyber-darker/50 dark:to-cyber-dark/50">
+    <section className="py-16 relative overflow-hidden">
       <div className="container mx-auto px-6 mb-12">
-        <p className="text-center text-sm text-gray-600 dark:text-gray-500 uppercase tracking-widest">
+        <p className="text-center text-sm text-gray-600 dark:text-gray-400 uppercase tracking-widest">
           Our Industry Partners
         </p>
       </div>
@@ -57,12 +57,12 @@ const LogoLoop = () => {
       {/* Infinite Scroll Container */}
       <div className="relative">
         {/* Gradient Overlays for fade effect */}
-        <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-white to-transparent dark:from-cyber-dark dark:to-transparent z-10" />
-        <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-white to-transparent dark:from-cyber-dark dark:to-transparent z-10" />
+        <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-white to-transparent dark:from-gray-900 dark:to-transparent z-10" />
+        <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-white to-transparent dark:from-gray-900 dark:to-transparent z-10" />
 
         {/* Scrolling Logos */}
         <motion.div
-          className="flex gap-12 items-center"
+          className="flex gap-16 items-center"
           animate={{
             x: [0, -50 + "%"],
           }}
@@ -78,18 +78,16 @@ const LogoLoop = () => {
           {duplicatedLogos.map((logo, index) => (
             <div
               key={index}
-              className="flex-shrink-0 w-48 h-24 flex items-center justify-center hover:scale-105 transition-all duration-300"
+              className="flex-shrink-0 w-40 h-20 flex items-center justify-center opacity-60 hover:opacity-100 transition-opacity duration-300"
             >
-              <div className="bg-white dark:bg-white/[0.02] rounded-xl p-6 w-full h-full flex items-center justify-center border border-gray-200/80 dark:border-white/10 shadow-sm hover:shadow-md dark:shadow-none transition-shadow">
-                <Image
-                  src={logo.src}
-                  alt={logo.alt}
-                  width={120}
-                  height={60}
-                  className="max-w-full max-h-full object-contain"
-                  priority={index < 7}
-                />
-              </div>
+              <Image
+                src={logo.src}
+                alt={logo.alt}
+                width={160}
+                height={80}
+                className="max-w-full max-h-full object-contain filter dark:brightness-0 dark:invert"
+                priority={index < 7}
+              />
             </div>
           ))}
         </motion.div>
