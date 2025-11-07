@@ -40,9 +40,6 @@ const MBDR = () => {
     { name: "Ransomware Attack", prevented: true, time: "< 1ms" },
     { name: "Zero-Day Exploit", prevented: true, time: "< 1ms" },
     { name: "Supply Chain Compromise", prevented: true, time: "< 1ms" },
-    { name: "Firmware Tampering", prevented: true, time: "< 1ms" },
-    { name: "Privilege Escalation", prevented: true, time: "< 1ms" },
-    { name: "Data Exfiltration", prevented: true, time: "< 1ms" },
   ];
 
   return (
