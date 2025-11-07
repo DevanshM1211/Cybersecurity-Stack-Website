@@ -3,9 +3,7 @@ import { Inter, Roboto_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 import dynamic from "next/dynamic";
-// @ts-ignore
 import CookieConsent from "@/components/CookieConsent";
-// @ts-ignore
 import ExitIntentPopup from "@/components/ExitIntentPopup";
 import Script from "next/script";
 
