@@ -1,6 +1,6 @@
 "use client";
 
-import { Shield, Mail, Linkedin, Twitter, Github } from "lucide-react";
+import { Shield, Mail, Linkedin, Github } from "lucide-react";
 import { motion } from "framer-motion";
 
 const Footer = () => {
@@ -33,11 +33,6 @@ const Footer = () => {
       icon: <Linkedin size={20} />,
       href: "https://www.linkedin.com/company/cyber-security-stack/",
       label: "LinkedIn",
-    },
-    {
-      icon: <Twitter size={20} />,
-      href: "https://twitter.com/CyberSecStack",
-      label: "Twitter",
     },
     {
       icon: <Github size={20} />,
@@ -150,23 +145,11 @@ const Footer = () => {
                 </motion.a>
               ))}
             </div>
-
-            {/* Partnership Badge */}
-            <div className="flex items-center gap-2 text-sm">
-              <span className="text-gray-400">Developed with</span>
-              <span className="text-cyber-purple font-semibold">
-                University of Oxford
-              </span>
-            </div>
           </div>
         </div>
 
         {/* Extra Info */}
         <div className="mt-8 pt-8 border-t border-gray-800/50 text-center text-xs text-gray-500">
-          <p className="mb-2">
-            The Resonance Protocol and MBDR are trademarks of Cyber Security
-            Stack Ltd. This technology is protected by patents pending.
-          </p>
           <p>
             Website developed by{" "}
             <motion.a
