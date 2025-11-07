@@ -111,10 +111,10 @@ const ResonanceProtocol = () => {
             className="text-xl text-gray-300 max-w-3xl mx-auto"
           >
             A federated trust protocol where every system operates as a
-            self-verifying "hive." Each layer—hardware, firmware, kernel,
-            process, application—generates cryptographically signed Merkle tree
-            blocks to prove integrity. Adjacent hives only trust through scoped,
-            signed contracts.
+            self-verifying "hive." Each layer - hardware, firmware, kernel,
+            process, application - generates cryptographically signed Merkle
+            tree blocks to prove integrity. Adjacent hives only trust through
+            scoped, signed contracts.
           </motion.p>
 
           {/* Problem / Solution / Vision */}

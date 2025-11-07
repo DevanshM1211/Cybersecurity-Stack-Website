@@ -24,7 +24,7 @@ const Team = () => {
       name: "Anna Wilson",
       role: "Co-founder",
       description:
-        "Expert in cyber defense systems and resilient architecture design for critical infrastructure.",
+        "Expert in cyber defence systems and resilient architecture design for critical infrastructure.",
       image: "/team/anna-wilson.jpg",
       linkedin: "https://www.linkedin.com/in/anna-wilson-889830226/",
       email: "anna@cybersecuritystack.co.uk",

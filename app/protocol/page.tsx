@@ -5,7 +5,7 @@ import PageNavigation from "@/components/PageNavigation";
 export const metadata = {
   title: "Resonance Protocol | Cyber Security Stack",
   description:
-    "Explore the Resonance Protocol - decentralised trust architecture for autonomous cyber defense.",
+    "Explore the Resonance Protocol - decentralised trust architecture for autonomous cyber defence.",
 };
 
 export default function ProtocolPage() {

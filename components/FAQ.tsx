@@ -102,7 +102,7 @@ const FAQ = () => {
     {
       question: "How do I get started with Cyber Security Stack?",
       answer:
-        "Getting started is simple: our solution includes lightweight agents for endpoint protection, a SaaS platform for centralized management and dashboards, and professional services for onboarding, technical review, and ongoing support. Contact us to schedule a demo and see the Resonance Protocol in action.",
+        "Getting started is simple: our solution includes lightweight agents for endpoint protection, a SaaS platform for centralised management and dashboards, and professional services for onboarding, technical review, and ongoing support. Contact us to schedule a demo and see the Resonance Protocol in action.",
     },
     {
       question: "What makes the solution 'ransomware-resistant'?",

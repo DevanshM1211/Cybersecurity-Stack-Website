@@ -161,13 +161,13 @@ const PrivacyPolicy = () => {
             </h2>
             <p className="text-gray-300 mb-4">
               We use cookies and similar tracking technologies to enhance your
-              browsing experience and analyze website traffic. You can control
+              browsing experience and analyse website traffic. You can control
               cookie preferences through your browser settings.
             </p>
             <p className="text-gray-400 text-sm">
               Types of cookies we use: Essential cookies (required for website
               functionality), Analytics cookies (to understand usage patterns),
-              and Performance cookies (to optimize user experience).
+              and Performance cookies (to optimise user experience).
             </p>
           </motion.div>
 

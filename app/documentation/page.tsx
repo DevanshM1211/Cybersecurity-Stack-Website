@@ -4,7 +4,7 @@ import DocumentationContent from "./DocumentationContent";
 export const metadata: Metadata = {
   title: "Documentation | Cyber Security Stack",
   description:
-    "Technical documentation for the Resonance Protocol and MBDR. Learn how to integrate our blockchain-based cyber defence technology into your organization.",
+    "Technical documentation for the Resonance Protocol and MBDR. Learn how to integrate our blockchain-based cyber defence technology into your organisation.",
   keywords: [
     "documentation",
     "technical docs",

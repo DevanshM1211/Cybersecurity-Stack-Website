@@ -53,7 +53,7 @@ const Solution = () => {
         {
           icon: <BarChart3 className="w-5 h-5" />,
           title: "Dashboards",
-          description: "Centralized visibility and insights",
+          description: "Centralised visibility and insights",
         },
         {
           icon: <Settings className="w-5 h-5" />,
