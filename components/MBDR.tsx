@@ -213,9 +213,9 @@ const MBDR = () => {
             {[
               {
                 step: "01",
-                title: "Self-Verifying Hives",
+                title: "Rapid Detection",
                 description:
-                  "Each system layer generates cryptographically signed Merkle tree blocks, creating a verifiable chain of integrity across all components.",
+                  "MBDR's ability to scope rapidly every few seconds means that any compromise in immutables is rapidly detected.",
               },
               {
                 step: "02",
