@@ -285,10 +285,10 @@ const ResonanceProtocol = () => {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 1.2 + index * 0.1 }}
               whileHover={{ scale: 1.05, y: -5 }}
-              className="glass-effect rounded-xl p-6 hover:glow-effect transition-all cursor-pointer group"
+              className="glass-effect rounded-xl p-6 hover:glow-effect transition-all cursor-pointer group text-center"
             >
               <div
-                className={`inline-flex p-3 rounded-lg bg-${feature.color}/10 text-${feature.color} mb-4 group-hover:scale-110 transition-transform`}
+                className={`inline-flex p-3 rounded-lg bg-${feature.color}/10 text-${feature.color} mb-4 group-hover:scale-110 transition-transform mx-auto`}
               >
                 {feature.icon}
               </div>
