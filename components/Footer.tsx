@@ -16,14 +16,8 @@ const Footer = () => {
       { name: "About Us", href: "/about" },
       { name: "Team", href: "/team" },
       { name: "LinkedIn Feed", href: "/#linkedin" },
-      { name: "Contact", href: "/contact" },
-    ],
-    Resources: [
-      { name: "Research Papers", href: "/documentation" },
-      { name: "Case Studies", href: "/solution" },
       { name: "Whitepaper", href: "/documentation" },
-      { name: "API Docs", href: "/documentation" },
-      { name: "Support", href: "/faq" },
+      { name: "Contact", href: "/contact" },
     ],
     Legal: [
       { name: "Privacy Policy", href: "/privacy" },
@@ -56,7 +50,7 @@ const Footer = () => {
     <footer className="bg-cyber-darker border-t border-gray-800 pt-16 pb-8">
       <div className="container mx-auto px-6">
         {/* Main Footer Content */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-6 gap-12 mb-12">
+        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
           {/* Company Info */}
           <div className="lg:col-span-2">
             <motion.div
