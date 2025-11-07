@@ -151,8 +151,9 @@ const ResonanceProtocol = () => {
                 Vision
               </h4>
               <p className="text-gray-400">
-                Start as an agent & SaaS in IT, then become the universal
-                tamper‑proofing protocol embedded across all architectures and devices.
+                -an agent & SaaS in IT, then become the universal
+                tamper‑proofing protocol embedded across all architectures and
+                devices.
               </p>
             </div>
           </motion.div>
@@ -168,7 +169,7 @@ const ResonanceProtocol = () => {
               How the Resonance Protocol Works
             </h3>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-6 items-start text-center">
+            <div className="grid grid-cols-1 sm:grid-cols-5 gap-6 items-start text-center">
               <div className="space-y-3">
                 <div className="w-14 h-14 rounded-full bg-white/5 flex items-center justify-center mx-auto text-cyber-blue font-bold">
                   1
@@ -207,15 +208,6 @@ const ResonanceProtocol = () => {
                 </div>
                 <p className="text-sm text-gray-400">
                   Compromised subsumption hive isolated
-                </p>
-              </div>
-
-              <div className="space-y-3">
-                <div className="w-14 h-14 rounded-full bg-white/5 flex items-center justify-center mx-auto text-cyber-blue font-bold">
-                  6
-                </div>
-                <p className="text-sm text-gray-400">
-                  Remedial action, automated corrective action to mitigate ransomware
                 </p>
               </div>
             </div>
