@@ -1,6 +1,6 @@
 "use client";
 
-import { Shield, Mail, Linkedin, Twitter, Github, MapPin } from "lucide-react";
+import { Shield, Mail, Linkedin, Twitter, Github } from "lucide-react";
 import { motion } from "framer-motion";
 
 const Footer = () => {
@@ -74,19 +74,6 @@ const Footer = () => {
               the future of autonomous cyber defence with the Resonance
               Protocol.
             </p>
-            <div className="flex items-start gap-2 text-gray-400 mb-4">
-              <MapPin
-                size={20}
-                className="flex-shrink-0 mt-1 text-cyber-blue"
-              />
-              <div>
-                <p className="font-semibold text-white">
-                  Oxford Innovation Hub
-                </p>
-                <p className="text-sm">University of Oxford</p>
-                <p className="text-sm">United Kingdom</p>
-              </div>
-            </div>
             <div className="flex items-center gap-2 text-gray-400">
               <Mail size={20} className="text-cyber-purple" />
               <a
