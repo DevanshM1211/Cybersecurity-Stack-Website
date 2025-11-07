@@ -47,9 +47,9 @@ const ResonanceProtocol = () => {
     },
     {
       icon: <Cpu className="w-8 h-8" />,
-      title: "Chip-Level Integration",
+      title: "Firmware Integration",
       description:
-        "Trust embedded from chip and firmware level, creating unbreakable chains of verification.",
+        "Trust embedded from firmware level, creating unbreakable chains of verification.",
       color: "cyber-pink",
     },
   ];
@@ -309,9 +309,6 @@ const ResonanceProtocol = () => {
           transition={{ delay: 1.8 }}
           className="mt-16 text-center"
         >
-          <p className="text-lg text-gray-300 mb-6">
-            Developed in partnership with the University of Oxford
-          </p>
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
