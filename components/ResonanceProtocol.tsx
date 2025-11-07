@@ -152,7 +152,8 @@ const ResonanceProtocol = () => {
               </h4>
               <p className="text-gray-400">
                 Start as an agent & SaaS in IT, then become the universal
-                tamper‑proofing protocol embedded across all architectures and devices.
+                tamper‑proofing protocol embedded across all architectures and
+                devices.
               </p>
             </div>
           </motion.div>
@@ -215,7 +216,8 @@ const ResonanceProtocol = () => {
                   6
                 </div>
                 <p className="text-sm text-gray-400">
-                  Remedial action, automated corrective action to mitigate ransomware
+                  Remedial action, automated corrective action to mitigate
+                  ransomware
                 </p>
               </div>
             </div>
