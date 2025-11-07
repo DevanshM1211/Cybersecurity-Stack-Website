@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Shield, Eye, Zap, Lock, Activity, AlertTriangle } from "lucide-react";
+import Link from "next/link";
 
 const MBDR = () => {
   const ref = useRef(null);
@@ -257,13 +258,15 @@ const MBDR = () => {
           transition={{ delay: 2.2 }}
           className="mt-16 text-center"
         >
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="px-10 py-5 bg-gradient-to-r from-cyber-blue to-cyber-purple rounded-full text-white font-bold text-lg glow-effect"
-          >
-            Request MBDR Demo
-          </motion.button>
+          <Link href="/contact">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="px-10 py-5 bg-gradient-to-r from-cyber-blue to-cyber-purple rounded-full text-white font-bold text-lg glow-effect"
+            >
+              Request MBDR Demo
+            </motion.button>
+          </Link>
         </motion.div>
       </div>
     </section>
