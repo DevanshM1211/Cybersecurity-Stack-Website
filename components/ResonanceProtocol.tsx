@@ -57,14 +57,13 @@ const ResonanceProtocol = () => {
 
   const architectureLayers = [
     {
-      name: "IoT / OT / IT Infrastructure",
+      name: "IT / OT / IoT Device Architectures",
       color: "from-primary-500 to-cyber-blue",
     },
-    { name: "Runtime Environments", color: "from-primary-700 to-cyber-purple" },
-    { name: "Operating Systems", color: "from-primary-500 to-primary-700" },
-    { name: "Kernel Layer", color: "from-cyber-purple to-cyber-navy" },
+    { name: "Runtime", color: "from-primary-700 to-cyber-purple" },
+    { name: "OS", color: "from-primary-500 to-primary-700" },
+    { name: "Kernel", color: "from-cyber-purple to-cyber-navy" },
     { name: "Firmware", color: "from-primary-700 to-cyber-navy" },
-    { name: "Chip Level", color: "from-cyber-navy to-primary-900" },
   ];
 
   return (
