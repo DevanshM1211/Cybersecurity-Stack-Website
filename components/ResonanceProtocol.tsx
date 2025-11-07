@@ -256,30 +256,42 @@ const ResonanceProtocol = () => {
           <h3 className="text-2xl font-bold text-center mb-8 text-cyber-blue">
             Trust Architecture Layers
           </h3>
-          <div className="max-w-4xl mx-auto space-y-4">
-            {architectureLayers.map((layer, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: -50 }}
-                animate={isInView ? { opacity: 1, x: 0 } : {}}
-                transition={{ delay: 0.6 + index * 0.1 }}
-                whileHover={{ scale: 1.02, x: 10 }}
-                className="relative group cursor-pointer"
-              >
-                <div
-                  className={`glass-effect rounded-lg p-6 bg-gradient-to-r ${layer.color} bg-opacity-10 border-l-4 border-transparent group-hover:border-cyber-blue transition-all`}
-                >
-                  <div className="flex items-center justify-between">
-                    <span className="text-lg font-semibold text-white">
-                      {layer.name}
-                    </span>
-                    <span className="text-sm text-gray-400 font-mono">
-                      Layer {architectureLayers.length - index}
-                    </span>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
+          <div className="max-w-4xl mx-auto relative">
+            {/* IT/OT/IoT Overarching Bracket */}
+            <div className="relative border-l-4 border-r-4 border-t-4 border-primary-500/30 rounded-t-3xl pt-8 pb-4 px-6 mb-6">
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-cyber-dark px-4">
+                <span className="text-lg font-semibold text-primary-500">
+                  IT / OT / IoT Device Architectures
+                </span>
+              </div>
+
+              {/* Inner Layers */}
+              <div className="space-y-4 mt-4">
+                {architectureLayers.slice(1).map((layer, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, x: -50 }}
+                    animate={isInView ? { opacity: 1, x: 0 } : {}}
+                    transition={{ delay: 0.6 + index * 0.1 }}
+                    whileHover={{ scale: 1.02, x: 10 }}
+                    className="relative group cursor-pointer"
+                  >
+                    <div
+                      className={`glass-effect rounded-lg p-6 bg-gradient-to-r ${layer.color} bg-opacity-10 border-l-4 border-transparent group-hover:border-cyber-blue transition-all`}
+                    >
+                      <div className="flex items-center justify-between">
+                        <span className="text-lg font-semibold text-white">
+                          {layer.name}
+                        </span>
+                        <span className="text-sm text-gray-400 font-mono">
+                          Layer {architectureLayers.length - 1 - index}
+                        </span>
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
           </div>
         </motion.div>
 
