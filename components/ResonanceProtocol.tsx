@@ -284,7 +284,7 @@ const ResonanceProtocol = () => {
                           {layer.name}
                         </span>
                         <span className="text-sm text-gray-400 font-mono">
-                          Layer {architectureLayers.length - 1 - index}
+                          Layer {index + 1}
                         </span>
                       </div>
                     </div>
