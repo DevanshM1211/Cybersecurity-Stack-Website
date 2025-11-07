@@ -65,7 +65,7 @@ const MBDR = () => {
             transition={{ delay: 0.2 }}
             className="inline-block px-4 py-2 bg-cyber-blue/10 border border-cyber-blue/30 rounded-full text-cyber-blue text-sm font-semibold mb-4"
           >
-            Next-Generation Defense
+            Next-Generation Defence
           </motion.span>
 
           <motion.h2
