@@ -41,6 +41,11 @@ const LogoLoop = () => {
       src: "/team/Google for startups.png",
       alt: "Google for Startups",
     },
+    {
+      name: "Plexal",
+      src: "/team/plexal.png",
+      alt: "Plexal",
+    },
   ];
 
   // Duplicate logos for seamless infinite scroll
