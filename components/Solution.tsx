@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
+import Link from "next/link";
 import {
   Cpu,
   Search,
@@ -222,20 +223,15 @@ const Solution = () => {
             infrastructure with unmatched speed and resilience.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-10 py-5 bg-gradient-to-r from-cyber-blue to-cyber-purple rounded-full text-white font-bold text-lg glow-effect"
-            >
-              Schedule a Demo
-            </motion.button>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-10 py-5 glass-effect rounded-full text-white font-bold text-lg hover:bg-white/10 transition-all"
-            >
-              Talk to an Expert
-            </motion.button>
+            <Link href="/contact">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-10 py-5 bg-gradient-to-r from-cyber-blue to-cyber-purple rounded-full text-white font-bold text-lg glow-effect"
+              >
+                Talk to an Expert
+              </motion.button>
+            </Link>
           </div>
         </motion.div>
       </div>
