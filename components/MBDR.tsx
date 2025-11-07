@@ -219,9 +219,9 @@ const MBDR = () => {
               },
               {
                 step: "02",
-                title: "Federated Trust Contracts",
+                title: "Resonance Response Engine",
                 description:
-                  "Adjacent hives establish trust through scoped, signed contracts. Any deviation from verified state breaks the trust chain.",
+                  "Deviations freeze any processes associated with immutables, delete compromised immutables, and restore from safe backup.",
               },
               {
                 step: "03",
