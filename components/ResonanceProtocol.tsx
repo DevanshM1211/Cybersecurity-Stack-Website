@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Network, Layers, Lock, Cpu, Shield, Zap } from "lucide-react";
+import Link from "next/link";
 
 const ResonanceProtocol = () => {
   const ref = useRef(null);
@@ -309,13 +310,15 @@ const ResonanceProtocol = () => {
           transition={{ delay: 1.8 }}
           className="mt-16 text-center"
         >
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="px-8 py-4 glass-effect rounded-full text-white font-semibold hover:glow-effect transition-all"
-          >
-            Learn More About the Protocol
-          </motion.button>
+          <Link href="/whitepapers">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="px-8 py-4 glass-effect rounded-full text-white font-semibold hover:glow-effect transition-all"
+            >
+              Click to View Whitepapers
+            </motion.button>
+          </Link>
         </motion.div>
       </div>
     </section>
