@@ -29,6 +29,7 @@ const Navbar = () => {
     { name: "MBDR", href: "/mbdr" },
     { name: "Solution", href: "/solution" },
     { name: "Team", href: "/team" },
+    { name: "Whitepapers", href: "/whitepapers" },
     { name: "FAQ", href: "/faq" },
     { name: "Contact", href: "/contact" },
   ];
