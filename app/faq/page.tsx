@@ -18,7 +18,7 @@ const faqStructuredData = {
       name: "What is Cyber Security Stack (CSS)?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Cyber Security Stack is a UK-based cyber innovation company pioneering the Resonance Protocol — a trust contract framework that ensures system integrity using Merkle-tree-based verification. Our mission is to make digital systems verifiably trustworthy.",
+        text: "Cyber Security Stack is a UK-based cyber innovation company pioneering the Resonance Protocol - a trust contract framework that ensures system integrity using Merkle-tree-based verification. Our mission is to make digital systems verifiably trustworthy.",
       },
     },
     {
@@ -34,7 +34,7 @@ const faqStructuredData = {
       name: "How is CSS different from traditional cybersecurity solutions?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Traditional security tools detect or prevent attacks after they happen. The Resonance Protocol builds security into the system's DNA — continuously verifying integrity and revoking trust if anomalies are detected.",
+        text: "Traditional security tools detect or prevent attacks after they happen. The Resonance Protocol builds security into the system's DNA - continuously verifying integrity and revoking trust if anomalies are detected.",
       },
     },
     {

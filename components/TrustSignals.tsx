@@ -14,25 +14,25 @@ const TrustSignals = () => {
       icon: <Shield className="w-8 h-8" />,
       title: "ISO 27001",
       subtitle: "Certified",
-      color: "from-cyber-blue to-cyan-400",
+      color: "from-cyber-blue to-primary-400",
     },
     {
       icon: <Award className="w-8 h-8" />,
       title: "Oxford",
       subtitle: "Innovation Partner",
-      color: "from-cyber-purple to-purple-400",
+      color: "from-cyber-purple to-primary-700",
     },
     {
       icon: <FileCheck className="w-8 h-8" />,
       title: "8+ Patents",
       subtitle: "Pending",
-      color: "from-cyber-pink to-pink-400",
+      color: "from-primary-500 to-cyber-blue",
     },
     {
       icon: <Lock className="w-8 h-8" />,
       title: "Zero Trust",
       subtitle: "Architecture",
-      color: "from-blue-500 to-indigo-500",
+      color: "from-primary-700 to-cyber-navy",
     },
   ];
 

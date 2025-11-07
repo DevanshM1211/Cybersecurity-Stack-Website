@@ -134,7 +134,7 @@ const Mission = () => {
                 Cyber Security Stack (CSS)
               </strong>{" "}
               is pioneering the{" "}
-              <strong className="text-cyber-blue">Resonance Protocol</strong>—a
+              <strong className="text-cyber-blue">Resonance Protocol</strong>-a
               federated trust protocol creating ransomware-resistant
               architectures for enterprise IT, OT, and IoT. Achieving this
               vision requires collaboration between academia, manufacturers, and

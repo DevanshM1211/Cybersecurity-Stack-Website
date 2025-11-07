@@ -24,7 +24,7 @@ const robotoMono = Roboto_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL("https://cybersecuritystack.co.uk"),
   title: {
-    default: "Cyber Security Stack — Trust as a Protocol, Not a Policy",
+    default: "Cyber Security Stack - Trust as a Protocol, Not a Policy",
     template: "%s | Cyber Security Stack",
   },
   description:
@@ -92,7 +92,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_GB",
     url: "https://cybersecuritystack.co.uk",
-    title: "Cyber Security Stack — Trust as a Protocol, Not a Policy",
+    title: "Cyber Security Stack - Trust as a Protocol, Not a Policy",
     description:
       "Deep-tech immune system preventing ransomware outages. Detects unwanted changes instantly and reverts to trusted state. Starting as SaaS platform, aiming to be the new standard for tamper-proofing businesses.",
     siteName: "Cyber Security Stack",
@@ -107,7 +107,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Cyber Security Stack — Trust as a Protocol, Not a Policy",
+    title: "Cyber Security Stack - Trust as a Protocol, Not a Policy",
     description:
       "Deep-tech immune system preventing ransomware outages. Detects unwanted changes instantly and reverts to trusted state. Starting as SaaS platform, aiming to be the new standard for tamper-proofing businesses.",
     images: ["/og-image.png"],

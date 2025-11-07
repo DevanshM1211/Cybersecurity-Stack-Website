@@ -32,7 +32,7 @@ const MBDR = () => {
       icon: <Lock className="w-6 h-6" />,
       title: "Trust Contracts",
       description:
-        "Hives establish scoped, signed trust contracts. Only verified components can communicate—tampering breaks the trust chain instantly.",
+        "Hives establish scoped, signed trust contracts. Only verified components can communicate-tampering breaks the trust chain instantly.",
     },
   ];
 
@@ -90,7 +90,7 @@ const MBDR = () => {
             Built on the Resonance Protocol, MBDR leverages cryptographic Merkle
             tree verification across every system layer. When integrity is
             compromised, affected components are automatically rejected and
-            isolated—no human intervention required.
+            isolated-no human intervention required.
           </motion.p>
         </motion.div>
 

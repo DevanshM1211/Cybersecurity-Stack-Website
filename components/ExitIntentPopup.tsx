@@ -58,7 +58,7 @@ export default function ExitIntentPopup() {
             transition={{ type: "spring", damping: 25 }}
             className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[101] w-full max-w-lg mx-4"
           >
-            <div className="relative bg-gradient-to-br from-gray-900 to-blue-950 rounded-2xl border border-blue-500/30 shadow-2xl overflow-hidden">
+            <div className="relative bg-gradient-to-br from-gray-900 to-cyber-navy rounded-2xl border border-primary-500/30 shadow-2xl overflow-hidden">
               {/* Close button */}
               <button
                 onClick={handleClose}
@@ -71,8 +71,8 @@ export default function ExitIntentPopup() {
               {/* Content */}
               <div className="p-8">
                 <div className="flex items-center justify-center mb-6">
-                  <div className="p-4 bg-blue-500/10 rounded-full">
-                    <Mail className="w-12 h-12 text-blue-400" />
+                  <div className="p-4 bg-primary-500/10 rounded-full">
+                    <Mail className="w-12 h-12 text-primary-500" />
                   </div>
                 </div>
 
@@ -90,7 +90,7 @@ export default function ExitIntentPopup() {
                   <Link
                     href="/contact"
                     onClick={handleClose}
-                    className="flex items-center justify-center gap-2 w-full px-6 py-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg text-white font-semibold hover:from-blue-700 hover:to-purple-700 transition-all group"
+                    className="flex items-center justify-center gap-2 w-full px-6 py-4 bg-gradient-to-r from-primary-700 to-cyber-purple rounded-lg text-white font-semibold hover:from-primary-600 hover:to-primary-700 transition-all group"
                   >
                     Schedule Free Consultation
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -99,7 +99,7 @@ export default function ExitIntentPopup() {
                   <Link
                     href="/documentation"
                     onClick={handleClose}
-                    className="flex items-center justify-center gap-2 w-full px-6 py-3 bg-gray-800/50 border border-blue-500/30 rounded-lg text-white hover:bg-gray-800/70 hover:border-blue-500/50 transition-all"
+                    className="flex items-center justify-center gap-2 w-full px-6 py-3 bg-gray-800/50 border border-primary-500/30 rounded-lg text-white hover:bg-gray-800/70 hover:border-primary-500/50 transition-all"
                   >
                     View Documentation
                   </Link>
@@ -114,8 +114,8 @@ export default function ExitIntentPopup() {
               </div>
 
               {/* Decorative gradient */}
-              <div className="absolute -top-24 -right-24 w-48 h-48 bg-blue-500/20 rounded-full blur-3xl" />
-              <div className="absolute -bottom-24 -left-24 w-48 h-48 bg-purple-500/20 rounded-full blur-3xl" />
+              <div className="absolute -top-24 -right-24 w-48 h-48 bg-primary-500/20 rounded-full blur-3xl" />
+              <div className="absolute -bottom-24 -left-24 w-48 h-48 bg-cyber-purple/20 rounded-full blur-3xl" />
             </div>
           </motion.div>
         </>

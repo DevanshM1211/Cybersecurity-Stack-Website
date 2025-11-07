@@ -20,7 +20,7 @@ const Community = () => {
     {
       name: "LinkedIn",
       icon: <Linkedin className="w-12 h-12" />,
-      gradient: "from-blue-600 to-blue-400",
+      gradient: "from-primary-700 to-primary-500",
       title: "Keep up to date on LinkedIn",
       description:
         "We've set up a dedicated LinkedIn page for Cyber Security Stack where we'll be sharing the latest updates, insights, and progress on the Resonance Protocol. This will be the main space to follow our journey, from new whitepapers and proof-of-concepts through to events, partnerships, and milestones.",
@@ -193,7 +193,7 @@ const Community = () => {
             If you're interested in staying close to the development of this
             technology and joining the conversation, we welcome security
             professionals, researchers, and innovators to engage
-            directly—validating the concept, contributing improvements, and
+            directly-validating the concept, contributing improvements, and
             shaping how it evolves.
           </p>
           <div className="flex flex-wrap justify-center gap-4">

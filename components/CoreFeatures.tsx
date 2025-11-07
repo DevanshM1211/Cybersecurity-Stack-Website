@@ -45,7 +45,7 @@ const CoreFeatures = () => {
         className="absolute inset-0 opacity-[0.02]"
         style={{
           backgroundImage:
-            "linear-gradient(rgba(59, 130, 246, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(59, 130, 246, 0.1) 1px, transparent 1px)",
+            "linear-gradient(rgba(0, 143, 255, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 143, 255, 0.1) 1px, transparent 1px)",
           backgroundSize: "50px 50px",
         }}
       />
@@ -73,7 +73,7 @@ const CoreFeatures = () => {
             transition={{ delay: 0.2 }}
             className="text-4xl md:text-5xl lg:text-6xl font-light mb-6 leading-tight tracking-tight"
           >
-            <span className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-cyber-blue via-blue-400 to-cyber-purple">
+            <span className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-cyber-blue via-primary-500 to-cyber-purple">
               Powerful
             </span>{" "}
             by Design

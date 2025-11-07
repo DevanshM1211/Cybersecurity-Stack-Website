@@ -36,15 +36,15 @@ export default function InternalLinks({
             >
               <Link
                 href={link.href}
-                className="group block p-6 rounded-xl bg-gray-800/30 border border-blue-500/20 hover:border-blue-500/40 hover:bg-gray-800/50 transition-all"
+                className="group block p-6 rounded-xl bg-gray-800/30 border border-primary-500/20 hover:border-primary-500/40 hover:bg-gray-800/50 transition-all"
               >
-                <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-blue-400 transition-colors">
+                <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-primary-500 transition-colors">
                   {link.title}
                 </h3>
-                <p className="text-gray-400 text-sm mb-4 line-clamp-2">
+                <p className="text-gray-400 text-sm mb-4">
                   {link.description}
                 </p>
-                <div className="flex items-center text-blue-400 text-sm font-medium">
+                <div className="flex items-center text-primary-500 text-sm font-medium">
                   Learn more
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </div>

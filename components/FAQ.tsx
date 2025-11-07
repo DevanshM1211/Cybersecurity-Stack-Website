@@ -14,7 +14,7 @@ const FAQ = () => {
     {
       question: "What is Cyber Security Stack (CSS)?",
       answer:
-        "Cyber Security Stack is a UK-based cyber innovation company pioneering the Resonance Protocol — a trust contract framework that ensures system integrity using Merkle-tree-based verification. Our mission is to make digital systems verifiably trustworthy.",
+        "Cyber Security Stack is a UK-based cyber innovation company pioneering the Resonance Protocol - a trust contract framework that ensures system integrity using Merkle-tree-based verification. Our mission is to make digital systems verifiably trustworthy.",
     },
     {
       question: "What is the Resonance Protocol?",
@@ -25,7 +25,7 @@ const FAQ = () => {
       question:
         "How is CSS different from traditional cybersecurity solutions?",
       answer:
-        "Traditional security tools detect or prevent attacks after they happen. The Resonance Protocol builds security into the system's DNA — continuously verifying integrity and revoking trust if anomalies are detected.",
+        "Traditional security tools detect or prevent attacks after they happen. The Resonance Protocol builds security into the system's DNA - continuously verifying integrity and revoking trust if anomalies are detected.",
     },
     {
       question: "Is the Resonance Protocol open source?",
@@ -41,7 +41,7 @@ const FAQ = () => {
     {
       question: "Who are CSS's target clients?",
       answer:
-        "CSS primarily works with enterprise IT, OT, and IoT sectors — especially those with complex infrastructures that require verifiable integrity such as councils, manufacturers, and service providers.",
+        "CSS primarily works with enterprise IT, OT, and IoT sectors - especially those with complex infrastructures that require verifiable integrity such as councils, manufacturers, and service providers.",
     },
     {
       question: "What stage of development is CSS in?",
@@ -97,7 +97,7 @@ const FAQ = () => {
     {
       question: "What is the performance impact of MBDR?",
       answer:
-        "MBDR is engineered for speed without sacrificing security. Our lightweight agents have minimal footprint, and detection happens in real time (typically under 1ms). The system is designed to be 'super fast'—providing enterprise-grade protection without adding complexity or slowing down operations.",
+        "MBDR is engineered for speed without sacrificing security. Our lightweight agents have minimal footprint, and detection happens in real time (typically under 1ms). The system is designed to be 'super fast'-providing enterprise-grade protection without adding complexity or slowing down operations.",
     },
     {
       question: "How do I get started with Cyber Security Stack?",
@@ -107,7 +107,7 @@ const FAQ = () => {
     {
       question: "What makes the solution 'ransomware-resistant'?",
       answer:
-        "The integrity-first architecture means every component continuously proves its authenticity through cryptographic verification. If ransomware attempts to tamper with any layer, the trust chain breaks instantly, and the affected component is automatically rejected and isolated before it can spread—making traditional ransomware attacks ineffective.",
+        "The integrity-first architecture means every component continuously proves its authenticity through cryptographic verification. If ransomware attempts to tamper with any layer, the trust chain breaks instantly, and the affected component is automatically rejected and isolated before it can spread-making traditional ransomware attacks ineffective.",
     },
     {
       question: "How was Cyber Security Stack developed?",

@@ -58,13 +58,13 @@ const ResonanceProtocol = () => {
   const architectureLayers = [
     {
       name: "IoT / OT / IT Infrastructure",
-      color: "from-purple-500 to-pink-500",
+      color: "from-primary-500 to-cyber-blue",
     },
-    { name: "Runtime Environments", color: "from-blue-500 to-purple-500" },
-    { name: "Operating Systems", color: "from-cyan-500 to-blue-500" },
-    { name: "Kernel Layer", color: "from-teal-500 to-cyan-500" },
-    { name: "Firmware", color: "from-green-500 to-teal-500" },
-    { name: "Chip Level", color: "from-emerald-500 to-green-500" },
+    { name: "Runtime Environments", color: "from-primary-700 to-cyber-purple" },
+    { name: "Operating Systems", color: "from-primary-500 to-primary-700" },
+    { name: "Kernel Layer", color: "from-cyber-purple to-cyber-navy" },
+    { name: "Firmware", color: "from-primary-700 to-cyber-navy" },
+    { name: "Chip Level", color: "from-cyber-navy to-primary-900" },
   ];
 
   return (
@@ -100,7 +100,7 @@ const ResonanceProtocol = () => {
             className="text-4xl md:text-6xl font-bold mb-6"
           >
             The{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyber-blue via-cyber-purple to-cyber-pink">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyber-blue via-cyber-purple to-primary-500">
               Resonance Protocol
             </span>
           </motion.h2>
@@ -112,8 +112,8 @@ const ResonanceProtocol = () => {
             className="text-xl text-gray-300 max-w-3xl mx-auto"
           >
             A federated trust protocol where every system operates as a
-            self-verifying "hive." Each layer—hardware, firmware, kernel,
-            process, application—generates cryptographically signed Merkle tree
+            self-verifying "hive." Each layer-hardware, firmware, kernel,
+            process, application-generates cryptographically signed Merkle tree
             blocks to prove integrity. Adjacent hives only trust through scoped,
             signed contracts.
           </motion.p>
