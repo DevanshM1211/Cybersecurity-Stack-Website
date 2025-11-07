@@ -14,6 +14,7 @@ const Team = () => {
     {
       name: "Luke Collinson",
       role: "Co-founder",
+      description: "Visionary leader driving innovation in cybersecurity infrastructure and strategic partnerships.",
       image: "/team/luke-collinson.jpg",
       linkedin: "https://www.linkedin.com/in/luke-c-088b61121/",
       email: "luke@cybersecuritystack.co.uk",
@@ -21,6 +22,7 @@ const Team = () => {
     {
       name: "Anna Wilson",
       role: "Co-founder",
+      description: "Expert in cyber defense systems and resilient architecture design for critical infrastructure.",
       image: "/team/anna-wilson.jpg",
       linkedin: "https://www.linkedin.com/in/anna-wilson-889830226/",
       email: "anna@cybersecuritystack.co.uk",
@@ -28,6 +30,7 @@ const Team = () => {
     {
       name: "Devansh Mehrotra",
       role: "Founder's Associate",
+      description: "Specializing in product development and bringing cutting-edge security solutions to market.",
       image: "/team/devansh-mehrotra.png",
       linkedin: "https://www.linkedin.com/in/devanshmehrotra12/",
       email: "devansh@cybersecuritystack.co.uk",
@@ -35,6 +38,7 @@ const Team = () => {
     {
       name: "Ebun Idowu",
       role: "Founder's Associate",
+      description: "Focused on research and implementation of next-generation cryptographic security protocols.",
       image: "/team/ebun-idowu.png",
       linkedin: "https://www.linkedin.com/in/ebun-idowu/",
       email: "ebun@cybersecuritystack.co.uk",
@@ -119,8 +123,11 @@ const Team = () => {
                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyber-blue transition-colors">
                   {member.name}
                 </h3>
-                <p className="text-cyber-purple text-sm font-semibold mb-4">
+                <p className="text-cyber-purple text-sm font-semibold mb-3">
                   {member.role}
+                </p>
+                <p className="text-gray-400 text-xs mb-4 line-clamp-3">
+                  {member.description}
                 </p>
 
                 {/* Social Links */}
