@@ -3,6 +3,11 @@ import { Inter, Roboto_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 import dynamic from "next/dynamic";
+// @ts-ignore
+import CookieConsent from "@/components/CookieConsent";
+// @ts-ignore
+import ExitIntentPopup from "@/components/ExitIntentPopup";
+import Script from "next/script";
 
 // Client-only Navbar to avoid SSR context issues
 const Navbar = dynamic(() => import("@/components/Navbar"), { ssr: false });
@@ -256,6 +261,21 @@ export default function RootLayout({
             Skip to main content
           </a>
           {children}
+          <CookieConsent />
+          <ExitIntentPopup />
+          {/* Google Analytics (replace G-XXXXXXX with your Measurement ID) */}
+          <Script
+            src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"
+            strategy="afterInteractive"
+          />
+          <Script id="ga-init" strategy="afterInteractive">
+            {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-XXXXXXX', { anonymize_ip: true });
+              `}
+          </Script>
           <Footer />
         </ThemeProvider>
       </body>

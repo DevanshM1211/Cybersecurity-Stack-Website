@@ -1,16 +1,50 @@
 {
-  "name": "Cyber Security Stack",
+  "name": "Cyber Security Stack - Trust as a Protocol",
   "short_name": "CSS",
-  "description": "Pioneering ransomware-resistant cyber security with the Resonance Protocol",
+  "description": "Deep-tech immune system for ransomware protection. Detects unwanted changes instantly and reverts to trusted state.",
   "start_url": "/",
   "display": "standalone",
+  "orientation": "portrait-primary",
   "background_color": "#050814",
-  "theme_color": "#1e3a8a",
+  "theme_color": "#008fff",
+  "categories": ["business", "security", "technology"],
   "icons": [
     {
       "src": "/favicon.svg",
       "sizes": "any",
-      "type": "image/svg+xml"
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Contact Us",
+      "short_name": "Contact",
+      "description": "Get in touch with our team",
+      "url": "/contact",
+      "icons": [{ "src": "/favicon-32x32.png", "sizes": "32x32" }]
+    },
+    {
+      "name": "Documentation",
+      "short_name": "Docs",
+      "description": "Technical documentation",
+      "url": "/documentation",
+      "icons": [{ "src": "/favicon-32x32.png", "sizes": "32x32" }]
     }
   ]
 }

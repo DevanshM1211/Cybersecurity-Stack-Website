@@ -6,8 +6,47 @@ const resend = process.env.RESEND_API_KEY
   ? new Resend(process.env.RESEND_API_KEY)
   : null;
 
+// Simple in-memory rate limiting (use Redis in production)
+const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
+const RATE_LIMIT = 3; // Max requests
+const RATE_LIMIT_WINDOW = 60 * 60 * 1000; // 1 hour in milliseconds
+
+function checkRateLimit(identifier: string): boolean {
+  const now = Date.now();
+  const record = rateLimitMap.get(identifier);
+
+  if (!record || now > record.resetTime) {
+    rateLimitMap.set(identifier, {
+      count: 1,
+      resetTime: now + RATE_LIMIT_WINDOW,
+    });
+    return true;
+  }
+
+  if (record.count >= RATE_LIMIT) {
+    return false;
+  }
+
+  record.count++;
+  return true;
+}
+
 export async function POST(request: NextRequest) {
   try {
+    // Get client IP for rate limiting
+    const ip =
+      request.headers.get("x-forwarded-for") ||
+      request.headers.get("x-real-ip") ||
+      "unknown";
+
+    // Check rate limit
+    if (!checkRateLimit(ip)) {
+      return NextResponse.json(
+        { error: "Too many requests. Please try again later." },
+        { status: 429 }
+      );
+    }
+
     const body = await request.json();
     const { name, email, company, message } = body;
 
@@ -24,6 +63,30 @@ export async function POST(request: NextRequest) {
     if (!emailRegex.test(email)) {
       return NextResponse.json(
         { error: "Invalid email address" },
+        { status: 400 }
+      );
+    }
+
+    // Basic spam detection - check for suspicious patterns
+    const spamPatterns = [
+      /\b(viagra|cialis|casino|lottery|prize)\b/i,
+      /\b(click here|buy now|limited time)\b/i,
+      /(http|https):\/\/[^\s]+/gi, // Multiple URLs
+    ];
+
+    const combinedText = `${name} ${email} ${company} ${message}`.toLowerCase();
+    const urlCount = (combinedText.match(/(http|https):\/\/[^\s]+/gi) || [])
+      .length;
+
+    if (
+      spamPatterns.some((pattern) => pattern.test(combinedText)) ||
+      urlCount > 2
+    ) {
+      return NextResponse.json(
+        {
+          error:
+            "Message flagged as potential spam. Please contact us directly.",
+        },
         { status: 400 }
       );
     }
