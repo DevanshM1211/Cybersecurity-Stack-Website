@@ -90,7 +90,10 @@ const MBDR = () => {
             Built on the Resonance Protocol, MBDR leverages cryptographic Merkle
             tree verification across every system layer. When integrity is
             compromised, affected components are automatically rejected and
-            isolated-no human intervention required.
+            isolated-no human intervention required.{" "}
+            <em>
+              This is the circuit breaker for the ransomware circuit breaker.
+            </em>
           </motion.p>
         </motion.div>
 
