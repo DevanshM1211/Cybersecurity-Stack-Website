@@ -36,9 +36,21 @@ const Footer = () => {
   };
 
   const socialLinks = [
-    { icon: <Linkedin size={20} />, href: "#", label: "LinkedIn" },
-    { icon: <Twitter size={20} />, href: "#", label: "Twitter" },
-    { icon: <Github size={20} />, href: "#", label: "GitHub" },
+    {
+      icon: <Linkedin size={20} />,
+      href: "https://www.linkedin.com/company/cybersecuritystack/",
+      label: "LinkedIn",
+    },
+    {
+      icon: <Twitter size={20} />,
+      href: "https://twitter.com/CyberSecStack",
+      label: "Twitter",
+    },
+    {
+      icon: <Github size={20} />,
+      href: "https://github.com/CyberSecurityStack",
+      label: "GitHub",
+    },
   ];
 
   return (

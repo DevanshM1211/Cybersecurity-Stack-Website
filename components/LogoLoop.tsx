@@ -46,9 +46,9 @@ const LogoLoop = () => {
   const duplicatedLogos = [...logos, ...logos];
 
   return (
-    <section className="py-16 relative overflow-hidden border-y border-white/5 bg-gradient-to-b from-cyber-darker/50 to-cyber-dark/50">
-      <div className="container mx-auto px-6 mb-8">
-        <p className="text-center text-sm text-gray-500 uppercase tracking-widest">
+    <section className="py-16 relative overflow-hidden border-y border-gray-200/50 dark:border-white/5 bg-white dark:bg-gradient-to-b dark:from-cyber-darker/50 dark:to-cyber-dark/50">
+      <div className="container mx-auto px-6 mb-12">
+        <p className="text-center text-sm text-gray-600 dark:text-gray-500 uppercase tracking-widest">
           Our Industry Partners
         </p>
       </div>
@@ -56,12 +56,12 @@ const LogoLoop = () => {
       {/* Infinite Scroll Container */}
       <div className="relative">
         {/* Gradient Overlays for fade effect */}
-        <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-cyber-dark to-transparent z-10" />
-        <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-cyber-dark to-transparent z-10" />
+        <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-white to-transparent dark:from-cyber-dark dark:to-transparent z-10" />
+        <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-white to-transparent dark:from-cyber-dark dark:to-transparent z-10" />
 
         {/* Scrolling Logos */}
         <motion.div
-          className="flex gap-16 items-center"
+          className="flex gap-12 items-center"
           animate={{
             x: [0, -50 + "%"],
           }}
@@ -77,9 +77,9 @@ const LogoLoop = () => {
           {duplicatedLogos.map((logo, index) => (
             <div
               key={index}
-              className="flex-shrink-0 w-40 h-20 flex items-center justify-center hover:scale-105 transition-all duration-300"
+              className="flex-shrink-0 w-48 h-24 flex items-center justify-center hover:scale-105 transition-all duration-300"
             >
-              <div className="glass-effect rounded-lg p-4 w-full h-full flex items-center justify-center border border-white/5">
+              <div className="bg-white dark:bg-white/[0.02] rounded-xl p-6 w-full h-full flex items-center justify-center border border-gray-200/80 dark:border-white/10 shadow-sm hover:shadow-md dark:shadow-none transition-shadow">
                 <img
                   src={logo.src}
                   alt={logo.alt}
