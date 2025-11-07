@@ -92,7 +92,7 @@ const Team = () => {
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ delay: 0.6 }}
-          className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto"
         >
           {team.map((member, index) => (
             <motion.div
@@ -104,27 +104,27 @@ const Team = () => {
               className="glass-effect rounded-2xl overflow-hidden hover:glow-effect transition-all cursor-pointer group"
             >
               {/* Image */}
-              <div className="relative h-80 bg-gradient-to-br from-cyber-blue/20 via-cyber-purple/20 to-cyber-pink/20 overflow-hidden">
+              <div className="relative h-64 bg-gradient-to-br from-cyber-blue/20 via-cyber-purple/20 to-cyber-pink/20 overflow-hidden">
                 <Image
                   src={member.image}
                   alt={`${member.name} - ${member.role}`}
                   fill
                   className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 50vw"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
                 />
               </div>
 
               {/* Member Info */}
-              <div className="p-8">
-                <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-cyber-blue transition-colors">
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyber-blue transition-colors">
                   {member.name}
                 </h3>
-                <p className="text-cyber-purple text-lg font-semibold mb-4">
+                <p className="text-cyber-purple text-sm font-semibold mb-4">
                   {member.role}
                 </p>
 
                 {/* Social Links */}
-                <div className="flex gap-4 mt-6">
+                <div className="flex gap-3 mt-4">
                   <motion.a
                     href={member.linkedin}
                     target="_blank"
@@ -135,7 +135,7 @@ const Team = () => {
                     aria-label={`${member.name}'s LinkedIn profile`}
                   >
                     <Linkedin
-                      className="w-5 h-5 text-gray-400 hover:text-cyber-blue transition-colors"
+                      className="w-4 h-4 text-gray-400 hover:text-cyber-blue transition-colors"
                       aria-hidden="true"
                     />
                   </motion.a>
@@ -148,7 +148,7 @@ const Team = () => {
                       aria-label={`Email ${member.name}`}
                     >
                       <Mail
-                        className="w-5 h-5 text-gray-400 hover:text-cyber-purple transition-colors"
+                        className="w-4 h-4 text-gray-400 hover:text-cyber-purple transition-colors"
                         aria-hidden="true"
                       />
                     </motion.a>
