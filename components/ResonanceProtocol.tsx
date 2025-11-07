@@ -40,7 +40,7 @@ const ResonanceProtocol = () => {
     },
     {
       icon: <Shield className="w-8 h-8" />,
-      title: "Ransomware-Resistant",
+      title: "Ransomware Resistance",
       description:
         "Integrity-first architecture prevents ransomware attacks by detecting and isolating compromised components before damage spreads.",
       color: "cyber-purple",
