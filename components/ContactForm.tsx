@@ -131,20 +131,6 @@ const ContactForm = () => {
                   </a>
                 </div>
               </div>
-
-              <div className="flex items-start gap-4">
-                <div className="p-3 bg-cyber-purple/20 rounded-lg">
-                  <Building className="w-6 h-6 text-cyber-purple" />
-                </div>
-                <div>
-                  <div className="font-semibold text-white mb-1">Visit Us</div>
-                  <p className="text-gray-400">
-                    Oxford Innovation Hub
-                    <br />
-                    University of Oxford, UK
-                  </p>
-                </div>
-              </div>
             </motion.div>
           </motion.div>
 
