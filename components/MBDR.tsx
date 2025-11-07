@@ -225,9 +225,9 @@ const MBDR = () => {
               },
               {
                 step: "03",
-                title: "Real-Time Rejection",
+                title: "Reduce Operational Impact",
                 description:
-                  "Tampering is detected instantly. Affected components are automatically rejected and isolated before damage spreads.",
+                  "Once baseline device integrity is restored, allows normal operation to continue and isolates it.",
               },
             ].map((item, index) => (
               <motion.div
