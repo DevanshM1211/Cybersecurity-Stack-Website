@@ -20,6 +20,7 @@ const teamStructuredData = {
       name: "Luke Collinson",
       jobTitle: "Co-founder",
       sameAs: "https://www.linkedin.com/in/luke-c-088b61121/",
+      email: "luke@cybersecuritystack.co.uk",
       worksFor: {
         "@type": "Organization",
         name: "Cyber Security Stack",
@@ -30,6 +31,29 @@ const teamStructuredData = {
       name: "Anna Wilson",
       jobTitle: "Co-founder",
       sameAs: "https://www.linkedin.com/in/anna-wilson-889830226/",
+      email: "anna@cybersecuritystack.co.uk",
+      worksFor: {
+        "@type": "Organization",
+        name: "Cyber Security Stack",
+      },
+    },
+    {
+      "@type": "Person",
+      name: "Devansh Mehrotra",
+      jobTitle: "Founder's Associate",
+      sameAs: "https://www.linkedin.com/in/devanshmehrotra12/",
+      email: "devansh@cybersecuritystack.co.uk",
+      worksFor: {
+        "@type": "Organization",
+        name: "Cyber Security Stack",
+      },
+    },
+    {
+      "@type": "Person",
+      name: "Ebun Idowu",
+      jobTitle: "Founder's Associate",
+      sameAs: "https://www.linkedin.com/in/ebun-idowu/",
+      email: "ebun@cybersecuritystack.co.uk",
       worksFor: {
         "@type": "Organization",
         name: "Cyber Security Stack",

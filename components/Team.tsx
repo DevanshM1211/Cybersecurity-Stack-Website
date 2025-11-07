@@ -16,12 +16,28 @@ const Team = () => {
       role: "Co-founder",
       image: "/team/luke-collinson.jpg",
       linkedin: "https://www.linkedin.com/in/luke-c-088b61121/",
+      email: "luke@cybersecuritystack.co.uk",
     },
     {
       name: "Anna Wilson",
       role: "Co-founder",
       image: "/team/anna-wilson.jpg",
       linkedin: "https://www.linkedin.com/in/anna-wilson-889830226/",
+      email: "anna@cybersecuritystack.co.uk",
+    },
+    {
+      name: "Devansh Mehrotra",
+      role: "Founder's Associate",
+      image: "/team/devansh-mehrotra.jpg",
+      linkedin: "https://www.linkedin.com/in/devanshmehrotra12/",
+      email: "devansh@cybersecuritystack.co.uk",
+    },
+    {
+      name: "Ebun Idowu",
+      role: "Founder's Associate",
+      image: "/team/ebun-idowu.jpg",
+      linkedin: "https://www.linkedin.com/in/ebun-idowu/",
+      email: "ebun@cybersecuritystack.co.uk",
     },
   ];
 
@@ -123,17 +139,20 @@ const Team = () => {
                       aria-hidden="true"
                     />
                   </motion.a>
-                  <motion.button
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="p-2 glass-effect rounded-lg hover:bg-cyber-purple/20 transition-all focus:outline-none focus:ring-2 focus:ring-cyber-purple"
-                    aria-label={`Email ${member.name}`}
-                  >
-                    <Mail
-                      className="w-5 h-5 text-gray-400 hover:text-cyber-purple transition-colors"
-                      aria-hidden="true"
-                    />
-                  </motion.button>
+                  {member.email && (
+                    <motion.a
+                      href={`mailto:${member.email}`}
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="p-2 glass-effect rounded-lg hover:bg-cyber-purple/20 transition-all focus:outline-none focus:ring-2 focus:ring-cyber-purple"
+                      aria-label={`Email ${member.name}`}
+                    >
+                      <Mail
+                        className="w-5 h-5 text-gray-400 hover:text-cyber-purple transition-colors"
+                        aria-hidden="true"
+                      />
+                    </motion.a>
+                  )}
                 </div>
               </div>
             </motion.div>
