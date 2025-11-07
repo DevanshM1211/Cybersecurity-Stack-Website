@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Network, Layers, Lock, Cpu, Shield, Zap } from "lucide-react";
-import MerkleTree from "./MerkleTree";
 
 const ResonanceProtocol = () => {
   const ref = useRef(null);
@@ -220,29 +219,6 @@ const ResonanceProtocol = () => {
                 </p>
               </div>
             </div>
-          </motion.div>
-        </motion.div>
-
-        {/* Merkle Tree Visualization */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ delay: 0.4 }}
-          className="mb-20"
-        >
-          <h3 className="text-2xl font-bold text-center mb-8 text-cyber-blue">
-            Merkle Tree Verification
-          </h3>
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={isInView ? { opacity: 1, scale: 1 } : {}}
-            transition={{ delay: 0.5 }}
-            className="max-w-3xl mx-auto glass-effect rounded-2xl p-8"
-          >
-            <p className="text-center text-gray-400 mb-6 text-sm">
-              Real-time cryptographic trust validation
-            </p>
-            <MerkleTree />
           </motion.div>
         </motion.div>
 
