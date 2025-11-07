@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const LogoLoop = () => {
   // Partner/certification logos - you can replace these with actual logo paths
@@ -80,10 +81,13 @@ const LogoLoop = () => {
               className="flex-shrink-0 w-48 h-24 flex items-center justify-center hover:scale-105 transition-all duration-300"
             >
               <div className="bg-white dark:bg-white/[0.02] rounded-xl p-6 w-full h-full flex items-center justify-center border border-gray-200/80 dark:border-white/10 shadow-sm hover:shadow-md dark:shadow-none transition-shadow">
-                <img
+                <Image
                   src={logo.src}
                   alt={logo.alt}
+                  width={120}
+                  height={60}
                   className="max-w-full max-h-full object-contain"
+                  priority={index < 7}
                 />
               </div>
             </div>
