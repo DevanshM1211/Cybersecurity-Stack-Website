@@ -130,21 +130,9 @@ const Team = () => {
                 <p className="text-cyber-purple text-sm font-semibold mb-3">
                   {member.role}
                 </p>
-                <p className="text-gray-400 text-xs mb-4 line-clamp-3">
+                <p className="text-gray-300 text-sm mb-6 leading-relaxed">
                   {member.description}
                 </p>
-
-                {/* Learn More Button */}
-                <motion.a
-                  href={member.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  className="inline-block w-full text-center px-4 py-2 mb-4 bg-gradient-to-r from-cyber-blue/20 to-cyber-purple/20 border border-cyber-blue/30 rounded-lg text-cyber-blue text-xs font-semibold hover:from-cyber-blue/30 hover:to-cyber-purple/30 transition-all"
-                >
-                  Learn More
-                </motion.a>
 
                 {/* Social Links */}
                 <div className="flex gap-3">
