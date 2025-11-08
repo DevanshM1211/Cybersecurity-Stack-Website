@@ -190,10 +190,8 @@ const MBDR = () => {
               className="mt-6 p-4 bg-cyber-blue/5 border border-cyber-blue/30 rounded-lg"
             >
               <p className="text-sm text-gray-300 text-center">
-                <strong className="text-cyber-blue">
-                  100% Prevention Rate
-                </strong>{" "}
-                • Zero-latency response • Autonomous operation
+                <strong className="text-cyber-blue">Ultra fast response</strong>{" "}
+                • Autonomous operation restoration
               </p>
             </motion.div>
           </motion.div>
