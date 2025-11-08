@@ -90,7 +90,7 @@ const LogoLoop = () => {
                 alt={logo.alt}
                 width={160}
                 height={80}
-                className="max-w-full max-h-full object-contain filter grayscale opacity-70 hover:opacity-100 dark:brightness-100 dark:invert"
+                className="max-w-full max-h-full object-contain opacity-70 hover:opacity-100 transition-opacity"
                 priority={index < 7}
               />
             </div>
