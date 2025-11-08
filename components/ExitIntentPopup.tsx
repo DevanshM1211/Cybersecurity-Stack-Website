@@ -40,85 +40,63 @@ export default function ExitIntentPopup() {
   return (
     <AnimatePresence>
       {isVisible && (
-        <>
-          {/* Backdrop */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black/70 backdrop-blur-sm z-[100]"
-            onClick={handleClose}
-          />
+        <motion.div
+          initial={{ opacity: 0, x: 400, y: 100 }}
+          animate={{ opacity: 1, x: 0, y: 0 }}
+          exit={{ opacity: 0, x: 400 }}
+          transition={{ type: "spring", damping: 20, stiffness: 300 }}
+          className="fixed bottom-6 right-6 z-[100] w-full max-w-sm"
+        >
+          <div className="relative bg-gradient-to-br from-gray-900 to-cyber-navy rounded-xl border border-primary-500/30 shadow-2xl overflow-hidden">
+            {/* Close button */}
+            <button
+              onClick={handleClose}
+              className="absolute top-3 right-3 p-1.5 rounded-lg bg-gray-800/50 hover:bg-gray-800 transition-colors z-10"
+              aria-label="Close popup"
+            >
+              <X className="w-4 h-4 text-gray-400" />
+            </button>
 
-          {/* Popup */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9, y: -20 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.9, y: -20 }}
-            transition={{ type: "spring", damping: 25 }}
-            className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[101] w-full max-w-lg mx-4"
-          >
-            <div className="relative bg-gradient-to-br from-gray-900 to-cyber-navy rounded-2xl border border-primary-500/30 shadow-2xl overflow-hidden">
-              {/* Close button */}
-              <button
-                onClick={handleClose}
-                className="absolute top-4 right-4 p-2 rounded-lg bg-gray-800/50 hover:bg-gray-800 transition-colors z-10"
-                aria-label="Close popup"
-              >
-                <X className="w-5 h-5 text-gray-400" />
-              </button>
-
-              {/* Content */}
-              <div className="p-8">
-                <div className="flex items-center justify-center mb-6">
-                  <div className="p-4 bg-primary-500/10 rounded-full">
-                    <Mail className="w-12 h-12 text-primary-500" />
-                  </div>
+            {/* Content */}
+            <div className="p-5">
+              <div className="flex items-start gap-3 mb-4">
+                <div className="p-2 bg-primary-500/10 rounded-lg flex-shrink-0">
+                  <Mail className="w-6 h-6 text-primary-500" />
                 </div>
-
-                <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-4">
-                  Wait! Before You Go...
-                </h2>
-
-                <p className="text-gray-300 text-center mb-6">
-                  Discover how our Resonance Protocol can protect your business
-                  from ransomware attacks. Get a free consultation with our
-                  security experts.
-                </p>
-
-                <div className="space-y-3">
-                  <Link
-                    href="/contact"
-                    onClick={handleClose}
-                    className="flex items-center justify-center gap-2 w-full px-6 py-4 bg-gradient-to-r from-primary-700 to-cyber-purple rounded-lg text-white font-semibold hover:from-primary-600 hover:to-primary-700 transition-all group"
-                  >
-                    Schedule Free Consultation
-                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                  </Link>
-
-                  <Link
-                    href="/documentation"
-                    onClick={handleClose}
-                    className="flex items-center justify-center gap-2 w-full px-6 py-3 bg-gray-800/50 border border-primary-500/30 rounded-lg text-white hover:bg-gray-800/70 hover:border-primary-500/50 transition-all"
-                  >
-                    View Documentation
-                  </Link>
+                <div>
+                  <h3 className="text-lg font-bold text-white mb-1">
+                    Wait! Before You Go...
+                  </h3>
+                  <p className="text-gray-300 text-sm">
+                    Get a free consultation on ransomware protection.
+                  </p>
                 </div>
+              </div>
+
+              <div className="space-y-2">
+                <Link
+                  href="/contact"
+                  onClick={handleClose}
+                  className="flex items-center justify-center gap-2 w-full px-4 py-2.5 bg-gradient-to-r from-primary-700 to-cyber-purple rounded-lg text-white text-sm font-semibold hover:from-primary-600 hover:to-primary-700 transition-all group"
+                >
+                  Schedule Consultation
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </Link>
 
                 <button
                   onClick={handleClose}
-                  className="mt-4 w-full text-gray-400 text-sm hover:text-gray-300 transition-colors"
+                  className="w-full text-gray-400 text-xs hover:text-gray-300 transition-colors py-1"
                 >
-                  No thanks, I'll explore on my own
+                  No thanks
                 </button>
               </div>
-
-              {/* Decorative gradient */}
-              <div className="absolute -top-24 -right-24 w-48 h-48 bg-primary-500/20 rounded-full blur-3xl" />
-              <div className="absolute -bottom-24 -left-24 w-48 h-48 bg-cyber-purple/20 rounded-full blur-3xl" />
             </div>
-          </motion.div>
-        </>
+
+            {/* Decorative gradient */}
+            <div className="absolute -top-12 -right-12 w-24 h-24 bg-primary-500/20 rounded-full blur-2xl" />
+            <div className="absolute -bottom-12 -left-12 w-24 h-24 bg-cyber-purple/20 rounded-full blur-2xl" />
+          </div>
+        </motion.div>
       )}
     </AnimatePresence>
   );
