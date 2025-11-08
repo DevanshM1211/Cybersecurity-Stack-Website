@@ -15,7 +15,7 @@ const Team = () => {
       name: "Luke Collinson",
       role: "Co-founder",
       description:
-        "Visionary leader driving innovation in cybersecurity infrastructure and strategic partnerships.",
+        "Turning breakthrough integrity research into practical security products. Leads strategy, partnerships, and go-to-market to help organisations build ransomware-resilient systems.",
       image: "/team/luke-collinson.jpg",
       linkedin: "https://www.linkedin.com/in/luke-c-088b61121/",
       email: "luke@cybersecuritystack.co.uk",
@@ -24,7 +24,7 @@ const Team = () => {
       name: "Anna Wilson",
       role: "Co-founder",
       description:
-        "Expert in cyber defence systems and resilient architecture design for critical infrastructure.",
+        "Expert in technological innovation across industry, Anna leads our business strategy and stakeholder engagement portfolio.",
       image: "/team/anna-wilson.jpg",
       linkedin: "https://www.linkedin.com/in/anna-wilson-889830226/",
       email: "anna@cybersecuritystack.co.uk",
@@ -33,7 +33,7 @@ const Team = () => {
       name: "Devansh Mehrotra",
       role: "Founder's Associate",
       description:
-        "Specializing in product development and bringing cutting-edge security solutions to market.",
+        "Drives the technical development of our SaaS platform and website, transforming concepts into scalable, user-focused digital solutions with seamless functionality and user experience.",
       image: "/team/devansh-mehrotra.png",
       linkedin: "https://www.linkedin.com/in/devanshmehrotra12/",
       email: "devansh@cybersecuritystack.co.uk",
@@ -42,7 +42,7 @@ const Team = () => {
       name: "Ebun Idowu",
       role: "Founder's Associate",
       description:
-        "Focused on research and implementation of next-generation cryptographic security protocols.",
+        "Focus on research for investment readiness via grant and Investor Relations analysis, translating complex concepts into clear commercial narratives for funding and market adoption.",
       image: "/team/ebun-idowu.png",
       linkedin: "https://www.linkedin.com/in/ebun-idowu/",
       email: "ebun@cybersecuritystack.co.uk",
