@@ -23,12 +23,17 @@ Cyber Security Stack is a deep-tech cybersecurity company pioneering a new parad
 - **Modern Design**: Cutting-edge UI with glassmorphism effects and gradient accents
 - **Smooth Animations**: Powered by Framer Motion for fluid, engaging interactions
 - **Responsive Layout**: Optimized for all devices from mobile to desktop
+- **LinkedIn Feed Integration**: Automated post fetching with three-tier fallback system
+  - LinkedIn API for real-time updates
+  - Google Sheets for easy manual management
+  - Static JSON fallback for reliability
 - **Interactive Visualizations**:
   - Animated Merkle Tree verification system
   - Real-time threat prevention matrix
   - Multi-layer architecture diagrams
 - **Performance Optimized**: Built with Next.js 14 App Router for optimal performance
 - **Type-Safe**: Full TypeScript implementation
+- **SEO Optimized**: Comprehensive meta tags, structured data, and sitemap
 
 ## 🛠️ Tech Stack
 
@@ -58,7 +63,17 @@ Cyber Security Stack is a deep-tech cybersecurity company pioneering a new parad
    pnpm install
    ```
 
-3. **Run the development server**
+3. **Set up environment variables (optional)**
+
+   ```bash
+   # Copy the example environment file
+   cp .env.example .env.local
+
+   # Use the interactive setup script for LinkedIn feed
+   ./scripts/setup-linkedin.sh
+   ```
+
+4. **Run the development server**
 
    ```bash
    npm run dev
@@ -68,7 +83,7 @@ Cyber Security Stack is a deep-tech cybersecurity company pioneering a new parad
    pnpm dev
    ```
 
-4. **Open your browser**
+5. **Open your browser**
 
    Navigate to [http://localhost:3000](http://localhost:3000)
 
@@ -78,17 +93,29 @@ Cyber Security Stack is a deep-tech cybersecurity company pioneering a new parad
 ├── app/
 │   ├── layout.tsx          # Root layout with fonts and metadata
 │   ├── page.tsx            # Home page
-│   └── globals.css         # Global styles and Tailwind imports
+│   ├── globals.css         # Global styles and Tailwind imports
+│   └── api/                # API routes
+│       ├── contact/        # Contact form API
+│       ├── linkedin-feed/  # LinkedIn API integration
+│       ├── linkedin-sheet/ # Google Sheets fallback
+│       └── linkedin-static/# Static JSON fallback
 ├── components/
 │   ├── Navbar.tsx          # Navigation bar with scroll effects
 │   ├── Hero.tsx            # Hero section with CTA
+│   ├── LinkedInFeed.tsx    # Automated LinkedIn feed component
 │   ├── MerkleTree.tsx      # Interactive Merkle tree visualization
 │   ├── ResonanceProtocol.tsx  # Protocol explanation section
 │   ├── MBDR.tsx            # MBDR technology showcase
 │   ├── Partnership.tsx     # Oxford partnership section
 │   ├── Mission.tsx         # Company mission and values
 │   └── Footer.tsx          # Footer with links and newsletter
+├── data/
+│   └── linkedin-posts.json # Static LinkedIn posts fallback
+├── scripts/
+│   ├── setup-linkedin.sh   # Interactive LinkedIn setup
+│   └── test-linkedin-feed.js  # LinkedIn integration tester
 ├── public/                 # Static assets
+├── LINKEDIN_SETUP.md       # Comprehensive LinkedIn setup guide
 ├── tailwind.config.ts      # Tailwind configuration
 ├── tsconfig.json          # TypeScript configuration
 ├── next.config.js         # Next.js configuration
@@ -113,25 +140,32 @@ Cyber Security Stack is a deep-tech cybersecurity company pioneering a new parad
    - Real-time statistics
    - Merkle tree visualization
 
-2. **Resonance Protocol**
+2. **LinkedIn Feed**
+
+   - Displays latest 3 company posts
+   - Three-tier fallback system for reliability
+   - Auto-refresh with ISR caching
+   - Beautiful card-based layout with hover effects
+
+3. **Resonance Protocol**
 
    - Multi-layer architecture visualization
    - Interactive feature cards
    - Scroll-triggered animations
 
-3. **MBDR Technology**
+4. **MBDR Technology**
 
    - Live threat prevention matrix
    - Core capabilities showcase
    - Step-by-step process explanation
 
-4. **Partnership Section**
+5. **Partnership Section**
 
    - Oxford University collaboration
    - Research statistics
    - Rotating gradient backgrounds
 
-5. **Mission Statement**
+6. **Mission Statement**
    - Company values grid
    - Vision statement with key metrics
    - Call-to-action buttons
@@ -158,12 +192,38 @@ npm start
 
 ### Environment Variables
 
-Create a `.env.local` file in the root directory:
+Create a `.env.local` file in the root directory (or use `./scripts/setup-linkedin.sh` for interactive setup):
 
 ```env
-# Add any environment variables here
-NEXT_PUBLIC_API_URL=your_api_url
+# Contact Form (Resend)
+RESEND_API_KEY=re_your_api_key_here
+CONTACT_FROM="Cyber Security Stack <no-reply@cybersecuritystack.co.uk>"
+CONTACT_TO=hello@cybersecuritystack.co.uk
+
+# reCAPTCHA v3
+NEXT_PUBLIC_RECAPTCHA_SITE_KEY=your_recaptcha_site_key_here
+RECAPTCHA_SECRET_KEY=your_recaptcha_secret_key_here
+
+# LinkedIn Feed (Choose one or more methods)
+# Method 1: LinkedIn API (Fully automated)
+LINKEDIN_CLIENT_ID=your_linkedin_client_id
+LINKEDIN_CLIENT_SECRET=your_linkedin_client_secret
+LINKEDIN_ACCESS_TOKEN=your_access_token
+LINKEDIN_ORGANIZATION_ID=123456789
+
+# Method 2: Google Sheets (Easy manual updates)
+GOOGLE_SHEET_ID=your_google_sheet_id
+GOOGLE_SHEET_TAB=Posts
+
+# Method 3: Static JSON (No setup needed)
+# Edit data/linkedin-posts.json directly
 ```
+
+**LinkedIn Feed Setup:**
+
+- **Quick Start**: Run `./scripts/setup-linkedin.sh` for interactive setup
+- **Testing**: Run `node scripts/test-linkedin-feed.js` to test your configuration
+- **Documentation**: See [LINKEDIN_SETUP.md](./LINKEDIN_SETUP.md) for detailed instructions
 
 ### Customization
 

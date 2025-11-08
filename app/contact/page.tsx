@@ -1,7 +1,6 @@
 import ContactForm from "@/components/ContactForm";
 import BackButton from "@/components/BackButton";
 import PageNavigation from "@/components/PageNavigation";
-import { RecaptchaProvider } from "@/contexts/RecaptchaContext";
 import { Metadata } from "next";
 import Script from "next/script";
 
@@ -57,9 +56,7 @@ export default function ContactPage() {
       />
       <main className="min-h-screen bg-cyber-dark">
         <BackButton />
-        <RecaptchaProvider>
-          <ContactForm />
-        </RecaptchaProvider>
+        <ContactForm />
         <PageNavigation
           previousPage={{
             title: "FAQ",

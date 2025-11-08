@@ -4,13 +4,10 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { Send, Mail, User, Building, MessageSquare, Check } from "lucide-react";
-import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
-import { fetchJsonWithRetry } from "@/lib/fetch-with-retry";
 
 const ContactForm = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.3 });
-  const { executeRecaptcha } = useGoogleReCaptcha();
   const [formState, setFormState] = useState({
     name: "",
     email: "",
@@ -28,28 +25,28 @@ const ContactForm = () => {
     setError("");
 
     try {
-      // Execute reCAPTCHA if available; gracefully degrade if not configured
-      const recaptchaToken = executeRecaptcha
-        ? await executeRecaptcha("contact_form")
-        : undefined;
+      // Honeypot check - if website field is filled, it's likely a bot
+      if (formState.website) {
+        throw new Error("Invalid submission");
+      }
 
-      const data = await fetchJsonWithRetry(
-        "/api/contact",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            ...formState,
-            recaptchaToken,
-          }),
+      // Submit to Formspree
+      const response = await fetch("https://formspree.io/f/xzzypgly", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
         },
-        {
-          maxRetries: 2,
-          initialDelay: 1000,
-        }
-      );
+        body: JSON.stringify({
+          name: formState.name,
+          email: formState.email,
+          company: formState.company,
+          message: formState.message,
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to send message. Please try again.");
+      }
 
       setIsSubmitted(true);
 

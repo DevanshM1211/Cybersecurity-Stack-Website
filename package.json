@@ -10,7 +10,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test:linkedin": "node scripts/test-linkedin-feed.js",
+    "setup:linkedin": "./scripts/setup-linkedin.sh"
   },
   "dependencies": {
     "clsx": "^2.1.1",
