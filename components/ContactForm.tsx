@@ -28,12 +28,10 @@ const ContactForm = () => {
     setError("");
 
     try {
-      // Execute reCAPTCHA
-      if (!executeRecaptcha) {
-        throw new Error("reCAPTCHA not initialized");
-      }
-
-      const recaptchaToken = await executeRecaptcha("contact_form");
+      // Execute reCAPTCHA if available; gracefully degrade if not configured
+      const recaptchaToken = executeRecaptcha
+        ? await executeRecaptcha("contact_form")
+        : undefined;
 
       const data = await fetchJsonWithRetry(
         "/api/contact",

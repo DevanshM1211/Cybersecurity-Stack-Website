@@ -161,10 +161,16 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    // Resolve sender/recipient from env with safe defaults
+    const FROM =
+      process.env.CONTACT_FROM ||
+      "Cyber Security Stack <no-reply@cybersecuritystack.co.uk>";
+    const TO = process.env.CONTACT_TO || "contact@cybersecuritystack.com";
+
     // Send email using Resend (resend is guaranteed to be non-null here)
     const data = await resend!.emails.send({
-      from: "Cyber Security Stack <onboarding@resend.dev>", // Replace with your verified domain
-      to: ["contact@cybersecuritystack.com"], // Replace with your actual email
+      from: FROM,
+      to: [TO],
       replyTo: email,
       subject: `New Contact Form Submission from ${name}`,
       html: `
