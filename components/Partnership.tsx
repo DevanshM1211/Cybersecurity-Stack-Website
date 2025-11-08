@@ -51,7 +51,7 @@ const Partnership = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.4 }}
-              className="text-lg text-gray-300 mb-8 leading-relaxed"
+              className="text-lg text-gray-700 dark:text-gray-300 mb-8 leading-relaxed"
             >
               <strong className="text-cyber-blue">
                 Cyber Security Stack (CSS)
@@ -93,7 +93,7 @@ const Partnership = () => {
                   initial={{ opacity: 0, x: -20 }}
                   animate={isInView ? { opacity: 1, x: 0 } : {}}
                   transition={{ delay: 0.6 + index * 0.1 }}
-                  className="flex items-center gap-4 text-gray-300"
+                  className="flex items-center gap-4 text-gray-700 dark:text-gray-300"
                 >
                   <div className="flex-shrink-0 p-2 bg-cyber-purple/20 rounded-lg text-cyber-purple">
                     {item.icon}
@@ -140,10 +140,12 @@ const Partnership = () => {
               <div className="relative z-10">
                 <div className="text-center mb-8">
                   <GraduationCap className="w-24 h-24 mx-auto text-cyber-purple mb-4" />
-                  <h3 className="text-2xl font-bold text-white mb-2">
+                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
                     University of Oxford
                   </h3>
-                  <p className="text-gray-400">Research Partnership</p>
+                  <p className="text-gray-600 dark:text-gray-400">
+                    Research Partnership
+                  </p>
                 </div>
 
                 <div className="grid grid-cols-2 gap-6">
@@ -163,7 +165,9 @@ const Partnership = () => {
                       <div className="text-3xl font-bold text-cyber-purple mb-1">
                         {stat.value}
                       </div>
-                      <div className="text-sm text-gray-400">{stat.label}</div>
+                      <div className="text-sm text-gray-600 dark:text-gray-400">
+                        {stat.label}
+                      </div>
                     </motion.div>
                   ))}
                 </div>
@@ -179,10 +183,10 @@ const Partnership = () => {
           transition={{ delay: 1.5 }}
           className="mt-20 text-center glass-effect rounded-2xl p-12"
         >
-          <h3 className="text-3xl font-bold text-white mb-4">
+          <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
             Join the Movement
           </h3>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-700 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
             <strong className="text-cyber-blue">CSS</strong> is leading the
             establishment of the Resonance Protocol as the universal
             integrity-first standard. Achieving this vision requires

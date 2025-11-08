@@ -108,7 +108,7 @@ const ResonanceProtocol = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.4 }}
-            className="text-xl text-gray-300 max-w-3xl mx-auto"
+            className="text-xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto"
           >
             A federated trust protocol where every system operates as a
             self-verifying "hive." Each layer - hardware, firmware, kernel,
@@ -128,7 +128,7 @@ const ResonanceProtocol = () => {
               <h4 className="text-sm text-cyber-blue uppercase tracking-widest mb-2">
                 Problem
               </h4>
-              <p className="text-gray-400">
+              <p className="text-gray-700 dark:text-gray-400">
                 Ransomware causes operational outages and costly rebuilds.
                 Existing tools detect behaviours late and struggle with unknown
                 threats.
@@ -139,7 +139,7 @@ const ResonanceProtocol = () => {
               <h4 className="text-sm text-cyber-blue uppercase tracking-widest mb-2">
                 Solution
               </h4>
-              <p className="text-gray-400">
+              <p className="text-gray-700 dark:text-gray-400">
                 A deep‑tech immune system that detects unwanted change instantly
                 and reverts to a trusted state so businesses continue as normal.
               </p>
@@ -149,7 +149,7 @@ const ResonanceProtocol = () => {
               <h4 className="text-sm text-cyber-blue uppercase tracking-widest mb-2">
                 Vision
               </h4>
-              <p className="text-gray-400">
+              <p className="text-gray-700 dark:text-gray-400">
                 Start as an agent & SaaS in IT, then become the universal
                 tamper‑proofing protocol embedded across all architectures and
                 devices.
@@ -164,7 +164,7 @@ const ResonanceProtocol = () => {
             transition={{ delay: 0.8 }}
             className="mt-16 max-w-6xl mx-auto"
           >
-            <h3 className="text-2xl font-semibold text-center text-white mb-8">
+            <h3 className="text-2xl font-semibold text-center text-gray-900 dark:text-white mb-8">
               How the Resonance Protocol Works
             </h3>
 
@@ -257,10 +257,10 @@ const ResonanceProtocol = () => {
                       className={`glass-effect rounded-lg p-6 bg-gradient-to-r ${layer.color} bg-opacity-10 border-l-4 border-transparent group-hover:border-cyber-blue transition-all`}
                     >
                       <div className="flex items-center justify-between">
-                        <span className="text-lg font-semibold text-white">
+                        <span className="text-lg font-semibold text-gray-900 dark:text-white">
                           {layer.name}
                         </span>
-                        <span className="text-sm text-gray-400 font-mono">
+                        <span className="text-sm text-gray-600 dark:text-gray-400 font-mono">
                           Layer {index + 1}
                         </span>
                       </div>
@@ -293,10 +293,10 @@ const ResonanceProtocol = () => {
               >
                 {feature.icon}
               </div>
-              <h3 className="text-xl font-bold mb-3 text-white group-hover:text-cyber-blue transition-colors">
+              <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white group-hover:text-cyber-blue transition-colors">
                 {feature.title}
               </h3>
-              <p className="text-gray-400 leading-relaxed">
+              <p className="text-gray-700 dark:text-gray-400 leading-relaxed">
                 {feature.description}
               </p>
             </motion.div>

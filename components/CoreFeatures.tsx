@@ -105,14 +105,14 @@ const CoreFeatures = () => {
               transition={{ delay: 0.5 + index * 0.1 }}
               className="group"
             >
-              <div className="p-8 bg-white/[0.02] border border-white/5 rounded-xl hover:bg-white/[0.04] hover:border-white/10 transition-all duration-300 h-full text-center">
+              <div className="p-8 bg-white dark:bg-white/[0.02] border border-gray-200 dark:border-white/5 rounded-xl hover:bg-white dark:hover:bg-white/[0.04] hover:border-gray-300 dark:hover:border-white/10 transition-all duration-300 h-full text-center">
                 <div className="mb-6 text-cyber-blue group-hover:scale-110 transition-transform inline-block">
                   {feature.icon}
                 </div>
                 <h3 className="text-xl font-semibold mb-3 text-gray-900 dark:text-white">
                   {feature.title}
                 </h3>
-                <p className="text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+                <p className="text-sm leading-relaxed text-gray-700 dark:text-gray-400">
                   {feature.description}
                 </p>
               </div>
