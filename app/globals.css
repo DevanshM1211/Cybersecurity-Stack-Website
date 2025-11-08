@@ -9,11 +9,13 @@
 }
 
 /* Light theme variables */
+/* Light mode temporarily disabled
 :root:not(.dark) {
   --foreground-rgb: 15, 23, 42;
   --background-start-rgb: 248, 250, 252;
   --background-end-rgb: 241, 245, 249;
 }
+*/
 
 * {
   box-sizing: border-box;
@@ -52,20 +54,24 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.08);
   }
 
+  /* Light mode temporarily disabled
   :root:not(.dark) .glass-effect {
     background: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(20px);
     border: 1px solid rgba(0, 143, 255, 0.15);
   }
+  */
 
   /* Subtle glow - adapts to theme */
   .glow-effect {
     box-shadow: 0 0 30px rgba(0, 143, 255, 0.2), 0 0 60px rgba(0, 90, 178, 0.15);
   }
 
+  /* Light mode temporarily disabled
   :root:not(.dark) .glow-effect {
     box-shadow: 0 0 30px rgba(0, 143, 255, 0.15), 0 0 60px rgba(0, 90, 178, 0.1);
   }
+  */
 
   /* Refined text glow */
   .text-glow {
@@ -79,10 +85,12 @@ body {
     transition: all 0.3s ease;
   }
 
+  /* Light mode temporarily disabled
   :root:not(.dark) .minimal-card {
     background: rgba(255, 255, 255, 0.95);
     border: 1px solid rgba(0, 143, 255, 0.1);
   }
+  */
 
   .minimal-card:hover {
     background: rgba(255, 255, 255, 0.04);
@@ -90,10 +98,12 @@ body {
     transform: translateY(-2px);
   }
 
+  /* Light mode temporarily disabled
   :root:not(.dark) .minimal-card:hover {
     background: rgba(255, 255, 255, 1);
     border-color: rgba(0, 143, 255, 0.3);
   }
+  */
 
   /* Screen reader only utility */
   .sr-only {

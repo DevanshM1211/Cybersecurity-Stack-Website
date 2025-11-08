@@ -92,27 +92,13 @@ const Navbar = () => {
 
           {/* Desktop Navigation - Simple & Elegant */}
           <div className="hidden md:flex items-center gap-4">
-            {/* Theme Toggle Button */}
-            <motion.button
-              onClick={toggleTheme}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="p-2 hover:bg-black/5 rounded-lg transition-colors dark:hover:bg-white/[0.05]"
-              aria-label="Toggle theme"
-              title={
-                theme === "dark"
-                  ? "Switch to light mode"
-                  : "Switch to dark mode"
-              }
+            {/* Theme Toggle Button (disabled) */}
+            <div
+              className="p-2 rounded-lg opacity-40 cursor-not-allowed select-none"
+              aria-hidden
             >
-              <motion.div
-                initial={false}
-                animate={{ rotate: theme === "dark" ? 0 : 180 }}
-                transition={{ duration: 0.3 }}
-              >
-                {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
-              </motion.div>
-            </motion.button>
+              <Sun size={20} />
+            </div>
 
             {/* Hamburger Menu Button */}
             <button
@@ -127,27 +113,10 @@ const Navbar = () => {
 
           {/* Mobile - Theme Toggle and Menu Button */}
           <div className="md:hidden flex items-center gap-2">
-            {/* Theme toggle */}
-            <motion.button
-              onClick={toggleTheme}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="p-2 rounded-lg transition-colors hover:bg-black/5 dark:text-white dark:hover:bg-white/[0.05]"
-              aria-label="Toggle theme"
-              title={
-                theme === "dark"
-                  ? "Switch to light mode"
-                  : "Switch to dark mode"
-              }
-            >
-              <motion.div
-                initial={false}
-                animate={{ rotate: theme === "dark" ? 0 : 180 }}
-                transition={{ duration: 0.3 }}
-              >
-                {theme === "dark" ? <Sun size={24} /> : <Moon size={24} />}
-              </motion.div>
-            </motion.button>
+            {/* Theme toggle (disabled on mobile) */}
+            <div className="p-2 rounded-lg opacity-40 cursor-not-allowed select-none">
+              <Sun size={24} />
+            </div>
 
             {/* Hamburger Menu Button */}
             <button

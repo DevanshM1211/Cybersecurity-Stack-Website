@@ -249,21 +249,7 @@ export default function RootLayout({
         />
       </head>
       <body className={`${inter.className} dark`}>
-        {/* Prevent flash of light mode */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                const theme = localStorage.getItem('theme');
-                if (theme === 'light') {
-                  document.documentElement.classList.remove('dark');
-                } else {
-                  document.documentElement.classList.add('dark');
-                }
-              })();
-            `,
-          }}
-        />
+        {/* Light mode temporarily disabled */}
         <ThemeProvider>
           <Navbar />
           {/* Skip to main content link for accessibility */}
