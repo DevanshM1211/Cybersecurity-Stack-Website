@@ -141,7 +141,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json(
         {
           error:
-            "Message flagged as potential spam. Please contact us directly at contact@cybersecuritystack.com",
+            "Message flagged as potential spam. Please contact us directly at hello@cybersecuritystack.co.uk",
           code: "SPAM_DETECTED",
         },
         { status: 400 }
@@ -154,7 +154,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json(
         {
           error:
-            "Email service is currently unavailable. Please contact us directly at contact@cybersecuritystack.com",
+            "Email service is currently unavailable. Please contact us directly at hello@cybersecuritystack.co.uk",
           code: "SERVICE_UNAVAILABLE",
         },
         { status: 503 }
@@ -165,7 +165,7 @@ export async function POST(request: NextRequest) {
     const FROM =
       process.env.CONTACT_FROM ||
       "Cyber Security Stack <no-reply@cybersecuritystack.co.uk>";
-    const TO = process.env.CONTACT_TO || "contact@cybersecuritystack.com";
+    const TO = process.env.CONTACT_TO || "hello@cybersecuritystack.co.uk";
 
     // Send email using Resend (resend is guaranteed to be non-null here)
     const data = await resend!.emails.send({

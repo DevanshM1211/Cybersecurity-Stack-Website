@@ -145,10 +145,10 @@ const ContactForm = () => {
                     Email Us
                   </div>
                   <a
-                    href="mailto:contact@cybersecuritystack.com"
+                    href="mailto:hello@cybersecuritystack.co.uk"
                     className="text-gray-600 dark:text-gray-400 hover:text-cyber-blue transition-colors"
                   >
-                    contact@cybersecuritystack.com
+                    hello@cybersecuritystack.co.uk
                   </a>
                 </div>
               </div>

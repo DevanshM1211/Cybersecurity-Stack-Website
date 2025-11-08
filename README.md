@@ -208,7 +208,7 @@ This project is proprietary software of Cyber Security Stack Ltd.
 
 For inquiries about Cyber Security Stack:
 
-- Email: contact@cybersecuritystack.com
+- Email: hello@cybersecuritystack.co.uk
 - Location: Oxford Innovation Hub, University of Oxford, United Kingdom
 
 ---

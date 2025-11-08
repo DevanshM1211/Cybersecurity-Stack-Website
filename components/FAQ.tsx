@@ -86,7 +86,7 @@ const FAQ = () => {
     {
       question: "How can I contact CSS?",
       answer:
-        "You can reach us through the website's contact form or by emailing the team at info@cybersecuritystack.io.",
+        "You can reach us through the website's contact form or by emailing the team at hello@cybersecuritystack.co.uk.",
     },
     // Additional FAQs (kept from the original set)
     {

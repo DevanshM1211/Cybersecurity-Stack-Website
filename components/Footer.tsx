@@ -10,7 +10,7 @@ const Footer = () => {
       { name: "MBDR Technology", href: "/mbdr" },
       { name: "Features", href: "/#core-features" },
       { name: "Documentation", href: "/documentation" },
-      { name: "Pricing", href: "/solution" },
+      { name: "Pricing", href: "/contact" },
     ],
     Company: [
       { name: "About Us", href: "/about" },
