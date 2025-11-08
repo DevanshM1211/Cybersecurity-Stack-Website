@@ -3,8 +3,8 @@ import { Inter, Roboto_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 import dynamic from "next/dynamic";
-import CookieConsent from "@/components/CookieConsent";
-import ExitIntentPopup from "@/components/ExitIntentPopup";
+// import CookieConsent from "@/components/CookieConsent";
+// import ExitIntentPopup from "@/components/ExitIntentPopup";
 import Script from "next/script";
 
 // Client-only Navbar to avoid SSR context issues
@@ -259,8 +259,8 @@ export default function RootLayout({
             Skip to main content
           </a>
           {children}
-          <CookieConsent />
-          <ExitIntentPopup />
+          {/* <CookieConsent /> */}
+          {/* <ExitIntentPopup /> */}
           {/* Google Analytics (replace G-XXXXXXX with your Measurement ID) */}
           <Script
             src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"

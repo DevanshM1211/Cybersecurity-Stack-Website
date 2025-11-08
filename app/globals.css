@@ -4,8 +4,8 @@
 
 :root {
   --foreground-rgb: 255, 255, 255;
-  --background-start-rgb: 0, 40, 88;
-  --background-end-rgb: 0, 57, 124;
+  --background-start-rgb: 5, 8, 20;
+  --background-end-rgb: 10, 14, 39;
 }
 
 /* Light theme variables */
@@ -115,11 +115,11 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #002858;
+  background: #0a0e27;
 }
 
 .dark ::-webkit-scrollbar-track {
-  background: #002858;
+  background: #0a0e27;
 }
 
 :root:not(.dark) ::-webkit-scrollbar-track {
