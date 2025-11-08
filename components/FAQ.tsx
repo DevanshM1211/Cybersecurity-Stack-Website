@@ -155,7 +155,7 @@ const FAQ = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.4 }}
-            className="text-xl text-gray-300 max-w-3xl mx-auto"
+            className="text-xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto"
           >
             Everything you need to know about the Resonance Protocol and Cyber
             Security Stack.
@@ -184,7 +184,7 @@ const FAQ = () => {
                 <div className="flex items-start justify-between gap-4">
                   <div className="flex items-start gap-4 flex-1">
                     <HelpCircle className="w-6 h-6 text-cyber-blue flex-shrink-0 mt-1" />
-                    <h3 className="text-lg md:text-xl font-bold text-white group-hover:text-cyber-blue transition-colors">
+                    <h3 className="text-lg md:text-xl font-bold text-gray-900 dark:text-white group-hover:text-cyber-blue transition-colors">
                       {faq.question}
                     </h3>
                   </div>
@@ -206,7 +206,7 @@ const FAQ = () => {
                   transition={{ duration: 0.3 }}
                   className="overflow-hidden"
                 >
-                  <p className="text-gray-300 leading-relaxed mt-4 ml-10">
+                  <p className="text-gray-700 dark:text-gray-300 leading-relaxed mt-4 ml-10">
                     {faq.answer}
                   </p>
                 </motion.div>
@@ -222,10 +222,10 @@ const FAQ = () => {
           transition={{ delay: 1.5 }}
           className="mt-16 text-center glass-effect rounded-2xl p-12"
         >
-          <h3 className="text-3xl font-bold text-white mb-4">
+          <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
             Still Have Questions?
           </h3>
-          <p className="text-xl text-gray-300 mb-8">
+          <p className="text-xl text-gray-700 dark:text-gray-300 mb-8">
             Our team is here to help you understand how the Resonance Protocol
             can protect your infrastructure.
           </p>
