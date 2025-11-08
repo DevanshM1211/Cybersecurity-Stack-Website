@@ -16,7 +16,7 @@ const Team = () => {
       role: "Co-founder",
       description:
         "Turning breakthrough integrity research into practical security products. Leads strategy, partnerships, and go-to-market to help organisations build ransomware-resilient systems.",
-      image: "/team/luke-collinson.jpg",
+      image: "/team/luke-collinson.jpeg",
       linkedin: "https://www.linkedin.com/in/luke-c-088b61121/",
       email: "luke@cybersecuritystack.co.uk",
     },
