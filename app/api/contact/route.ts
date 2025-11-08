@@ -42,18 +42,71 @@ export async function POST(request: NextRequest) {
     // Check rate limit
     if (!checkRateLimit(ip)) {
       return NextResponse.json(
-        { error: "Too many requests. Please try again later." },
+        {
+          error: "Too many requests. Please try again later.",
+          code: "RATE_LIMIT_EXCEEDED",
+        },
         { status: 429 }
       );
     }
 
     const body = await request.json();
-    const { name, email, company, message } = body;
+    const { name, email, company, message, recaptchaToken, website } = body;
+
+    // Honeypot check - if website field is filled, it's likely a bot
+    if (website) {
+      console.warn("Honeypot triggered:", { ip, email });
+      // Return success to avoid tipping off bots
+      return NextResponse.json(
+        { message: "Email sent successfully" },
+        { status: 200 }
+      );
+    }
+
+    // Verify reCAPTCHA token
+    if (recaptchaToken) {
+      try {
+        const recaptchaSecret = process.env.RECAPTCHA_SECRET_KEY;
+        if (recaptchaSecret) {
+          const recaptchaResponse = await fetch(
+            "https://www.google.com/recaptcha/api/siteverify",
+            {
+              method: "POST",
+              headers: { "Content-Type": "application/x-www-form-urlencoded" },
+              body: `secret=${recaptchaSecret}&response=${recaptchaToken}`,
+            }
+          );
+
+          const recaptchaData = await recaptchaResponse.json();
+
+          if (!recaptchaData.success || recaptchaData.score < 0.5) {
+            console.warn("reCAPTCHA verification failed:", {
+              ip,
+              score: recaptchaData.score,
+            });
+            return NextResponse.json(
+              {
+                error:
+                  "Spam detection triggered. Please try again or contact us directly.",
+                code: "CAPTCHA_FAILED",
+              },
+              { status: 400 }
+            );
+          }
+        }
+      } catch (captchaError) {
+        console.error("reCAPTCHA verification error:", captchaError);
+        // Continue even if CAPTCHA verification fails (fallback to other checks)
+      }
+    }
 
     // Validate required fields
     if (!name || !email || !message) {
       return NextResponse.json(
-        { error: "Missing required fields" },
+        {
+          error: "Missing required fields. Please fill in all required fields.",
+          code: "MISSING_FIELDS",
+        },
         { status: 400 }
       );
     }
@@ -62,7 +115,10 @@ export async function POST(request: NextRequest) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
       return NextResponse.json(
-        { error: "Invalid email address" },
+        {
+          error: "Invalid email address format.",
+          code: "INVALID_EMAIL",
+        },
         { status: 400 }
       );
     }
@@ -85,7 +141,8 @@ export async function POST(request: NextRequest) {
       return NextResponse.json(
         {
           error:
-            "Message flagged as potential spam. Please contact us directly.",
+            "Message flagged as potential spam. Please contact us directly at contact@cybersecuritystack.com",
+          code: "SPAM_DETECTED",
         },
         { status: 400 }
       );
@@ -95,7 +152,11 @@ export async function POST(request: NextRequest) {
     if (!resend) {
       console.error("Resend API key not configured");
       return NextResponse.json(
-        { error: "Email service not configured. Please contact us directly." },
+        {
+          error:
+            "Email service is currently unavailable. Please contact us directly at contact@cybersecuritystack.com",
+          code: "SERVICE_UNAVAILABLE",
+        },
         { status: 503 }
       );
     }
@@ -171,8 +232,18 @@ export async function POST(request: NextRequest) {
     );
   } catch (error) {
     console.error("Error sending email:", error);
+
+    // Determine error type and provide appropriate message
+    const errorMessage =
+      error instanceof Error ? error.message : "Unknown error occurred";
+
     return NextResponse.json(
-      { error: "Failed to send email. Please try again later." },
+      {
+        error: "Failed to send email. Please try again later.",
+        code: "INTERNAL_ERROR",
+        details:
+          process.env.NODE_ENV === "development" ? errorMessage : undefined,
+      },
       { status: 500 }
     );
   }

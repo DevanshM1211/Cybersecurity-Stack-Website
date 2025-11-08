@@ -17,6 +17,7 @@ export async function GET() {
         items: [],
         message:
           "LinkedIn feed not configured. Set LINKEDIN_ACCESS_TOKEN and LINKEDIN_ORGANIZATION_ID or LINKEDIN_OWNER_URN in your environment.",
+        code: "NOT_CONFIGURED",
       },
       { status: 200 }
     );
@@ -42,7 +43,14 @@ export async function GET() {
 
     if (!res.ok) {
       const text = await res.text();
-      throw new Error(`LinkedIn API error ${res.status}: ${text}`);
+      console.error("LinkedIn API error:", {
+        status: res.status,
+        statusText: res.statusText,
+        response: text,
+      });
+      throw new Error(
+        `LinkedIn API returned ${res.status} ${res.statusText}. Please check your credentials and permissions.`
+      );
     }
 
     const json: any = await res.json();
@@ -88,11 +96,29 @@ export async function GET() {
     return NextResponse.json({ items });
   } catch (err: any) {
     // Never leak token or full errors to client
-    console.error("/api/linkedin-feed error:", err?.message || err);
+    console.error("/api/linkedin-feed error:", {
+      message: err?.message || "Unknown error",
+      stack: process.env.NODE_ENV === "development" ? err?.stack : undefined,
+    });
+
+    // Determine error type for better client messaging
+    const isAuthError =
+      err?.message?.includes("401") || err?.message?.includes("403");
+    const isRateLimitError = err?.message?.includes("429");
+
     return NextResponse.json(
       {
         items: [],
-        error: "Unable to fetch LinkedIn feed right now.",
+        error: isAuthError
+          ? "LinkedIn authentication failed. Please check credentials."
+          : isRateLimitError
+          ? "LinkedIn API rate limit exceeded. Please try again later."
+          : "Unable to fetch LinkedIn feed right now. Please try again later.",
+        code: isAuthError
+          ? "AUTH_ERROR"
+          : isRateLimitError
+          ? "RATE_LIMIT"
+          : "FETCH_ERROR",
       },
       { status: 200 }
     );

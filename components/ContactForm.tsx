@@ -4,15 +4,19 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { Send, Mail, User, Building, MessageSquare, Check } from "lucide-react";
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
+import { fetchJsonWithRetry } from "@/lib/fetch-with-retry";
 
 const ContactForm = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.3 });
+  const { executeRecaptcha } = useGoogleReCaptcha();
   const [formState, setFormState] = useState({
     name: "",
     email: "",
     company: "",
     message: "",
+    website: "", // Honeypot field
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -24,25 +28,42 @@ const ContactForm = () => {
     setError("");
 
     try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formState),
-      });
-
-      const data = await response.json();
-
-      if (!response.ok) {
-        throw new Error(data.error || "Failed to send message");
+      // Execute reCAPTCHA
+      if (!executeRecaptcha) {
+        throw new Error("reCAPTCHA not initialized");
       }
+
+      const recaptchaToken = await executeRecaptcha("contact_form");
+
+      const data = await fetchJsonWithRetry(
+        "/api/contact",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            ...formState,
+            recaptchaToken,
+          }),
+        },
+        {
+          maxRetries: 2,
+          initialDelay: 1000,
+        }
+      );
 
       setIsSubmitted(true);
 
       // Reset form after 5 seconds
       setTimeout(() => {
-        setFormState({ name: "", email: "", company: "", message: "" });
+        setFormState({
+          name: "",
+          email: "",
+          company: "",
+          message: "",
+          website: "",
+        });
         setIsSubmitted(false);
       }, 5000);
     } catch (err) {
@@ -217,6 +238,20 @@ const ContactForm = () => {
                       placeholder="Your Company"
                     />
                   </div>
+                </div>
+
+                {/* Honeypot field - hidden from users */}
+                <div className="hidden" aria-hidden="true">
+                  <label htmlFor="website">Website</label>
+                  <input
+                    type="text"
+                    id="website"
+                    name="website"
+                    value={formState.website}
+                    onChange={handleChange}
+                    tabIndex={-1}
+                    autoComplete="off"
+                  />
                 </div>
 
                 <div>
