@@ -123,7 +123,7 @@ const ContactForm = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.4 }}
-              className="text-xl text-gray-300 mb-8 leading-relaxed"
+              className="text-xl text-gray-700 dark:text-gray-300 mb-8 leading-relaxed"
             >
               Get in touch to learn how the Resonance Protocol can protect your
               infrastructure with ransomware-resistant, integrity-first
@@ -141,10 +141,12 @@ const ContactForm = () => {
                   <Mail className="w-6 h-6 text-cyber-blue" />
                 </div>
                 <div>
-                  <div className="font-semibold text-white mb-1">Email Us</div>
+                  <div className="font-semibold text-gray-900 dark:text-white mb-1">
+                    Email Us
+                  </div>
                   <a
                     href="mailto:contact@cybersecuritystack.com"
-                    className="text-gray-400 hover:text-cyber-blue transition-colors"
+                    className="text-gray-600 dark:text-gray-400 hover:text-cyber-blue transition-colors"
                   >
                     contact@cybersecuritystack.com
                   </a>
@@ -165,13 +167,13 @@ const ContactForm = () => {
                 <div>
                   <label
                     htmlFor="name"
-                    className="block text-sm font-medium text-gray-300 mb-2"
+                    className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
                   >
                     Full Name *
                   </label>
                   <div className="relative">
                     <User
-                      className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400"
+                      className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-500 dark:text-gray-400"
                       aria-hidden="true"
                     />
                     <input
@@ -191,13 +193,13 @@ const ContactForm = () => {
                 <div>
                   <label
                     htmlFor="email"
-                    className="block text-sm font-medium text-gray-300 mb-2"
+                    className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
                   >
                     Email Address *
                   </label>
                   <div className="relative">
                     <Mail
-                      className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400"
+                      className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-500 dark:text-gray-400"
                       aria-hidden="true"
                     />
                     <input
@@ -207,7 +209,7 @@ const ContactForm = () => {
                       required
                       value={formState.email}
                       onChange={handleChange}
-                      className="w-full pl-12 pr-4 py-3 bg-cyber-dark border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-cyber-blue focus:ring-2 focus:ring-cyber-blue/50 transition-colors"
+                      className="w-full pl-12 pr-4 py-3 bg-white dark:bg-white/5 border border-gray-300 dark:border-white/10 rounded-lg text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyber-blue focus:border-transparent transition-all"
                       placeholder="john@company.com"
                       aria-required="true"
                     />
@@ -217,13 +219,13 @@ const ContactForm = () => {
                 <div>
                   <label
                     htmlFor="company"
-                    className="block text-sm font-medium text-gray-300 mb-2"
+                    className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
                   >
                     Company Name
                   </label>
                   <div className="relative">
                     <Building
-                      className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400"
+                      className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-500 dark:text-gray-400"
                       aria-hidden="true"
                     />
                     <input
@@ -232,7 +234,7 @@ const ContactForm = () => {
                       name="company"
                       value={formState.company}
                       onChange={handleChange}
-                      className="w-full pl-12 pr-4 py-3 bg-cyber-dark border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-cyber-blue focus:ring-2 focus:ring-cyber-blue/50 transition-colors"
+                      className="w-full pl-12 pr-4 py-3 bg-white dark:bg-white/5 border border-gray-300 dark:border-white/10 rounded-lg text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyber-blue focus:border-transparent transition-all"
                       placeholder="Your Company"
                     />
                   </div>
@@ -255,13 +257,13 @@ const ContactForm = () => {
                 <div>
                   <label
                     htmlFor="message"
-                    className="block text-sm font-medium text-gray-300 mb-2"
+                    className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
                   >
                     Message *
                   </label>
                   <div className="relative">
                     <MessageSquare
-                      className="absolute left-4 top-4 w-5 h-5 text-gray-400"
+                      className="absolute left-4 top-4 w-5 h-5 text-gray-500 dark:text-gray-400"
                       aria-hidden="true"
                     />
                     <textarea
@@ -340,10 +342,10 @@ const ContactForm = () => {
                     aria-hidden="true"
                   />
                 </motion.div>
-                <h3 className="text-2xl font-bold text-white mb-2">
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
                   Message Sent!
                 </h3>
-                <p className="text-gray-400">
+                <p className="text-gray-700 dark:text-gray-400">
                   We'll get back to you within 24 hours.
                 </p>
               </motion.div>

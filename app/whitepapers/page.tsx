@@ -150,7 +150,7 @@ export default function WhitepapersPage() {
                 </span>
               </h1>
 
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
                 Download our comprehensive 4-part technical research series on
                 the Resonance Protocol, covering the Overall Architecture,
                 Subsumption Hive, Adjacent Hive, and OT Applications.
@@ -166,13 +166,13 @@ export default function WhitepapersPage() {
                 >
                   <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
                     <div className="flex-1">
-                      <h2 className="text-2xl font-bold text-white mb-3">
+                      <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
                         {paper.title}
                       </h2>
-                      <p className="text-gray-400 mb-4 leading-relaxed">
+                      <p className="text-gray-700 dark:text-gray-400 mb-4 leading-relaxed">
                         {paper.description}
                       </p>
-                      <div className="flex items-center gap-6 text-sm text-gray-500">
+                      <div className="flex items-center gap-6 text-sm text-gray-600 dark:text-gray-500">
                         <div className="flex items-center gap-2">
                           <Calendar className="w-4 h-4" />
                           <span>{paper.date}</span>
@@ -201,10 +201,10 @@ export default function WhitepapersPage() {
 
             {/* Additional Information */}
             <div className="mt-16 text-center p-8 glass-effect rounded-2xl border border-primary-500/20">
-              <h3 className="text-2xl font-bold text-white mb-4">
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
                 Complete Technical Documentation
               </h3>
-              <p className="text-gray-400 max-w-2xl mx-auto">
+              <p className="text-gray-700 dark:text-gray-400 max-w-2xl mx-auto">
                 These four whitepapers provide comprehensive technical coverage
                 of the Resonance Protocol. Read them in sequence for a complete
                 understanding of our ransomware-resistant architecture, or focus

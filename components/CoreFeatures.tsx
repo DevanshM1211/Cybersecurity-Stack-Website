@@ -83,7 +83,7 @@ const CoreFeatures = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.3 }}
-            className="text-lg text-gray-400 max-w-2xl mx-auto font-light"
+            className="text-lg text-gray-700 dark:text-gray-400 max-w-2xl mx-auto font-light"
           >
             Built to contain ransomware and enforce trust through cryptographic
             verification
