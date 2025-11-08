@@ -43,7 +43,7 @@ const LogoLoop = () => {
     },
     {
       name: "Plexal",
-      src: "/team/plexal.png",
+      src: "/team/Plexal.png",
       alt: "Plexal",
     },
   ];
