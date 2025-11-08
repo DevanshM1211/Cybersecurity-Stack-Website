@@ -2,17 +2,15 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Sun, Moon } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { useTheme } from "@/contexts/ThemeContext";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [imgError, setImgError] = useState(false);
   const pathname = usePathname();
-  const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -92,14 +90,6 @@ const Navbar = () => {
 
           {/* Desktop Navigation - Simple & Elegant */}
           <div className="hidden md:flex items-center gap-4">
-            {/* Theme Toggle Button (disabled) */}
-            <div
-              className="p-2 rounded-lg opacity-40 cursor-not-allowed select-none"
-              aria-hidden
-            >
-              <Sun size={20} />
-            </div>
-
             {/* Hamburger Menu Button */}
             <button
               className="p-2 hover:bg-white/[0.05] rounded-lg transition-colors"
@@ -111,13 +101,8 @@ const Navbar = () => {
             </button>
           </div>
 
-          {/* Mobile - Theme Toggle and Menu Button */}
+          {/* Mobile - Menu Button */}
           <div className="md:hidden flex items-center gap-2">
-            {/* Theme toggle (disabled on mobile) */}
-            <div className="p-2 rounded-lg opacity-40 cursor-not-allowed select-none">
-              <Sun size={24} />
-            </div>
-
             {/* Hamburger Menu Button */}
             <button
               className="p-2 rounded-lg transition-colors hover:bg-black/5 dark:text-white dark:hover:bg-white/[0.05]"
