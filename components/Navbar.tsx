@@ -183,7 +183,7 @@ const Navbar = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ type: "spring", damping: 25, stiffness: 200 }}
-                className="fixed right-6 top-[90px] w-[280px] glass-effect border border-white/10 rounded-xl p-6 overflow-y-auto shadow-2xl"
+                className="fixed right-6 top-[90px] w-[280px] bg-white dark:bg-gray-900 border border-gray-200 dark:border-white/10 rounded-xl p-6 overflow-y-auto shadow-2xl"
               >
                 <nav aria-label="Navigation menu">
                   <div className="space-y-1">
