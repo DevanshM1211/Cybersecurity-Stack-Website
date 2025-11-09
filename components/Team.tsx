@@ -18,7 +18,7 @@ const Team = () => {
         "Turning breakthrough integrity research into practical security products. Leads strategy, partnerships, and go-to-market to help organisations build ransomware-resilient systems.",
       image: "/team/luke-collinson.jpeg",
       linkedin: "https://www.linkedin.com/in/luke-c-088b61121/",
-      email: "luke@cybersecuritystack.co.uk",
+      email: "hello@cybersecuritystack.co.uk",
     },
     {
       name: "Anna Wilson",
@@ -109,7 +109,7 @@ const Team = () => {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.7 + index * 0.2 }}
               whileHover={{ scale: 1.03, y: -10 }}
-              className="glass-effect rounded-2xl overflow-hidden hover:glow-effect transition-all cursor-pointer group"
+              className="glass-effect rounded-2xl overflow-hidden hover:glow-effect transition-all cursor-pointer group h-full flex flex-col"
             >
               {/* Image */}
               <div className="relative h-64 bg-gradient-to-br from-cyber-blue/20 via-cyber-purple/20 to-cyber-pink/20 overflow-hidden">
@@ -123,7 +123,7 @@ const Team = () => {
               </div>
 
               {/* Member Info */}
-              <div className="p-6">
+              <div className="p-6 flex flex-col h-full">
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-cyber-blue transition-colors">
                   {member.name}
                 </h3>
@@ -135,7 +135,7 @@ const Team = () => {
                 </p>
 
                 {/* Social Links */}
-                <div className="flex gap-3">
+                <div className="mt-auto flex items-center gap-3">
                   <motion.a
                     href={member.linkedin}
                     target="_blank"
