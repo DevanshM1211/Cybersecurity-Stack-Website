@@ -73,7 +73,7 @@ const ResonanceProtocol = () => {
       className="py-24 relative overflow-hidden"
     >
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-b from-cyber-darker via-cyber-dark to-cyber-darker opacity-50" />
+      <div className="absolute inset-0 bg-gradient-to-b from-white via-gray-50 to-white dark:from-cyber-darker dark:via-cyber-dark dark:to-cyber-darker opacity-50" />
 
       <div className="container mx-auto px-6 relative z-10">
         {/* Section Header */}
@@ -170,51 +170,55 @@ const ResonanceProtocol = () => {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-6 items-start text-center">
               <div className="space-y-3">
-                <div className="w-14 h-14 rounded-full bg-white/5 flex items-center justify-center mx-auto text-cyber-blue font-bold">
+                <div className="w-14 h-14 rounded-full bg-gray-200 dark:bg-white/5 flex items-center justify-center mx-auto text-cyber-blue font-bold">
                   1
                 </div>
-                <p className="text-sm text-gray-400">Merkle tree formation</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  Merkle tree formation
+                </p>
               </div>
 
               <div className="space-y-3">
-                <div className="w-14 h-14 rounded-full bg-white/5 flex items-center justify-center mx-auto text-cyber-blue font-bold">
+                <div className="w-14 h-14 rounded-full bg-gray-200 dark:bg-white/5 flex items-center justify-center mx-auto text-cyber-blue font-bold">
                   2
                 </div>
-                <p className="text-sm text-gray-400">
+                <p className="text-sm text-gray-600 dark:text-gray-400">
                   Stack propagation, subsumption hive formed
                 </p>
               </div>
 
               <div className="space-y-3">
-                <div className="w-14 h-14 rounded-full bg-white/5 flex items-center justify-center mx-auto text-cyber-blue font-bold">
+                <div className="w-14 h-14 rounded-full bg-gray-200 dark:bg-white/5 flex items-center justify-center mx-auto text-cyber-blue font-bold">
                   3
                 </div>
-                <p className="text-sm text-gray-400">
+                <p className="text-sm text-gray-600 dark:text-gray-400">
                   Peer-to-peer contracts form adjacent hives
                 </p>
               </div>
 
               <div className="space-y-3">
-                <div className="w-14 h-14 rounded-full bg-white/5 flex items-center justify-center mx-auto text-cyber-blue font-bold">
+                <div className="w-14 h-14 rounded-full bg-gray-200 dark:bg-white/5 flex items-center justify-center mx-auto text-cyber-blue font-bold">
                   4
                 </div>
-                <p className="text-sm text-gray-400">Node compromised</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  Node compromised
+                </p>
               </div>
 
               <div className="space-y-3">
-                <div className="w-14 h-14 rounded-full bg-white/5 flex items-center justify-center mx-auto text-cyber-blue font-bold">
+                <div className="w-14 h-14 rounded-full bg-gray-200 dark:bg-white/5 flex items-center justify-center mx-auto text-cyber-blue font-bold">
                   5
                 </div>
-                <p className="text-sm text-gray-400">
+                <p className="text-sm text-gray-600 dark:text-gray-400">
                   Compromised subsumption hive isolated
                 </p>
               </div>
 
               <div className="space-y-3">
-                <div className="w-14 h-14 rounded-full bg-white/5 flex items-center justify-center mx-auto text-cyber-blue font-bold">
+                <div className="w-14 h-14 rounded-full bg-gray-200 dark:bg-white/5 flex items-center justify-center mx-auto text-cyber-blue font-bold">
                   6
                 </div>
-                <p className="text-sm text-gray-400">
+                <p className="text-sm text-gray-600 dark:text-gray-400">
                   Remedial action, automated corrective action to mitigate
                   ransomware
                 </p>
@@ -236,7 +240,7 @@ const ResonanceProtocol = () => {
           <div className="max-w-4xl mx-auto relative">
             {/* IT/OT/IoT Overarching Bracket */}
             <div className="relative border-l-4 border-r-4 border-t-4 border-primary-500/30 rounded-t-3xl pt-8 pb-4 px-6 mb-6">
-              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-cyber-dark px-4">
+              <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-white dark:bg-cyber-dark px-4">
                 <span className="text-lg font-semibold text-primary-500">
                   IT / OT / IoT Device Architectures
                 </span>

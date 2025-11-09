@@ -130,7 +130,7 @@ export default function WhitepapersPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionData) }}
       />
 
-      <main className="min-h-screen bg-cyber-dark">
+      <main className="min-h-screen bg-white dark:bg-cyber-dark">
         <BackButton />
 
         <section className="py-24 relative overflow-hidden">

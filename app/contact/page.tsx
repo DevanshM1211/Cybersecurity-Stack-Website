@@ -54,7 +54,7 @@ export default function ContactPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbData) }}
       />
-      <main className="min-h-screen bg-cyber-dark">
+      <main className="min-h-screen bg-white dark:bg-cyber-dark">
         <BackButton />
         <ContactForm />
         <PageNavigation

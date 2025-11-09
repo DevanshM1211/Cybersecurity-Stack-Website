@@ -70,7 +70,7 @@ export default function TeamPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(teamStructuredData) }}
       />
-      <main className="min-h-screen bg-cyber-dark">
+      <main className="min-h-screen bg-white dark:bg-cyber-dark">
         <BackButton />
         <Team />
         <PageNavigation
