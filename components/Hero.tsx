@@ -60,7 +60,7 @@ const Hero = () => {
             <span className="font-normal text-gray-900 dark:text-white">
               Resonance Protocol
             </span>
-            -real-time integrity verification through federated trust.
+            – real-time integrity verification through federated trust.
           </motion.p>
 
           <motion.div

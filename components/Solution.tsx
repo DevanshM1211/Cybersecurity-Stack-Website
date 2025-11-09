@@ -63,12 +63,12 @@ const Solution = () => {
         {
           icon: <UsersIcon className="w-5 h-5" />,
           title: "Endpoint Grouping",
-          description: "Organize and manage at scale",
+          description: "Organise and manage at scale",
         },
         {
           icon: <ShieldCheck className="w-5 h-5" />,
-          title: "Licensing Management",
-          description: "Streamlined license control",
+          title: "Licence Management",
+          description: "Streamlined licence control",
         },
       ],
     },
@@ -85,7 +85,7 @@ const Solution = () => {
         {
           icon: <Search className="w-5 h-5" />,
           title: "Technical Review",
-          description: "Expert analysis and optimization",
+          description: "Expert analysis and optimisation",
         },
         {
           icon: <LifeBuoy className="w-5 h-5" />,
