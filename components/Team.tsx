@@ -117,10 +117,10 @@ const Team = () => {
                   src={member.image}
                   alt={`${member.name} - ${member.role}`}
                   fill
-                  className={`object-cover ${
+                  className={`${
                     member.name === "Luke Collinson"
-                      ? "object-[center_35%]"
-                      : "object-top"
+                      ? "object-contain object-top"
+                      : "object-cover object-top"
                   }`}
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
                 />
