@@ -48,11 +48,8 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     setTheme((prevTheme) => (prevTheme === "dark" ? "light" : "dark"));
   };
 
-  // Prevent flash of unstyled content
-  if (!mounted) {
-    return <>{children}</>;
-  }
-
+  // Always render the provider so consumers can safely call useTheme on first render
+  // We still manage DOM class updates in effects to avoid FOUC.
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       {children}
