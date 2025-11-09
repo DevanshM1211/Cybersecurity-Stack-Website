@@ -42,7 +42,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-6xl md:text-7xl lg:text-8xl font-light leading-[1.05] tracking-tight"
+            className="text-[clamp(2.25rem,7.5vw,4.5rem)] md:text-7xl lg:text-8xl font-light leading-[1.1] md:leading-[1.05] tracking-tight"
           >
             Redefining{" "}
             <span className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-cyber-blue via-blue-400 to-cyber-purple">
@@ -67,7 +67,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className="flex flex-wrap gap-4 pt-4 justify-center"
+            className="flex flex-wrap gap-3 sm:gap-4 pt-4 justify-center"
           >
             <motion.a
               href="/mbdr"
@@ -100,7 +100,7 @@ const Hero = () => {
           repeat: Infinity,
           ease: "easeInOut",
         }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 reduce-motion-hidden"
       >
         <div className="w-6 h-10 border-2 border-cyber-blue/50 rounded-full flex items-start justify-center p-2">
           <motion.div

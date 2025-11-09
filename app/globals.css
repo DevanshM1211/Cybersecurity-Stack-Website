@@ -61,6 +61,8 @@ body {
   line-height: 1.6;
   letter-spacing: -0.01em;
   transition: background 0.3s ease, color 0.3s ease;
+  /* Ensure content not obscured by iOS notch when using fixed navbar */
+  padding-top: env(safe-area-inset-top);
 }
 
 @layer utilities {
@@ -127,6 +129,20 @@ body {
   .dark .minimal-card:hover {
     background: rgba(255, 255, 255, 0.04);
     border-color: rgba(0, 143, 255, 0.3);
+  }
+
+  /* ============================================
+     REDUCED MOTION SUPPORT
+     ============================================ */
+  @media (prefers-reduced-motion: reduce) {
+    .reduce-motion-hidden {
+      display: none !important;
+    }
+    .reduce-motion-remove-anim,
+    .reduce-motion-remove-anim * {
+      animation: none !important;
+      transition: none !important;
+    }
   }
 
   /* ============================================

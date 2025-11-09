@@ -59,7 +59,7 @@ const Navbar = () => {
           : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-6 py-5 max-w-7xl">
+      <div className="container mx-auto px-4 sm:px-6 py-5 max-w-7xl">
         <div className="flex items-center justify-between">
           {/* Logo - Visible & Clean */}
           <motion.a
@@ -133,7 +133,6 @@ const Navbar = () => {
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.2 }}
                 className="fixed inset-0 bg-black/60 backdrop-blur-sm md:hidden"
-                style={{ top: "80px" }}
                 onClick={() => setIsMobileMenuOpen(false)}
                 aria-hidden="true"
               />
@@ -144,7 +143,8 @@ const Navbar = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ type: "spring", damping: 25, stiffness: 200 }}
-                className="fixed right-6 top-[90px] w-[280px] bg-white dark:bg-gray-900 border border-gray-200 dark:border-white/10 rounded-xl p-6 overflow-y-auto shadow-2xl"
+                className="fixed right-4 sm:right-6 top-[72px] sm:top-[80px] w-[88vw] max-w-[320px] bg-white dark:bg-gray-900 border border-gray-200 dark:border-white/10 rounded-xl p-2 sm:p-4 overflow-y-auto shadow-2xl"
+                style={{ maxHeight: "calc(100vh - 96px)" }}
               >
                 <nav aria-label="Navigation menu">
                   <div className="space-y-1">
@@ -155,7 +155,7 @@ const Navbar = () => {
                         initial={{ opacity: 0, x: -10 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: index * 0.05 }}
-                        className={`block py-3 px-4 rounded-lg transition-all text-sm font-light ${
+                        className={`block py-3.5 px-4 rounded-lg transition-all text-base font-light ${
                           pathname === link.href
                             ? "text-cyber-blue underline underline-offset-4 decoration-2 bg-black/5 dark:bg-white/[0.08]"
                             : "text-gray-700 hover:text-gray-900 hover:bg-black/5 dark:text-gray-300 dark:hover:text-white dark:hover:bg-white/[0.05]"
