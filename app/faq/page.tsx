@@ -64,7 +64,7 @@ export default function FAQPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }}
       />
-      <main className="min-h-screen bg-white dark:bg-cyber-dark">
+      <main className="relative min-h-screen bg-white dark:bg-cyber-dark z-0">
         <BackButton />
         <FAQ />
         <PageNavigation

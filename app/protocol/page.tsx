@@ -55,7 +55,7 @@ export default function ProtocolPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbData) }}
       />
-      <main className="min-h-screen bg-white dark:bg-cyber-dark">
+      <main className="relative min-h-screen bg-white dark:bg-cyber-dark z-0">
         <BackButton />
         <ResonanceProtocol />
         <PageNavigation

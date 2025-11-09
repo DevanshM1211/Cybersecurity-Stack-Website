@@ -132,7 +132,7 @@ const Navbar = () => {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.2 }}
-                className="fixed inset-0 bg-black/60 backdrop-blur-sm md:hidden"
+                className="fixed inset-0 bg-black/60 backdrop-blur-sm md:hidden z-40"
                 onClick={() => setIsMobileMenuOpen(false)}
                 aria-hidden="true"
               />
@@ -143,7 +143,7 @@ const Navbar = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ type: "spring", damping: 25, stiffness: 200 }}
-                className="fixed right-4 sm:right-6 top-[72px] sm:top-[80px] w-[88vw] max-w-[320px] bg-white dark:bg-gray-900 border border-gray-200 dark:border-white/10 rounded-xl p-2 sm:p-4 overflow-y-auto shadow-2xl"
+                className="fixed right-4 sm:right-6 top-[72px] sm:top-[80px] w-[88vw] max-w-[320px] bg-white dark:bg-gray-900 border border-gray-200 dark:border-white/10 rounded-xl p-2 sm:p-4 overflow-y-auto shadow-2xl z-50"
                 style={{ maxHeight: "calc(100vh - 96px)" }}
               >
                 <nav aria-label="Navigation menu">
