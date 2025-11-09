@@ -112,7 +112,7 @@ const Team = () => {
               className="glass-effect rounded-2xl overflow-hidden hover:glow-effect transition-all cursor-pointer group h-full flex flex-col"
             >
               {/* Image */}
-              <div className="relative h-72 bg-white dark:bg-cyber-dark overflow-hidden">
+              <div className="relative h-72 bg-white dark:bg-white overflow-hidden">
                 <Image
                   src={member.image}
                   alt={`${member.name} - ${member.role}`}
