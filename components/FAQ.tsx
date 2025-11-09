@@ -112,7 +112,7 @@ const FAQ = () => {
     {
       question: "How was Cyber Security Stack developed?",
       answer:
-        "Cyber Security Stack (CSS) developed the Resonance Protocol through rigorous research combining world-leading cryptographic expertise with cutting-edge federated trust architecture, backed by academic rigour and peer-reviewed security protocols.",
+        "Cyber Security Stack (CSS) developed the Resonance Protocol through rigorous research with the University of Manchester combining world-leading cryptographic expertise with cutting-edge federated trust architecture, backed by academic rigour and peer-reviewed security protocols.",
     },
   ];
 
