@@ -119,7 +119,7 @@ const Team = () => {
                   fill
                   className={`object-cover ${
                     member.name === "Luke Collinson"
-                      ? "object-[center_20%]"
+                      ? "object-top scale-90 md:scale-95 transform"
                       : "object-top"
                   }`}
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
