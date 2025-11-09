@@ -59,8 +59,12 @@ const TrustSignals = () => {
                 <div className="text-white">{badge.icon}</div>
               </div>
               <div>
-                <div className="text-white font-bold">{badge.title}</div>
-                <div className="text-gray-400 text-sm">{badge.subtitle}</div>
+                <div className="text-gray-900 dark:text-white font-bold">
+                  {badge.title}
+                </div>
+                <div className="text-gray-600 dark:text-gray-400 text-sm">
+                  {badge.subtitle}
+                </div>
               </div>
             </motion.div>
           ))}

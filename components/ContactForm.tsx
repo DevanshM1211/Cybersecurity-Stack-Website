@@ -180,7 +180,7 @@ const ContactForm = () => {
                       required
                       value={formState.name}
                       onChange={handleChange}
-                      className="w-full pl-12 pr-4 py-3 bg-cyber-dark border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-cyber-blue focus:ring-2 focus:ring-cyber-blue/50 transition-colors"
+                      className="w-full pl-12 pr-4 py-3 bg-white dark:bg-white/5 border border-gray-300 dark:border-white/10 rounded-lg text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyber-blue focus:border-transparent transition-all"
                       placeholder="John Doe"
                       aria-required="true"
                     />
@@ -270,7 +270,7 @@ const ContactForm = () => {
                       rows={4}
                       value={formState.message}
                       onChange={handleChange}
-                      className="w-full pl-12 pr-4 py-3 bg-cyber-dark border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-cyber-blue focus:ring-2 focus:ring-cyber-blue/50 transition-colors resize-none"
+                      className="w-full pl-12 pr-4 py-3 bg-white dark:bg-white/5 border border-gray-300 dark:border-white/10 rounded-lg text-gray-900 dark:text-white placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyber-blue focus:border-transparent transition-all resize-none"
                       placeholder="Tell us about your security needs..."
                       aria-required="true"
                     />
@@ -295,7 +295,7 @@ const ContactForm = () => {
                   disabled={isSubmitting}
                   whileHover={{ scale: isSubmitting ? 1 : 1.02 }}
                   whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
-                  className="w-full px-8 py-4 bg-gradient-to-r from-cyber-blue to-cyber-purple rounded-lg text-white font-semibold flex items-center justify-center gap-2 hover:shadow-lg hover:shadow-cyber-blue/50 transition-all disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-cyber-blue focus:ring-offset-2 focus:ring-offset-gray-900"
+                  className="w-full px-8 py-4 bg-gradient-to-r from-cyber-blue to-cyber-purple rounded-lg text-white font-semibold flex items-center justify-center gap-2 hover:shadow-lg hover:shadow-cyber-blue/50 transition-all disabled:opacity-50 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-cyber-blue focus:ring-offset-2 focus:ring-offset-white dark:focus:ring-offset-gray-900"
                   aria-label={isSubmitting ? "Sending message" : "Send message"}
                 >
                   {isSubmitting ? (

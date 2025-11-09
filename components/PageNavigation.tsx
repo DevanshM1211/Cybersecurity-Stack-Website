@@ -33,7 +33,7 @@ const PageNavigation = ({ previousPage, nextPage }: PageNavigationProps) => {
                 <p className="text-xs text-gray-500 uppercase tracking-wider">
                   Previous
                 </p>
-                <p className="text-white group-hover:text-cyber-blue transition-colors font-medium">
+                <p className="text-gray-900 dark:text-white group-hover:text-cyber-blue transition-colors font-medium">
                   {previousPage.title}
                 </p>
               </div>
@@ -54,7 +54,7 @@ const PageNavigation = ({ previousPage, nextPage }: PageNavigationProps) => {
                 <p className="text-xs text-gray-500 uppercase tracking-wider">
                   Next
                 </p>
-                <p className="text-white group-hover:text-cyber-blue transition-colors font-medium">
+                <p className="text-gray-900 dark:text-white group-hover:text-cyber-blue transition-colors font-medium">
                   {nextPage.title}
                 </p>
               </div>

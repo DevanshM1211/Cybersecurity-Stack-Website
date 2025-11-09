@@ -75,11 +75,11 @@ export default function TermsContent() {
               <FileText className="w-12 h-12 text-blue-400" />
             </motion.div>
 
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
               Terms of Service
             </h1>
 
-            <p className="text-xl text-gray-300 mb-8">
+            <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
               Please read these terms carefully before using our services
             </p>
 
@@ -109,7 +109,7 @@ export default function TermsContent() {
                     <section.icon className="w-6 h-6 text-blue-400" />
                   </div>
                   <div className="flex-1">
-                    <h2 className="text-2xl font-bold text-white mb-4">
+                    <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
                       {section.title}
                     </h2>
                     <ul className="space-y-4">
@@ -136,7 +136,7 @@ export default function TermsContent() {
             viewport={{ once: true }}
             className="mt-12 p-8 rounded-2xl bg-gradient-to-br from-blue-900/20 to-purple-900/20 backdrop-blur-sm border border-blue-500/30"
           >
-            <h2 className="text-2xl font-bold text-white mb-4">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
               Governing Law
             </h2>
             <p className="text-gray-300 mb-4">

@@ -127,7 +127,7 @@ const PrivacyPolicy = () => {
                       <div className="p-3 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-lg">
                         <section.icon className="w-6 h-6 text-blue-400" />
                       </div>
-                      <h2 className="text-2xl font-bold text-white">
+                      <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
                         {section.title}
                       </h2>
                     </div>
@@ -156,10 +156,10 @@ const PrivacyPolicy = () => {
             viewport={{ once: true }}
             className="mt-12 p-8 rounded-2xl bg-gradient-to-br from-blue-900/20 to-purple-900/20 backdrop-blur-sm border border-blue-500/30"
           >
-            <h2 className="text-2xl font-bold text-white mb-4">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
               Cookies & Tracking
             </h2>
-            <p className="text-gray-300 mb-4">
+            <p className="text-gray-600 dark:text-gray-300 mb-4">
               We use cookies and similar tracking technologies to enhance your
               browsing experience and analyse website traffic. You can control
               cookie preferences through your browser settings.
@@ -179,10 +179,10 @@ const PrivacyPolicy = () => {
             viewport={{ once: true }}
             className="mt-12 p-8 rounded-2xl bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-blue-500/20 text-center"
           >
-            <h2 className="text-2xl font-bold text-white mb-4">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
               Questions About Privacy?
             </h2>
-            <p className="text-gray-300 mb-6">
+            <p className="text-gray-600 dark:text-gray-300 mb-6">
               If you have any questions or concerns about our privacy practices,
               please don't hesitate to contact us.
             </p>

@@ -119,10 +119,12 @@ const MBDR = () => {
                     {capability.icon}
                   </div>
                   <div>
-                    <h4 className="text-lg font-bold text-white mb-2">
+                    <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
                       {capability.title}
                     </h4>
-                    <p className="text-gray-400">{capability.description}</p>
+                    <p className="text-gray-600 dark:text-gray-400">
+                      {capability.description}
+                    </p>
                   </div>
                 </motion.div>
               ))}
@@ -138,7 +140,7 @@ const MBDR = () => {
           >
             <div className="flex items-center gap-3 mb-6">
               <Shield className="w-8 h-8 text-cyber-purple" />
-              <h3 className="text-2xl font-bold text-white">
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
                 Threat Mitigation Matrix
               </h3>
             </div>
@@ -166,7 +168,7 @@ const MBDR = () => {
                         }}
                         className="w-2 h-2 bg-green-500 rounded-full"
                       />
-                      <span className="text-white font-medium">
+                      <span className="text-gray-900 dark:text-white font-medium">
                         {threat.name}
                       </span>
                     </div>
@@ -240,10 +242,12 @@ const MBDR = () => {
                 <div className="text-5xl font-bold text-cyber-blue mb-4 opacity-50">
                   {item.step}
                 </div>
-                <h4 className="text-xl font-bold text-white mb-4">
+                <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
                   {item.title}
                 </h4>
-                <p className="text-gray-400">{item.description}</p>
+                <p className="text-gray-600 dark:text-gray-400">
+                  {item.description}
+                </p>
               </motion.div>
             ))}
           </div>

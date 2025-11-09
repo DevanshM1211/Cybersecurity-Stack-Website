@@ -24,7 +24,7 @@ export default function CookieConsent() {
 
   return (
     <div className="fixed bottom-4 left-0 right-0 z-50 flex justify-center px-4">
-      <div className="flex items-center gap-4 bg-gray-900 border border-primary-500/30 shadow-lg rounded-xl px-6 py-4 max-w-xl w-full">
+      <div className="flex items-center gap-4 bg-white dark:bg-gray-900 border border-gray-300 dark:border-primary-500/30 shadow-lg rounded-xl px-6 py-4 max-w-xl w-full">
         <Cookie className="w-6 h-6 text-primary-500 flex-shrink-0" />
         <div className="flex-1 text-gray-200 text-sm">
           We use cookies to improve your experience and analyse site usage. By

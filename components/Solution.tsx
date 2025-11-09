@@ -169,9 +169,11 @@ const Solution = () => {
                 <div
                   className={`inline-flex p-4 rounded-xl bg-gradient-to-br ${solution.gradient} bg-opacity-10 mb-4`}
                 >
-                  <div className="text-white">{solution.icon}</div>
+                  <div className="text-gray-900 dark:text-white">
+                    {solution.icon}
+                  </div>
                 </div>
-                <h3 className="text-2xl font-bold text-white">
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
                   {solution.title}
                 </h3>
               </div>
@@ -191,13 +193,15 @@ const Solution = () => {
                     <div
                       className={`flex-shrink-0 p-2 rounded-lg bg-gradient-to-br ${solution.gradient} bg-opacity-10 group-hover:bg-opacity-20 transition-all`}
                     >
-                      <div className="text-gray-300">{feature.icon}</div>
+                      <div className="text-gray-600 dark:text-gray-300">
+                        {feature.icon}
+                      </div>
                     </div>
                     <div>
-                      <h4 className="text-white font-semibold mb-1 group-hover:text-cyber-blue transition-colors">
+                      <h4 className="text-gray-900 dark:text-white font-semibold mb-1 group-hover:text-cyber-blue transition-colors">
                         {feature.title}
                       </h4>
-                      <p className="text-gray-400 text-sm leading-relaxed">
+                      <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
                         {feature.description}
                       </p>
                     </div>
@@ -215,7 +219,7 @@ const Solution = () => {
           transition={{ delay: 1.5 }}
           className="text-center glass-effect rounded-2xl p-12"
         >
-          <h3 className="text-3xl font-bold text-white mb-4">
+          <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
             Ready to Transform Your Cyber Defence?
           </h3>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">

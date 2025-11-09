@@ -101,7 +101,7 @@ const SiteMap = () => {
                 <div className="text-cyber-blue mb-4 group-hover:scale-110 transition-transform">
                   {page.icon}
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-cyber-blue transition-colors">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-cyber-blue transition-colors">
                   {page.title}
                 </h3>
                 <p className="text-sm text-gray-400">{page.description}</p>

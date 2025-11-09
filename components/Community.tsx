@@ -136,13 +136,13 @@ const Community = () => {
                 >
                   <div className="text-white">{platform.icon}</div>
                 </div>
-                <h3 className="text-2xl font-bold text-white">
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
                   {platform.title}
                 </h3>
               </div>
 
               {/* Description */}
-              <p className="text-gray-300 leading-relaxed mb-6">
+              <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
                 {platform.description}
               </p>
 
@@ -151,7 +151,7 @@ const Community = () => {
                 {platform.features.map((feature, featureIndex) => (
                   <div
                     key={featureIndex}
-                    className="flex items-center gap-3 text-gray-400"
+                    className="flex items-center gap-3 text-gray-600 dark:text-gray-400"
                   >
                     <div
                       className={`p-1.5 rounded bg-gradient-to-br ${platform.gradient} bg-opacity-20`}
@@ -186,7 +186,7 @@ const Community = () => {
           transition={{ delay: 1.2 }}
           className="glass-effect rounded-2xl p-12 text-center"
         >
-          <h3 className="text-3xl font-bold text-white mb-4">
+          <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
             Help Shape the Future
           </h3>
           <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -203,7 +203,7 @@ const Community = () => {
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 glass-effect rounded-full text-white font-semibold hover:bg-white/10 transition-all flex items-center gap-2"
+              className="px-8 py-4 glass-effect rounded-full text-gray-900 dark:text-white font-semibold hover:bg-black/5 dark:hover:bg-white/10 transition-all flex items-center gap-2"
             >
               <Linkedin className="w-5 h-5" />
               Follow Updates
@@ -214,7 +214,7 @@ const Community = () => {
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 glass-effect rounded-full text-white font-semibold hover:bg-white/10 transition-all flex items-center gap-2"
+              className="px-8 py-4 glass-effect rounded-full text-gray-900 dark:text-white font-semibold hover:bg-black/5 dark:hover:bg-white/10 transition-all flex items-center gap-2"
             >
               <Github className="w-5 h-5" />
               Contribute Code
