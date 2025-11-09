@@ -230,22 +230,14 @@ const FAQ = () => {
             can protect your infrastructure.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <motion.button
+            <motion.a
+              href="/contact"
+              aria-label="Contact Us"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="px-10 py-5 bg-gradient-to-r from-cyber-blue to-cyber-purple rounded-full text-white font-bold text-lg glow-effect"
             >
               Contact Us
-            </motion.button>
-            <motion.a
-              href="https://github.com/CyberSecurityStack/opensource"
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-10 py-5 glass-effect rounded-full text-white font-bold text-lg hover:bg-white/10 transition-all"
-            >
-              View Documentation
             </motion.a>
           </div>
         </motion.div>
