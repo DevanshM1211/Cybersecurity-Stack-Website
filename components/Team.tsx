@@ -117,7 +117,7 @@ const Team = () => {
                   src={member.image}
                   alt={`${member.name} - ${member.role}`}
                   fill
-                  className="object-cover"
+                  className="object-cover object-top"
                   sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
                 />
               </div>
