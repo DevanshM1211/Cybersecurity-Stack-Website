@@ -135,7 +135,7 @@ export default function WhitepapersPage() {
 
         <section className="py-24 relative overflow-hidden">
           {/* Background Effects */}
-          <div className="absolute inset-0 bg-gradient-to-b from-cyber-darker via-cyber-dark to-cyber-darker opacity-50" />
+          <div className="absolute inset-0 bg-gradient-to-b from-gray-100 via-gray-50 to-white dark:from-cyber-darker dark:via-cyber-dark dark:to-cyber-darker opacity-50" />
 
           <div className="container mx-auto px-6 relative z-10 max-w-5xl">
             {/* Header */}

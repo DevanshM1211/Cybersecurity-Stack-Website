@@ -100,7 +100,7 @@ const Solution = () => {
     <section
       id="solution"
       ref={ref}
-      className="py-24 relative overflow-hidden bg-gradient-to-b from-cyber-darker via-cyber-dark to-cyber-darker"
+      className="py-24 relative overflow-hidden bg-gradient-to-b from-gray-50 via-white to-gray-50 dark:from-cyber-darker dark:via-cyber-dark dark:to-cyber-darker"
     >
       <div className="container mx-auto px-6 relative z-10">
         {/* Section Header */}
@@ -135,7 +135,7 @@ const Solution = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.4 }}
-            className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed"
+            className="text-xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed"
           >
             Our solution brings together lightweight agents, a powerful SaaS
             platform, and expert professional services to deliver end-to-end
@@ -222,7 +222,7 @@ const Solution = () => {
           <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
             Ready to Transform Your Cyber Defence?
           </h3>
-          <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
             Discover how our comprehensive solution can protect your
             infrastructure with unmatched speed and resilience.
           </p>

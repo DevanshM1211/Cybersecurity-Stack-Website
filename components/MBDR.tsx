@@ -47,7 +47,7 @@ const MBDR = () => {
     <section
       id="mbdr"
       ref={ref}
-      className="py-24 relative overflow-hidden bg-gradient-to-b from-cyber-darker to-cyber-dark"
+      className="py-24 relative overflow-hidden bg-gradient-to-b from-gray-50 to-white dark:from-cyber-darker dark:to-cyber-dark"
     >
       <div className="container mx-auto px-6 relative z-10">
         {/* Section Header */}
@@ -83,7 +83,7 @@ const MBDR = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.4 }}
-            className="text-xl text-gray-300 max-w-3xl mx-auto"
+            className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto"
           >
             Built on the Resonance Protocol, MBDR leverages cryptographic Merkle
             tree verification across every system layer. When integrity is
@@ -102,7 +102,7 @@ const MBDR = () => {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ delay: 0.5 }}
           >
-            <h3 className="text-3xl font-bold mb-8 text-cyber-blue">
+            <h3 className="text-3xl font-bold mb-8 text-gray-900 dark:text-cyber-blue">
               Core Capabilities
             </h3>
             <div className="space-y-6">
@@ -152,7 +152,7 @@ const MBDR = () => {
                   initial={{ opacity: 0, x: 20 }}
                   animate={isInView ? { opacity: 1, x: 0 } : {}}
                   transition={{ delay: 1 + index * 0.1 }}
-                  className="bg-cyber-dark/50 rounded-lg p-4 border border-green-500/30"
+                  className="bg-gray-100 dark:bg-cyber-dark/50 rounded-lg p-4 border border-green-500/30"
                 >
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-3">
@@ -191,7 +191,7 @@ const MBDR = () => {
               transition={{ delay: 2 }}
               className="mt-6 p-4 bg-cyber-blue/5 border border-cyber-blue/30 rounded-lg"
             >
-              <p className="text-sm text-gray-300 text-center">
+              <p className="text-sm text-gray-600 dark:text-gray-300 text-center">
                 <strong className="text-cyber-blue">Ultra fast response</strong>{" "}
                 • Autonomous operation restoration
               </p>
@@ -206,7 +206,7 @@ const MBDR = () => {
           transition={{ delay: 1.5 }}
           className="mt-20"
         >
-          <h3 className="text-3xl font-bold text-center mb-12 text-cyber-purple">
+          <h3 className="text-3xl font-bold text-center mb-12 text-gray-900 dark:text-cyber-purple">
             How MBDR Works
           </h3>
 
@@ -239,7 +239,7 @@ const MBDR = () => {
                 whileHover={{ scale: 1.05, y: -10 }}
                 className="glass-effect rounded-xl p-8 text-center hover:glow-effect transition-all"
               >
-                <div className="text-5xl font-bold text-cyber-blue mb-4 opacity-50">
+                <div className="text-5xl font-bold text-gray-400 dark:text-cyber-blue mb-4 opacity-50">
                   {item.step}
                 </div>
                 <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-4">

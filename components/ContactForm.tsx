@@ -84,7 +84,7 @@ const ContactForm = () => {
   return (
     <section id="contact" ref={ref} className="py-24 relative overflow-hidden">
       {/* Background Effects */}
-      <div className="absolute inset-0 bg-gradient-to-b from-cyber-dark via-cyber-darker to-cyber-dark opacity-50" />
+      <div className="absolute inset-0 bg-gradient-to-b from-gray-100 to-gray-50 dark:from-cyber-dark dark:via-cyber-darker dark:to-cyber-dark opacity-50" />
 
       <div className="container mx-auto px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-start max-w-6xl mx-auto">
