@@ -34,14 +34,52 @@ const config: Config = {
           light: "#f8fafc", // Light background
           lighter: "#ffffff", // Lighter background
         },
+        // Light mode optimized colors
+        light: {
+          bg: {
+            primary: "#ffffff",
+            secondary: "#f8fafc",
+            tertiary: "#f1f5f9",
+          },
+          text: {
+            primary: "#0f172a", // slate-900
+            secondary: "#475569", // slate-600
+            tertiary: "#64748b", // slate-500
+          },
+          border: {
+            primary: "#e2e8f0", // slate-200
+            secondary: "#cbd5e1", // slate-300
+          },
+        },
+        // Dark mode optimized colors
+        dark: {
+          bg: {
+            primary: "#0a0e27",
+            secondary: "#050814",
+            tertiary: "#1e293b",
+          },
+          text: {
+            primary: "#ffffff",
+            secondary: "#e2e8f0", // slate-200
+            tertiary: "#cbd5e1", // slate-300
+          },
+          border: {
+            primary: "#334155", // slate-700
+            secondary: "#475569", // slate-600
+          },
+        },
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         "cyber-gradient": "linear-gradient(135deg, #00397c 0%, #008fff 100%)",
+        "cyber-gradient-light":
+          "linear-gradient(135deg, #008fff 0%, #1aa3ff 100%)",
         "mesh-gradient":
           "radial-gradient(at 40% 20%, hsla(200,100%,50%,0.3) 0px, transparent 50%), radial-gradient(at 80% 0%, hsla(210,100%,35%,0.3) 0px, transparent 50%), radial-gradient(at 0% 50%, hsla(205,100%,25%,0.3) 0px, transparent 50%)",
+        "mesh-gradient-light":
+          "radial-gradient(at 40% 20%, hsla(200,100%,50%,0.1) 0px, transparent 50%), radial-gradient(at 80% 0%, hsla(210,100%,35%,0.1) 0px, transparent 50%), radial-gradient(at 0% 50%, hsla(205,100%,25%,0.1) 0px, transparent 50%)",
       },
       animation: {
         "pulse-slow": "pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite",

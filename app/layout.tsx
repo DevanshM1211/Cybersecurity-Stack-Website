@@ -248,8 +248,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${inter.className} dark`}>
-        {/* Light mode temporarily disabled */}
+      <body className={`${inter.className}`}>
         <ThemeProvider>
           <Navbar />
           {/* Skip to main content link for accessibility */}

@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import ThemeToggle from "./ThemeToggle";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -89,10 +90,13 @@ const Navbar = () => {
           </motion.a>
 
           {/* Desktop Navigation - Simple & Elegant */}
-          <div className="hidden md:flex items-center gap-4">
+          <div className="hidden md:flex items-center gap-2">
+            {/* Theme Toggle */}
+            <ThemeToggle />
+
             {/* Hamburger Menu Button */}
             <button
-              className="p-2 hover:bg-white/[0.05] rounded-lg transition-colors"
+              className="p-2 hover:bg-black/5 dark:hover:bg-white/[0.05] rounded-lg transition-colors text-gray-700 dark:text-white"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
               aria-expanded={isMobileMenuOpen}
@@ -103,9 +107,12 @@ const Navbar = () => {
 
           {/* Mobile - Menu Button */}
           <div className="md:hidden flex items-center gap-2">
+            {/* Theme Toggle */}
+            <ThemeToggle />
+
             {/* Hamburger Menu Button */}
             <button
-              className="p-2 rounded-lg transition-colors hover:bg-black/5 dark:text-white dark:hover:bg-white/[0.05]"
+              className="p-2 rounded-lg transition-colors hover:bg-black/5 dark:hover:bg-white/[0.05] text-gray-700 dark:text-white"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
               aria-expanded={isMobileMenuOpen}

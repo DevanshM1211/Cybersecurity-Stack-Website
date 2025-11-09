@@ -12,7 +12,9 @@
     "start": "next start",
     "lint": "next lint",
     "test:linkedin": "node scripts/test-linkedin-feed.js",
-    "setup:linkedin": "./scripts/setup-linkedin.sh"
+    "setup:linkedin": "./scripts/setup-linkedin.sh",
+    "linkedin:get-org-id": "node scripts/get-org-id.js",
+    "linkedin:oauth": "node scripts/complete-oauth.js"
   },
   "dependencies": {
     "clsx": "^2.1.1",

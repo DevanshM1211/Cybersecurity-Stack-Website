@@ -2,7 +2,7 @@
 
 import { createContext, useContext, useEffect, useState } from "react";
 
-type Theme = "dark"; // Light mode temporarily disabled
+type Theme = "light" | "dark";
 
 interface ThemeContextType {
   theme: Theme;
@@ -12,14 +12,26 @@ interface ThemeContextType {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setTheme] = useState<Theme>("dark"); // Force dark
+  const [theme, setTheme] = useState<Theme>("dark");
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
-    // Temporarily force dark mode and ignore saved preference
-    setTheme("dark");
-    localStorage.setItem("theme", "dark");
+
+    // Check localStorage first, then system preference
+    const savedTheme = localStorage.getItem("theme") as Theme | null;
+
+    if (savedTheme === "light" || savedTheme === "dark") {
+      setTheme(savedTheme);
+    } else {
+      // Check system preference
+      const prefersDark = window.matchMedia(
+        "(prefers-color-scheme: dark)"
+      ).matches;
+      const initialTheme = prefersDark ? "dark" : "light";
+      setTheme(initialTheme);
+      localStorage.setItem("theme", initialTheme);
+    }
   }, []);
 
   useEffect(() => {
@@ -27,7 +39,9 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
       const root = document.documentElement;
       if (theme === "dark") {
         root.classList.add("dark");
+        root.classList.remove("light");
       } else {
+        root.classList.add("light");
         root.classList.remove("dark");
       }
       localStorage.setItem("theme", theme);
@@ -35,10 +49,10 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   }, [theme, mounted]);
 
   const toggleTheme = () => {
-    // Light mode disabled - keep dark
-    setTheme("dark");
+    setTheme((prevTheme) => (prevTheme === "dark" ? "light" : "dark"));
   };
 
+  // Prevent flash of unstyled content
   if (!mounted) {
     return <>{children}</>;
   }
