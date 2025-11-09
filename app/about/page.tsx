@@ -10,7 +10,7 @@ export const metadata = {
 
 export default function AboutPage() {
   return (
-    <main className="relative min-h-screen bg-white dark:bg-cyber-dark z-0">
+    <main className="relative min-h-screen bg-white dark:bg-cyber-dark z-0 pt-20">
       <BackButton />
       <About />
       <PageNavigation
