@@ -53,7 +53,7 @@ const Team = () => {
     <section
       id="team"
       ref={ref}
-      className="py-24 relative overflow-hidden bg-gradient-to-b from-cyber-dark to-cyber-darker"
+      className="py-24 relative overflow-hidden bg-gradient-to-b from-gray-50 to-white dark:from-cyber-dark dark:to-cyber-darker"
     >
       <div className="container mx-auto px-6 relative z-10">
         {/* Section Header */}
@@ -88,7 +88,7 @@ const Team = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.4 }}
-            className="text-xl text-gray-300 max-w-3xl mx-auto"
+            className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto"
           >
             Pioneering the future of cyber security with vision, innovation, and
             world-class expertise.
@@ -124,13 +124,13 @@ const Team = () => {
 
               {/* Member Info */}
               <div className="p-6">
-                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyber-blue transition-colors">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-cyber-blue transition-colors">
                   {member.name}
                 </h3>
                 <p className="text-cyber-purple text-sm font-semibold mb-3">
                   {member.role}
                 </p>
-                <p className="text-gray-300 text-sm mb-6 leading-relaxed">
+                <p className="text-gray-600 dark:text-gray-300 text-sm mb-6 leading-relaxed">
                   {member.description}
                 </p>
 
@@ -146,7 +146,7 @@ const Team = () => {
                     aria-label={`${member.name}'s LinkedIn profile`}
                   >
                     <Linkedin
-                      className="w-4 h-4 text-gray-400 hover:text-cyber-blue transition-colors"
+                      className="w-4 h-4 text-gray-500 dark:text-gray-400 hover:text-cyber-blue transition-colors"
                       aria-hidden="true"
                     />
                   </motion.a>
@@ -159,7 +159,7 @@ const Team = () => {
                       aria-label={`Email ${member.name}`}
                     >
                       <Mail
-                        className="w-4 h-4 text-gray-400 hover:text-cyber-purple transition-colors"
+                        className="w-4 h-4 text-gray-500 dark:text-gray-400 hover:text-cyber-purple transition-colors"
                         aria-hidden="true"
                       />
                     </motion.a>
