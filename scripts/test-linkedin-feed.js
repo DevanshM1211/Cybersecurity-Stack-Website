@@ -64,11 +64,12 @@ async function testLinkedInAPI() {
   log("✓ Owner URN: " + ownerUrn, "green");
 
   try {
-    const url = new URL("https://api.linkedin.com/v2/shares");
-    url.searchParams.set("q", "owners");
-    url.searchParams.set("owners", ownerUrn);
+    // Use LinkedIn v2 ugcPosts endpoint (Community Management API)
+    const url = new URL("https://api.linkedin.com/v2/ugcPosts");
+    url.searchParams.set("q", "authors");
+    url.searchParams.set("authors", `List(${ownerUrn})`);
     url.searchParams.set("sortBy", "LAST_MODIFIED");
-    url.searchParams.set("sharesPerOwner", "10");
+    url.searchParams.set("count", "10");
 
     log("\nFetching from LinkedIn API...", "cyan");
     log("URL: " + url.toString(), "blue");
@@ -109,9 +110,9 @@ async function testLinkedInAPI() {
     if (elements.length > 0) {
       log("\nFirst post preview:", "cyan");
       const first = elements[0];
-      const text = first.text?.text || first.commentary?.text || "(no text)";
+      const text = first.commentary || first.text?.text || "(no text)";
       log("  Text: " + text.substring(0, 100) + "...", "blue");
-      log("  ID: " + (first.id || first.activity || "unknown"), "blue");
+      log("  ID: " + (first.id || "unknown"), "blue");
     } else {
       log(
         "\n⚠️  No posts found. Company page may not have any posts.",

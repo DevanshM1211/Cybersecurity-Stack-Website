@@ -24,12 +24,13 @@ export async function GET() {
   }
 
   try {
-    // LinkedIn Shares API (may require special app permissions)
-    const url = new URL("https://api.linkedin.com/v2/shares");
-    url.searchParams.set("q", "owners");
-    url.searchParams.set("owners", OWNER_URN);
+    // LinkedIn UGC Posts API (Community Management)
+    // Note: This requires r_organization_social scope
+    const url = new URL("https://api.linkedin.com/v2/ugcPosts");
+    url.searchParams.set("q", "authors");
+    url.searchParams.set("authors", `List(${OWNER_URN})`);
     url.searchParams.set("sortBy", "LAST_MODIFIED");
-    url.searchParams.set("sharesPerOwner", "10");
+    url.searchParams.set("count", "10");
 
     const res = await fetch(url.toString(), {
       method: "GET",
@@ -56,39 +57,37 @@ export async function GET() {
     const json: any = await res.json();
     const elements: any[] = json.elements || [];
 
-    // Map to lightweight feed items
+    // Map to lightweight feed items (updated for new API structure)
     const items = elements.map((el: any) => {
-      const id = el.id || el.activity || Math.random().toString(36).slice(2);
+      const id = el.id || Math.random().toString(36).slice(2);
 
-      // Attempt to parse text from different shapes
-      const text =
-        el.text?.text ||
-        el.commentary?.text ||
-        el.specificContent?.["com.linkedin.ugc.ShareContent"]?.shareCommentary
-          ?.text ||
-        undefined;
+      // Extract text from commentary
+      const text = el.commentary || el.text?.text || undefined;
 
-      // Construct a URL to the activity when possible
+      // Construct LinkedIn post URL
       let url = "https://www.linkedin.com/company/cybersecuritystack/";
-      if (el.activity) {
-        url = `https://www.linkedin.com/feed/update/${el.activity}`;
+      if (id) {
+        // Modern format: urn:li:share:1234567890 or activity:1234567890
+        const activityId = id
+          .replace("urn:li:share:", "")
+          .replace("urn:li:activity:", "");
+        url = `https://www.linkedin.com/feed/update/${activityId}`;
       }
 
-      // Image extraction (best effort)
-      const media = el.content?.contentEntities?.[0];
-      const imageUrl =
-        media?.thumbnails?.[0]?.imageSpecificContent?.url ||
-        media?.thumbnails?.[0]?.resolvedUrl ||
-        media?.entityLocation ||
-        undefined;
+      // Image extraction from content array
+      let imageUrl = undefined;
+      if (el.content && Array.isArray(el.content)) {
+        const mediaContent = el.content.find((c: any) => c.media);
+        imageUrl = mediaContent?.media?.thumbnails?.[0]?.url || undefined;
+      }
 
-      const createdAt = el.lastModified?.time || el.created?.time || undefined;
+      const createdAt = el.publishedAt || el.createdAt || undefined;
 
       return {
         id: String(id),
         text,
         url,
-        createdAt: createdAt ? new Date(createdAt).toISOString() : undefined,
+        createdAt: createdAt ? new Date(createdAt).toISOString() : createdAt,
         imageUrl,
       };
     });
