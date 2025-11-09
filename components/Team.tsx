@@ -112,7 +112,7 @@ const Team = () => {
               className="glass-effect rounded-2xl overflow-hidden hover:glow-effect transition-all cursor-pointer group h-full flex flex-col"
             >
               {/* Image */}
-              <div className="relative h-72 bg-gradient-to-br from-cyber-blue/20 via-cyber-purple/20 to-cyber-pink/20 overflow-hidden">
+              <div className="relative h-72 bg-white dark:bg-cyber-dark overflow-hidden">
                 <Image
                   src={member.image}
                   alt={`${member.name} - ${member.role}`}
