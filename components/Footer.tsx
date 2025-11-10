@@ -2,11 +2,8 @@
 
 import { Shield, Mail, Linkedin, Github } from "lucide-react";
 import { motion } from "framer-motion";
-import { useTheme } from "@/contexts/ThemeContext";
 
 const Footer = () => {
-  const { theme } = useTheme();
-
   const footerLinks = {
     Product: [
       { name: "Resonance Protocol", href: "/protocol" },
@@ -46,8 +43,7 @@ const Footer = () => {
 
   return (
     <footer
-      className="border-t border-gray-200 dark:border-gray-800 pt-16 pb-8 relative"
-      style={{ backgroundColor: theme === "light" ? "#ffffff" : "#0a0e27" }}
+      className="border-t border-gray-200 dark:border-gray-800 pt-16 pb-8 relative bg-gradient-to-b from-gray-50 to-white dark:from-cyber-darker dark:to-cyber-dark"
     >
       <div className="container mx-auto px-6 relative z-10">
         {/* Main Footer Content */}
