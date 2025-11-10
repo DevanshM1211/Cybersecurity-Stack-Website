@@ -21,7 +21,7 @@ const Footer = () => {
         name: "LinkedIn Feed",
         href: "https://www.linkedin.com/company/cyber-security-stack/",
       },
-      { name: "Whitepaper", href: "/documentation" },
+      { name: "Whitepaper", href: "/whitepapers" },
       { name: "Contact", href: "/contact" },
     ],
     Legal: [
