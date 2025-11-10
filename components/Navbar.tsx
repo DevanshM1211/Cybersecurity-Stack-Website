@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 import ThemeToggle from "./ThemeToggle";
 
@@ -62,32 +63,33 @@ const Navbar = () => {
       <div className="container mx-auto px-4 sm:px-6 py-5 max-w-7xl">
         <div className="flex items-center justify-between">
           {/* Logo - Visible & Clean */}
-          <motion.a
-            href="/"
-            whileHover={{ opacity: 0.8 }}
-            className="flex items-center gap-3 cursor-pointer"
-          >
-            {!imgError ? (
-              <Image
-                src="/logo.png"
-                alt="Cyber Security Stack logo"
-                width={40}
-                height={40}
-                priority
-                className="rounded-md"
-                onError={() => setImgError(true)}
-              />
-            ) : (
-              <div className="w-10 h-10 rounded-md bg-gradient-to-br from-cyber-blue to-cyber-purple flex items-center justify-center text-white font-bold text-sm">
-                CSS
+          <Link href="/" className="flex items-center gap-3 cursor-pointer">
+            <motion.div
+              whileHover={{ opacity: 0.8 }}
+              className="flex items-center gap-3"
+            >
+              {!imgError ? (
+                <Image
+                  src="/logo.png"
+                  alt="Cyber Security Stack logo"
+                  width={40}
+                  height={40}
+                  priority
+                  className="rounded-md"
+                  onError={() => setImgError(true)}
+                />
+              ) : (
+                <div className="w-10 h-10 rounded-md bg-gradient-to-br from-cyber-blue to-cyber-purple flex items-center justify-center text-white font-bold text-sm">
+                  CSS
+                </div>
+              )}
+              <div className="flex flex-col leading-tight">
+                <span className="text-lg font-light tracking-tight text-gray-900 dark:text-white">
+                  Cyber Security Stack
+                </span>
               </div>
-            )}
-            <div className="flex flex-col leading-tight">
-              <span className="text-lg font-light tracking-tight text-gray-900 dark:text-white">
-                Cyber Security Stack
-              </span>
-            </div>
-          </motion.a>
+            </motion.div>
+          </Link>
 
           {/* Desktop Navigation - Simple & Elegant */}
           <div className="hidden md:flex items-center gap-2">
@@ -149,21 +151,24 @@ const Navbar = () => {
                 <nav aria-label="Navigation menu">
                   <div className="space-y-1">
                     {navLinks.map((link, index) => (
-                      <motion.a
+                      <Link
                         key={index}
                         href={link.href}
-                        initial={{ opacity: 0, x: -10 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: index * 0.05 }}
+                        onClick={() => setIsMobileMenuOpen(false)}
                         className={`block py-3.5 px-4 rounded-lg transition-all text-base font-light ${
                           pathname === link.href
                             ? "text-cyber-blue underline underline-offset-4 decoration-2 bg-black/5 dark:bg-white/[0.08]"
                             : "text-gray-700 hover:text-gray-900 hover:bg-black/5 dark:text-gray-300 dark:hover:text-white dark:hover:bg-white/[0.05]"
                         }`}
-                        onClick={() => setIsMobileMenuOpen(false)}
                       >
-                        {link.name}
-                      </motion.a>
+                        <motion.div
+                          initial={{ opacity: 0, x: -10 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{ delay: index * 0.05 }}
+                        >
+                          {link.name}
+                        </motion.div>
+                      </Link>
                     ))}
                   </div>
                 </nav>

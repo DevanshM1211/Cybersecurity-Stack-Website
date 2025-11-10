@@ -192,3 +192,30 @@ body {
   outline: 2px solid #008fff;
   outline-offset: 2px;
 }
+
+/* ============================================
+   PAGE TRANSITIONS
+   ============================================ */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Ensure smooth page transitions */
+  body {
+    transition: background-color 0.2s ease-in-out;
+  }
+
+  /* Prevent layout shift during transitions */
+  main {
+    min-height: 100vh;
+  }
+}
+
+/* View transitions API for browsers that support it */
+@supports (view-transition-name: none) {
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation-duration: 0.3s;
+  }
+}
