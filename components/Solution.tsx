@@ -105,13 +105,13 @@ const Solution = () => {
       <div className="container mx-auto px-6 relative z-10">
         {/* Section Header */}
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 1, y: 0 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
           <motion.span
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 0 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.2 }}
             className="inline-block px-4 py-2 bg-cyber-blue/10 border border-cyber-blue/30 rounded-full text-cyber-blue text-sm font-semibold mb-4"
@@ -120,7 +120,7 @@ const Solution = () => {
           </motion.span>
 
           <motion.h2
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 0 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.3 }}
             className="text-4xl md:text-6xl font-bold mb-6"
@@ -132,7 +132,7 @@ const Solution = () => {
           </motion.h2>
 
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 0 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.4 }}
             className="text-xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed"
@@ -150,7 +150,7 @@ const Solution = () => {
 
         {/* Solutions Grid */}
         <motion.div
-          initial={{ opacity: 0 }}
+          initial={{ opacity: 1 }}
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ delay: 0.6 }}
           className="grid md:grid-cols-3 gap-8 mb-16"
@@ -158,7 +158,7 @@ const Solution = () => {
           {solutions.map((solution, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 50 }}
+              initial={{ opacity: 1, y: 0 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.7 + index * 0.2 }}
               whileHover={{ scale: 1.03, y: -10 }}
@@ -183,7 +183,7 @@ const Solution = () => {
                 {solution.features.map((feature, featureIndex) => (
                   <motion.div
                     key={featureIndex}
-                    initial={{ opacity: 0, x: -20 }}
+                    initial={{ opacity: 1, x: 0 }}
                     animate={isInView ? { opacity: 1, x: 0 } : {}}
                     transition={{
                       delay: 0.9 + index * 0.2 + featureIndex * 0.1,
@@ -214,7 +214,7 @@ const Solution = () => {
 
         {/* Bottom CTA */}
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 1, y: 0 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 1.5 }}
           className="text-center glass-effect rounded-2xl p-12"

@@ -58,13 +58,13 @@ const Team = () => {
       <div className="container mx-auto px-6 relative z-10">
         {/* Section Header */}
         <motion.div
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 1, y: 0 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
           <motion.span
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 0 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.2 }}
             className="inline-block px-4 py-2 bg-cyber-purple/10 border border-cyber-purple/30 rounded-full text-cyber-purple text-sm font-semibold mb-4"
@@ -73,7 +73,7 @@ const Team = () => {
           </motion.span>
 
           <motion.h2
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 0 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.3 }}
             className="text-4xl md:text-6xl font-bold mb-6"
@@ -85,7 +85,7 @@ const Team = () => {
           </motion.h2>
 
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 0 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.4 }}
             className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto"
@@ -97,7 +97,7 @@ const Team = () => {
 
         {/* Team Grid */}
         <motion.div
-          initial={{ opacity: 0 }}
+          initial={{ opacity: 1 }}
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ delay: 0.6 }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto"
@@ -105,7 +105,7 @@ const Team = () => {
           {team.map((member, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 50 }}
+              initial={{ opacity: 1, y: 0 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.7 + index * 0.2 }}
               whileHover={{ scale: 1.03, y: -10 }}
