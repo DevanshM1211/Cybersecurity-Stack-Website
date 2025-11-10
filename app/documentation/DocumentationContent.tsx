@@ -92,12 +92,12 @@ export default function DocumentationContent() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 via-blue-950 to-gray-900">
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 via-blue-50 to-gray-50 dark:from-gray-900 dark:via-blue-950 dark:to-gray-900 pt-20">
       <BackButton />
 
       {/* Header */}
       <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-blue-950/50 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-blue-100/50 to-transparent dark:from-blue-950/50 dark:to-transparent" />
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e3a8a15_1px,transparent_1px),linear-gradient(to_bottom,#1e3a8a15_1px,transparent_1px)] bg-[size:4rem_4rem]" />
         </div>
@@ -115,14 +115,14 @@ export default function DocumentationContent() {
               transition={{ delay: 0.2, type: "spring" }}
               className="inline-flex p-4 bg-blue-500/10 rounded-full mb-6"
             >
-              <Book className="w-12 h-12 text-blue-400" />
+              <Book className="w-12 h-12 text-blue-500 dark:text-blue-400" />
             </motion.div>
 
-            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
               Documentation
             </h1>
 
-            <p className="text-xl text-gray-300 mb-8">
+            <p className="text-xl text-gray-700 dark:text-gray-300 mb-8">
               Complete technical documentation for the Resonance Protocol and
               MBDR platform
             </p>
@@ -136,7 +136,7 @@ export default function DocumentationContent() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3 + index * 0.1 }}
-                  className="px-4 py-2 bg-blue-500/10 border border-blue-500/30 rounded-lg text-blue-400 hover:bg-blue-500/20 hover:border-blue-500/50 transition-all text-sm"
+                  className="px-4 py-2 bg-blue-500/10 border border-blue-500/30 rounded-lg text-blue-600 dark:text-blue-400 hover:bg-blue-500/20 hover:border-blue-500/50 transition-all text-sm"
                 >
                   {link.title}
                 </motion.a>
@@ -153,13 +153,13 @@ export default function DocumentationContent() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-r from-blue-900/30 to-purple-900/30 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/30 mb-12 text-center"
+            className="bg-gradient-to-r from-blue-100/80 to-purple-100/80 dark:from-blue-900/30 dark:to-purple-900/30 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/30 mb-12 text-center"
           >
-            <Zap className="w-16 h-16 text-blue-400 mx-auto mb-4" />
-            <h2 className="text-2xl font-bold text-white mb-4">
+            <Zap className="w-16 h-16 text-blue-600 dark:text-blue-400 mx-auto mb-4" />
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
               Detailed Documentation Coming Soon
             </h2>
-            <p className="text-gray-300 max-w-2xl mx-auto">
+            <p className="text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
               We're currently developing comprehensive documentation for our
               platform. In the meantime, please explore the sections below for
               an overview of available resources. For immediate assistance,
@@ -176,25 +176,25 @@ export default function DocumentationContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gray-800/30 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/20 hover:border-blue-500/40 transition-all"
+                className="bg-white/80 dark:bg-gray-800/30 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/20 hover:border-blue-500/40 transition-all"
               >
                 <div className="flex items-start gap-4 mb-6">
                   <div className="p-3 bg-blue-500/10 rounded-lg">
-                    <section.icon className="w-6 h-6 text-blue-400" />
+                    <section.icon className="w-6 h-6 text-blue-600 dark:text-blue-400" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-bold text-white mb-2">
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
                       {section.title}
                     </h3>
-                    <p className="text-gray-400 text-sm mb-4">
+                    <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">
                       {section.description}
                     </p>
 
                     <ul className="space-y-2">
                       {section.items.map((item, i) => (
                         <li key={i} className="flex items-start gap-3">
-                          <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-blue-400 flex-shrink-0" />
-                          <p className="text-gray-300 text-sm leading-relaxed">
+                          <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-blue-500 dark:bg-blue-400 flex-shrink-0" />
+                          <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
                             {item}
                           </p>
                         </li>
@@ -212,12 +212,12 @@ export default function DocumentationContent() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
             viewport={{ once: true }}
-            className="mt-12 p-8 rounded-2xl bg-gradient-to-br from-blue-900/20 to-purple-900/20 backdrop-blur-sm border border-blue-500/30"
+            className="mt-12 p-8 rounded-2xl bg-gradient-to-br from-blue-50/80 to-purple-50/80 dark:from-blue-900/20 dark:to-purple-900/20 backdrop-blur-sm border border-blue-500/30"
           >
-            <h2 className="text-2xl font-bold text-white mb-4 text-center">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 text-center">
               Need Technical Support?
             </h2>
-            <p className="text-gray-300 mb-6 text-center max-w-2xl mx-auto">
+            <p className="text-gray-700 dark:text-gray-300 mb-6 text-center max-w-2xl mx-auto">
               Our technical team is available to help with integration,
               deployment, and any questions about the Resonance Protocol and
               MBDR platform.

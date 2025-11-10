@@ -40,7 +40,7 @@ export default function MBDRPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(mbdrProductData) }}
       />
-      <main className="relative min-h-screen bg-white dark:bg-cyber-dark z-0">
+      <main className="relative min-h-screen bg-white dark:bg-cyber-dark z-0 pt-20">
         <BackButton />
         <MBDR />
         <PageNavigation

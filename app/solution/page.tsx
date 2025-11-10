@@ -10,7 +10,7 @@ export const metadata = {
 
 export default function SolutionPage() {
   return (
-    <main className="min-h-screen bg-white dark:bg-cyber-dark">
+    <main className="min-h-screen bg-white dark:bg-cyber-dark pt-20">
       <BackButton />
       <Solution />
       <PageNavigation
