@@ -68,12 +68,12 @@ const PrivacyPolicy = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 via-blue-50 to-gray-50 dark:from-gray-900 dark:via-blue-950 dark:to-gray-900">
+    <div className="min-h-screen bg-white dark:bg-cyber-dark">
       {/* Header */}
       <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-blue-100/50 to-transparent dark:from-blue-950/50 dark:to-transparent" />
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e3a8a15_1px,transparent_1px),linear-gradient(to_bottom,#1e3a8a15_1px,transparent_1px)] bg-[size:4rem_4rem]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-gray-50/50 to-transparent dark:from-cyber-darker/50 dark:to-transparent" />
+        <div className="absolute inset-0 opacity-[0.015]">
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(59,130,246,0.1)_1px,transparent_1px),linear-gradient(to_bottom,rgba(59,130,246,0.1)_1px,transparent_1px)] bg-[size:4rem_4rem]" />
         </div>
 
         <div className="container mx-auto px-6 relative z-10">
@@ -87,11 +87,11 @@ const PrivacyPolicy = () => {
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ delay: 0.2, type: "spring" }}
-              className="inline-flex p-4 bg-blue-500/10 rounded-full mb-6"
+              className="inline-flex p-4 bg-cyber-blue/10 rounded-full mb-6"
             >
-              <Shield className="w-12 h-12 text-blue-500 dark:text-blue-400" />
+              <Shield className="w-12 h-12 text-cyber-blue dark:text-cyber-blue" />
             </motion.div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-cyber-blue to-cyber-purple">
               Privacy Policy
             </h1>
             <p className="text-xl text-gray-700 dark:text-gray-300">
@@ -119,13 +119,13 @@ const PrivacyPolicy = () => {
                 viewport={{ once: true }}
                 className="group"
               >
-                <div className="relative p-8 rounded-2xl bg-gradient-to-br from-white/80 to-gray-50/80 dark:from-gray-800/50 dark:to-gray-900/50 backdrop-blur-sm border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300">
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
+                <div className="relative p-8 rounded-2xl glass-effect border border-cyber-blue/20 hover:border-cyber-blue/40 transition-all duration-300">
+                  <div className="absolute inset-0 bg-gradient-to-br from-cyber-blue/5 to-cyber-purple/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
 
                   <div className="relative z-10">
                     <div className="flex items-center gap-4 mb-6">
-                      <div className="p-3 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-lg">
-                        <section.icon className="w-6 h-6 text-blue-600 dark:text-blue-400" />
+                      <div className="p-3 bg-cyber-blue/10 rounded-lg">
+                        <section.icon className="w-6 h-6 text-cyber-blue" />
                       </div>
                       <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
                         {section.title}
@@ -135,7 +135,7 @@ const PrivacyPolicy = () => {
                     <ul className="space-y-4">
                       {section.content.map((item, i) => (
                         <li key={i} className="flex items-start gap-3">
-                          <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-blue-500 dark:bg-blue-400 flex-shrink-0" />
+                          <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-cyber-blue flex-shrink-0" />
                           <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
                             {item}
                           </p>
@@ -154,7 +154,7 @@ const PrivacyPolicy = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
             viewport={{ once: true }}
-            className="mt-12 p-8 rounded-2xl bg-gradient-to-br from-blue-50/80 to-purple-50/80 dark:from-blue-900/20 dark:to-purple-900/20 backdrop-blur-sm border border-blue-500/30"
+            className="mt-12 p-8 rounded-2xl glass-effect border border-cyber-blue/30"
           >
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
               Cookies & Tracking
@@ -177,7 +177,7 @@ const PrivacyPolicy = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
             viewport={{ once: true }}
-            className="mt-12 p-8 rounded-2xl bg-gradient-to-br from-white/80 to-gray-50/80 dark:from-gray-800/50 dark:to-gray-900/50 backdrop-blur-sm border border-blue-500/20 text-center"
+            className="mt-12 p-8 rounded-2xl glass-effect border border-cyber-blue/20 text-center"
           >
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
               Questions About Privacy?
@@ -188,7 +188,7 @@ const PrivacyPolicy = () => {
             </p>
             <Link
               href="/#contact"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg text-white font-semibold hover:from-blue-700 hover:to-purple-700 transition-all"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-cyber-blue to-cyber-purple rounded-lg text-white font-semibold hover:shadow-lg hover:shadow-cyber-blue/50 transition-all"
             >
               <Mail className="w-5 h-5" />
               Contact Us
@@ -205,7 +205,7 @@ const PrivacyPolicy = () => {
           >
             <Link
               href="/"
-              className="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 transition-colors inline-flex items-center gap-2"
+              className="text-cyber-blue hover:text-cyber-purple dark:text-cyber-blue dark:hover:text-cyber-purple transition-colors inline-flex items-center gap-2"
             >
               ← Back to Home
             </Link>

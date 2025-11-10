@@ -8,7 +8,7 @@ import MerkleTree from "@/components/MerkleTree";
 
 const About = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.3 });
+  const isInView = useInView(ref, { once: true, amount: 0.1 });
 
   return (
     <section
@@ -30,7 +30,7 @@ const About = () => {
         {/* Minimalist Badge */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
           className="text-center mb-20"
         >
@@ -42,7 +42,7 @@ const About = () => {
         {/* Tagline */}
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1, duration: 0.5 }}
           className="text-4xl md:text-5xl lg:text-6xl font-light text-center mb-8 leading-tight tracking-tight"
         >
@@ -57,7 +57,7 @@ const About = () => {
         {/* Main Content with imagery */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
           className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start mb-16"
         >
@@ -118,7 +118,7 @@ const About = () => {
         {/* Divider Line */}
         <motion.div
           initial={{ scaleX: 0 }}
-          animate={isInView ? { scaleX: 1 } : {}}
+          animate={{ scaleX: 1 }}
           transition={{ delay: 0.4, duration: 0.8 }}
           className="h-px bg-gradient-to-r from-transparent via-cyber-blue/30 to-transparent mb-16"
         />
@@ -126,7 +126,7 @@ const About = () => {
         {/* CTA - Minimal & Futuristic */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5 }}
           className="text-center space-y-8"
         >

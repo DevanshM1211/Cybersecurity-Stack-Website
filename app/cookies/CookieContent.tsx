@@ -51,14 +51,14 @@ export default function CookieContent() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 via-blue-50 to-gray-50 dark:from-gray-900 dark:via-blue-950 dark:to-gray-900">
+    <div className="min-h-screen bg-white dark:bg-cyber-dark">
       <BackButton />
 
       {/* Header */}
       <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-blue-100/50 to-transparent dark:from-blue-950/50 dark:to-transparent" />
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e3a8a15_1px,transparent_1px),linear-gradient(to_bottom,#1e3a8a15_1px,transparent_1px)] bg-[size:4rem_4rem]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-gray-50/50 to-transparent dark:from-cyber-darker/50 dark:to-transparent" />
+        <div className="absolute inset-0 opacity-[0.015]">
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(59,130,246,0.1)_1px,transparent_1px),linear-gradient(to_bottom,rgba(59,130,246,0.1)_1px,transparent_1px)] bg-[size:4rem_4rem]" />
         </div>
 
         <div className="container mx-auto px-6 relative z-10">
@@ -72,9 +72,9 @@ export default function CookieContent() {
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ delay: 0.2, type: "spring" }}
-              className="inline-flex p-4 bg-blue-500/10 rounded-full mb-6"
+              className="inline-flex p-4 bg-cyber-blue/10 rounded-full mb-6"
             >
-              <Cookie className="w-12 h-12 text-blue-500 dark:text-blue-400" />
+              <Cookie className="w-12 h-12 text-cyber-blue" />
             </motion.div>
 
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
@@ -87,9 +87,7 @@ export default function CookieContent() {
 
             <div className="flex items-center justify-center gap-2 text-sm text-gray-600 dark:text-gray-400">
               <span>Last Updated:</span>
-              <span className="text-blue-600 dark:text-blue-400">
-                6 November 2025
-              </span>
+              <span className="text-cyber-blue">6 November 2025</span>
             </div>
           </motion.div>
         </div>
@@ -102,7 +100,7 @@ export default function CookieContent() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-white/80 dark:bg-gray-800/30 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/20 mb-12"
+            className="glass-effect rounded-2xl p-8 border border-cyber-blue/20 mb-12"
           >
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
               What are Cookies?
@@ -129,11 +127,11 @@ export default function CookieContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-white/80 dark:bg-gray-800/30 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/20 hover:border-blue-500/40 transition-all"
+                className="glass-effect rounded-2xl p-8 border border-cyber-blue/20 hover:border-cyber-blue/40 transition-all"
               >
                 <div className="flex items-start gap-4 mb-6">
-                  <div className="p-3 bg-blue-500/10 rounded-lg">
-                    <type.icon className="w-6 h-6 text-blue-600 dark:text-blue-400" />
+                  <div className="p-3 bg-cyber-blue/10 rounded-lg">
+                    <type.icon className="w-6 h-6 text-cyber-blue" />
                   </div>
                   <div className="flex-1">
                     <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
@@ -147,7 +145,7 @@ export default function CookieContent() {
                       {type.cookies.map((cookie, i) => (
                         <div
                           key={i}
-                          className="bg-gray-50 dark:bg-gray-900/50 rounded-lg p-4 border border-blue-500/10"
+                          className="bg-gray-50 dark:bg-gray-900/50 rounded-lg p-4 border border-cyber-blue/10"
                         >
                           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
                             <div>
@@ -158,7 +156,7 @@ export default function CookieContent() {
                                 {cookie.purpose}
                               </p>
                             </div>
-                            <div className="text-blue-600 dark:text-blue-400 text-sm whitespace-nowrap">
+                            <div className="text-cyber-blue text-sm whitespace-nowrap">
                               {cookie.duration}
                             </div>
                           </div>
@@ -177,7 +175,7 @@ export default function CookieContent() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
             viewport={{ once: true }}
-            className="mt-12 p-8 rounded-2xl bg-gradient-to-br from-blue-50/80 to-purple-50/80 dark:from-blue-900/20 dark:to-purple-900/20 backdrop-blur-sm border border-blue-500/30"
+            className="mt-12 p-8 rounded-2xl glass-effect border border-cyber-blue/30"
           >
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
               Managing Your Cookie Preferences
@@ -194,7 +192,7 @@ export default function CookieContent() {
                 href="https://www.allaboutcookies.org"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 underline"
+                className="text-cyber-blue hover:text-cyber-purple underline"
               >
                 www.allaboutcookies.org
               </a>
@@ -211,13 +209,13 @@ export default function CookieContent() {
           >
             <Link
               href="/privacy"
-              className="px-6 py-3 bg-white/50 dark:bg-gray-800/50 border border-blue-500/30 rounded-lg text-gray-900 dark:text-white hover:bg-white/70 dark:hover:bg-gray-800/70 hover:border-blue-500/50 transition-all"
+              className="px-6 py-3 glass-effect border border-cyber-blue/30 rounded-lg text-gray-900 dark:text-white hover:border-cyber-blue/50 transition-all"
             >
               Privacy Policy
             </Link>
             <Link
               href="/terms"
-              className="px-6 py-3 bg-white/50 dark:bg-gray-800/50 border border-blue-500/30 rounded-lg text-gray-900 dark:text-white hover:bg-white/70 dark:hover:bg-gray-800/70 hover:border-blue-500/50 transition-all"
+              className="px-6 py-3 glass-effect border border-cyber-blue/30 rounded-lg text-gray-900 dark:text-white hover:border-cyber-blue/50 transition-all"
             >
               Terms of Service
             </Link>
