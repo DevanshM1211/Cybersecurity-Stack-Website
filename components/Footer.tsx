@@ -155,13 +155,13 @@ const Footer = () => {
           <p>
             Website developed by{" "}
             <motion.a
-              href="https://v0-aquos-website-design.vercel.app/"
+              href="https://www.devanshm.com/"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               className="text-cyber-blue hover:text-cyber-purple transition-colors font-semibold"
             >
-              AQUOS
+              Devansh Mehrotra
             </motion.a>
           </p>
         </div>
