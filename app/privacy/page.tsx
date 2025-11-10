@@ -68,10 +68,10 @@ const PrivacyPolicy = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 via-blue-950 to-gray-900">
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 via-blue-50 to-gray-50 dark:from-gray-900 dark:via-blue-950 dark:to-gray-900">
       {/* Header */}
       <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-blue-950/50 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-blue-100/50 to-transparent dark:from-blue-950/50 dark:to-transparent" />
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e3a8a15_1px,transparent_1px),linear-gradient(to_bottom,#1e3a8a15_1px,transparent_1px)] bg-[size:4rem_4rem]" />
         </div>
@@ -89,15 +89,15 @@ const PrivacyPolicy = () => {
               transition={{ delay: 0.2, type: "spring" }}
               className="inline-flex p-4 bg-blue-500/10 rounded-full mb-6"
             >
-              <Shield className="w-12 h-12 text-blue-400" />
+              <Shield className="w-12 h-12 text-blue-500 dark:text-blue-400" />
             </motion.div>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400">
+            <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400">
               Privacy Policy
             </h1>
-            <p className="text-xl text-gray-300">
+            <p className="text-xl text-gray-700 dark:text-gray-300">
               Last Updated: October 29, 2025
             </p>
-            <p className="text-gray-400 mt-4">
+            <p className="text-gray-600 dark:text-gray-400 mt-4">
               Your privacy is important to us. This policy outlines how Cyber
               Security Stack collects, uses, and protects your personal
               information.
@@ -119,13 +119,13 @@ const PrivacyPolicy = () => {
                 viewport={{ once: true }}
                 className="group"
               >
-                <div className="relative p-8 rounded-2xl bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300">
+                <div className="relative p-8 rounded-2xl bg-gradient-to-br from-white/80 to-gray-50/80 dark:from-gray-800/50 dark:to-gray-900/50 backdrop-blur-sm border border-blue-500/20 hover:border-blue-500/40 transition-all duration-300">
                   <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
 
                   <div className="relative z-10">
                     <div className="flex items-center gap-4 mb-6">
                       <div className="p-3 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-lg">
-                        <section.icon className="w-6 h-6 text-blue-400" />
+                        <section.icon className="w-6 h-6 text-blue-600 dark:text-blue-400" />
                       </div>
                       <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
                         {section.title}
@@ -135,8 +135,8 @@ const PrivacyPolicy = () => {
                     <ul className="space-y-4">
                       {section.content.map((item, i) => (
                         <li key={i} className="flex items-start gap-3">
-                          <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-blue-400 flex-shrink-0" />
-                          <p className="text-gray-300 leading-relaxed">
+                          <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-blue-500 dark:bg-blue-400 flex-shrink-0" />
+                          <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
                             {item}
                           </p>
                         </li>
@@ -154,17 +154,17 @@ const PrivacyPolicy = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
             viewport={{ once: true }}
-            className="mt-12 p-8 rounded-2xl bg-gradient-to-br from-blue-900/20 to-purple-900/20 backdrop-blur-sm border border-blue-500/30"
+            className="mt-12 p-8 rounded-2xl bg-gradient-to-br from-blue-50/80 to-purple-50/80 dark:from-blue-900/20 dark:to-purple-900/20 backdrop-blur-sm border border-blue-500/30"
           >
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
               Cookies & Tracking
             </h2>
-            <p className="text-gray-600 dark:text-gray-300 mb-4">
+            <p className="text-gray-700 dark:text-gray-300 mb-4">
               We use cookies and similar tracking technologies to enhance your
               browsing experience and analyse website traffic. You can control
               cookie preferences through your browser settings.
             </p>
-            <p className="text-gray-400 text-sm">
+            <p className="text-gray-600 dark:text-gray-400 text-sm">
               Types of cookies we use: Essential cookies (required for website
               functionality), Analytics cookies (to understand usage patterns),
               and Performance cookies (to optimise user experience).
@@ -177,12 +177,12 @@ const PrivacyPolicy = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
             viewport={{ once: true }}
-            className="mt-12 p-8 rounded-2xl bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-sm border border-blue-500/20 text-center"
+            className="mt-12 p-8 rounded-2xl bg-gradient-to-br from-white/80 to-gray-50/80 dark:from-gray-800/50 dark:to-gray-900/50 backdrop-blur-sm border border-blue-500/20 text-center"
           >
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
               Questions About Privacy?
             </h2>
-            <p className="text-gray-600 dark:text-gray-300 mb-6">
+            <p className="text-gray-700 dark:text-gray-300 mb-6">
               If you have any questions or concerns about our privacy practices,
               please don't hesitate to contact us.
             </p>
@@ -205,7 +205,7 @@ const PrivacyPolicy = () => {
           >
             <Link
               href="/"
-              className="text-blue-400 hover:text-blue-300 transition-colors inline-flex items-center gap-2"
+              className="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 transition-colors inline-flex items-center gap-2"
             >
               ← Back to Home
             </Link>
