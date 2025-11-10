@@ -85,13 +85,11 @@ const MBDR = () => {
             transition={{ delay: 0.4 }}
             className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto"
           >
-            Built on the Resonance Protocol, MBDR leverages cryptographic Merkle
+            - on the Resonance Protocol, MBDR leverages cryptographic Merkle
             tree verification across every system layer. When integrity is
             compromised, affected components are automatically rejected and
             isolated-no human intervention required.{" "}
-            <em>
-              This is the circuit breaker for the ransomware circuit breaker.
-            </em>
+            <em>This is the enterprise circuit breaker for ransomware.</em>
           </motion.p>
         </motion.div>
 
