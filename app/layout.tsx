@@ -222,8 +222,28 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className={`${inter.variable} ${robotoMono.variable}`}>
+    <html
+      lang="en"
+      className={`${inter.variable} ${robotoMono.variable} light`}
+    >
       <head>
+        {/* Theme initialization script - runs before page render to prevent flash */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                const savedTheme = localStorage.getItem('theme');
+                const theme = savedTheme === 'dark' ? 'dark' : 'light';
+                document.documentElement.classList.add(theme);
+                if (theme === 'dark') {
+                  document.documentElement.classList.remove('light');
+                } else {
+                  document.documentElement.classList.remove('dark');
+                }
+              })();
+            `,
+          }}
+        />
         {/* Structured Data */}
         <script
           type="application/ld+json"
