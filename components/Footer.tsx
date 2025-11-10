@@ -2,20 +2,25 @@
 
 import { Shield, Mail, Linkedin, Github } from "lucide-react";
 import { motion } from "framer-motion";
+import { useTheme } from "@/contexts/ThemeContext";
 
 const Footer = () => {
+  const { theme } = useTheme();
+
   const footerLinks = {
     Product: [
       { name: "Resonance Protocol", href: "/protocol" },
       { name: "MBDR Technology", href: "/mbdr" },
       { name: "Features", href: "/#core-features" },
-      { name: "Documentation", href: "/documentation" },
       { name: "Pricing", href: "/contact" },
     ],
     Company: [
       { name: "About Us", href: "/about" },
       { name: "Team", href: "/team" },
-      { name: "LinkedIn Feed", href: "/#linkedin" },
+      {
+        name: "LinkedIn Feed",
+        href: "https://www.linkedin.com/company/cyber-security-stack/",
+      },
       { name: "Whitepaper", href: "/documentation" },
       { name: "Contact", href: "/contact" },
     ],
@@ -42,8 +47,11 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-white dark:bg-cyber-darker border-t border-gray-200 dark:border-gray-800 pt-16 pb-8">
-      <div className="container mx-auto px-6">
+    <footer
+      className="border-t border-gray-200 dark:border-gray-800 pt-16 pb-8 relative"
+      style={{ backgroundColor: theme === "light" ? "#ffffff" : "#0a0e27" }}
+    >
+      <div className="container mx-auto px-6 relative z-10">
         {/* Main Footer Content */}
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
           {/* Company Info */}
