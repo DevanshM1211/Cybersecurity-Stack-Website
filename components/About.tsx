@@ -11,7 +11,11 @@ const About = () => {
   const isInView = useInView(ref, { once: true, amount: 0.3 });
 
   return (
-    <section id="about" ref={ref} className="py-40 relative overflow-hidden">
+    <section
+      id="about"
+      ref={ref}
+      className="py-20 md:py-40 relative overflow-hidden"
+    >
       {/* Subtle Grid Background */}
       <div
         className="absolute inset-0 opacity-[0.02]"

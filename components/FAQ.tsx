@@ -120,7 +120,7 @@ const FAQ = () => {
     <section
       id="faq"
       ref={ref}
-      className="py-24 relative overflow-hidden bg-gradient-to-b from-gray-50 to-white dark:from-cyber-darker dark:to-cyber-dark"
+      className="py-16 md:py-24 relative overflow-hidden bg-gradient-to-b from-gray-50 to-white dark:from-cyber-darker dark:to-cyber-dark"
     >
       <div className="container mx-auto px-6 relative z-10">
         {/* Section Header */}

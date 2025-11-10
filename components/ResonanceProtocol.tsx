@@ -68,9 +68,9 @@ const ResonanceProtocol = () => {
 
   return (
     <section
-      id="resonance"
+      id="resonance-protocol"
       ref={ref}
-      className="py-24 relative overflow-hidden"
+      className="py-16 md:py-24 relative overflow-hidden"
     >
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-to-b from-white via-gray-50 to-white dark:from-cyber-darker dark:via-cyber-dark dark:to-cyber-darker opacity-50" />

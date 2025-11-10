@@ -53,7 +53,7 @@ const Team = () => {
     <section
       id="team"
       ref={ref}
-      className="py-24 relative overflow-hidden bg-gradient-to-b from-gray-50 to-white dark:from-cyber-dark dark:to-cyber-darker"
+      className="py-16 md:py-24 relative overflow-hidden bg-gradient-to-b from-gray-50 to-white dark:from-cyber-dark dark:to-cyber-darker"
     >
       <div className="container mx-auto px-6 relative z-10">
         {/* Section Header */}
