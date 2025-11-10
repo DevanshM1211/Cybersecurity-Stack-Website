@@ -8,7 +8,7 @@ import Link from "next/link";
 
 const MBDR = () => {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.2 });
+  const isInView = useInView(ref, { once: true, amount: 0.1 });
 
   const capabilities = [
     {
@@ -53,13 +53,13 @@ const MBDR = () => {
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
           <motion.span
             initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
             className="inline-block px-4 py-2 bg-cyber-blue/10 border border-cyber-blue/30 rounded-full text-cyber-blue text-sm font-semibold mb-4"
           >
@@ -68,7 +68,7 @@ const MBDR = () => {
 
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
             className="text-4xl md:text-6xl font-bold mb-6"
           >
@@ -81,7 +81,7 @@ const MBDR = () => {
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
             className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto"
           >
@@ -97,7 +97,7 @@ const MBDR = () => {
           {/* Left: Capabilities */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.5 }}
           >
             <h3 className="text-3xl font-bold mb-8 text-gray-900 dark:text-cyber-blue">
@@ -108,7 +108,7 @@ const MBDR = () => {
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, x: -20 }}
-                  animate={isInView ? { opacity: 1, x: 0 } : {}}
+                  animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.6 + index * 0.1 }}
                   whileHover={{ scale: 1.03, x: 10 }}
                   className="glass-effect rounded-lg p-6 flex gap-4 hover:glow-effect transition-all cursor-pointer"
@@ -132,7 +132,7 @@ const MBDR = () => {
           {/* Right: Live Threat Prevention */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.5 }}
             className="glass-effect rounded-2xl p-8"
           >
@@ -148,7 +148,7 @@ const MBDR = () => {
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, x: 20 }}
-                  animate={isInView ? { opacity: 1, x: 0 } : {}}
+                  animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 1 + index * 0.1 }}
                   className="bg-gray-100 dark:bg-cyber-dark/50 rounded-lg p-4 border border-green-500/30"
                 >
@@ -185,7 +185,7 @@ const MBDR = () => {
 
             <motion.div
               initial={{ opacity: 0 }}
-              animate={isInView ? { opacity: 1 } : {}}
+              animate={{ opacity: 1 }}
               transition={{ delay: 2 }}
               className="mt-6 p-4 bg-cyber-blue/5 border border-cyber-blue/30 rounded-lg"
             >
@@ -200,7 +200,7 @@ const MBDR = () => {
         {/* How It Works */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.5 }}
           className="mt-20"
         >
@@ -232,7 +232,7 @@ const MBDR = () => {
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1.7 + index * 0.2 }}
                 whileHover={{ scale: 1.05, y: -10 }}
                 className="glass-effect rounded-xl p-8 text-center hover:glow-effect transition-all"
@@ -254,7 +254,7 @@ const MBDR = () => {
         {/* CTA */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 2.2 }}
           className="mt-16 text-center"
         >
