@@ -11,16 +11,10 @@ const TrustSignals = () => {
 
   const badges = [
     {
-      icon: <Shield className="w-8 h-8" />,
+      icon: <Award className="w-8 h-8" />,
       title: "ISO 27001",
       subtitle: "Certified",
       color: "from-cyber-blue to-primary-400",
-    },
-    {
-      icon: <Award className="w-8 h-8" />,
-      title: "Oxford",
-      subtitle: "Innovation Partner",
-      color: "from-cyber-purple to-primary-700",
     },
     {
       icon: <FileCheck className="w-8 h-8" />,

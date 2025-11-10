@@ -54,8 +54,6 @@ export const metadata: Metadata = {
     "deep-tech security",
     "cyber immune system",
     "trusted state recovery",
-    "Oxford Innovation",
-    "University of Oxford",
     "cyber security startup",
     "enterprise security",
     "OT security",
@@ -153,7 +151,7 @@ export default function RootLayout({
     email: "hello@cybersecuritystack.co.uk",
     address: {
       "@type": "PostalAddress",
-      addressLocality: "Oxford",
+      addressLocality: "London",
       addressCountry: "GB",
     },
     sameAs: [
@@ -162,10 +160,6 @@ export default function RootLayout({
       "https://github.com/CyberSecurityStack",
     ],
     foundingDate: "2024",
-    foundingLocation: {
-      "@type": "Place",
-      name: "Oxford Innovation Hub, University of Oxford",
-    },
     knowsAbout: [
       "Cybersecurity",
       "Resonance Protocol",
