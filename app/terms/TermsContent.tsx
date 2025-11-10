@@ -49,12 +49,12 @@ export default function TermsContent() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-900 via-blue-950 to-gray-900">
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 via-blue-50 to-gray-50 dark:from-gray-900 dark:via-blue-950 dark:to-gray-900">
       <BackButton />
 
       {/* Header */}
       <section className="relative pt-32 pb-20 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-blue-950/50 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-blue-100/50 to-transparent dark:from-blue-950/50 dark:to-transparent" />
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e3a8a15_1px,transparent_1px),linear-gradient(to_bottom,#1e3a8a15_1px,transparent_1px)] bg-[size:4rem_4rem]" />
         </div>
@@ -72,20 +72,22 @@ export default function TermsContent() {
               transition={{ delay: 0.2, type: "spring" }}
               className="inline-flex p-4 bg-blue-500/10 rounded-full mb-6"
             >
-              <FileText className="w-12 h-12 text-blue-400" />
+              <FileText className="w-12 h-12 text-blue-500 dark:text-blue-400" />
             </motion.div>
 
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
               Terms of Service
             </h1>
 
-            <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
+            <p className="text-xl text-gray-700 dark:text-gray-300 mb-8">
               Please read these terms carefully before using our services
             </p>
 
-            <div className="flex items-center justify-center gap-2 text-sm text-gray-400">
+            <div className="flex items-center justify-center gap-2 text-sm text-gray-600 dark:text-gray-400">
               <span>Last Updated:</span>
-              <span className="text-blue-400">6 November 2025</span>
+              <span className="text-blue-600 dark:text-blue-400">
+                6 November 2025
+              </span>
             </div>
           </motion.div>
         </div>
@@ -102,11 +104,11 @@ export default function TermsContent() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="bg-gray-800/30 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/20 hover:border-blue-500/40 transition-all"
+                className="bg-white/80 dark:bg-gray-800/30 backdrop-blur-sm rounded-2xl p-8 border border-blue-500/20 hover:border-blue-500/40 transition-all"
               >
                 <div className="flex items-start gap-4 mb-6">
                   <div className="p-3 bg-blue-500/10 rounded-lg">
-                    <section.icon className="w-6 h-6 text-blue-400" />
+                    <section.icon className="w-6 h-6 text-blue-600 dark:text-blue-400" />
                   </div>
                   <div className="flex-1">
                     <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
@@ -115,8 +117,8 @@ export default function TermsContent() {
                     <ul className="space-y-4">
                       {section.content.map((item, i) => (
                         <li key={i} className="flex items-start gap-3">
-                          <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-blue-400 flex-shrink-0" />
-                          <p className="text-gray-300 leading-relaxed">
+                          <div className="mt-1.5 w-1.5 h-1.5 rounded-full bg-blue-500 dark:bg-blue-400 flex-shrink-0" />
+                          <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
                             {item}
                           </p>
                         </li>
@@ -134,16 +136,16 @@ export default function TermsContent() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
             viewport={{ once: true }}
-            className="mt-12 p-8 rounded-2xl bg-gradient-to-br from-blue-900/20 to-purple-900/20 backdrop-blur-sm border border-blue-500/30"
+            className="mt-12 p-8 rounded-2xl bg-gradient-to-br from-blue-50/80 to-purple-50/80 dark:from-blue-900/20 dark:to-purple-900/20 backdrop-blur-sm border border-blue-500/30"
           >
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
               Governing Law
             </h2>
-            <p className="text-gray-300 mb-4">
+            <p className="text-gray-700 dark:text-gray-300 mb-4">
               These Terms of Service shall be governed by and construed in
               accordance with the laws of England and Wales.
             </p>
-            <p className="text-gray-300">
+            <p className="text-gray-700 dark:text-gray-300">
               Any disputes arising from these terms shall be subject to the
               exclusive jurisdiction of the courts of England and Wales.
             </p>
@@ -157,7 +159,7 @@ export default function TermsContent() {
             viewport={{ once: true }}
             className="mt-12 text-center"
           >
-            <p className="text-gray-400 mb-4">
+            <p className="text-gray-600 dark:text-gray-400 mb-4">
               Questions about our Terms of Service?
             </p>
             <Link
