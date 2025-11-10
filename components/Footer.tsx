@@ -66,7 +66,7 @@ const Footer = () => {
               <Mail size={20} className="text-cyber-purple" />
               <a
                 href="mailto:hello@cybersecuritystack.co.uk"
-                className="hover:text-cyber-blue transition-colors"
+                className="hover:text-cyber-blue dark:hover:text-cyber-blue transition-colors"
               >
                 hello@cybersecuritystack.co.uk
               </a>
@@ -76,7 +76,7 @@ const Footer = () => {
           {/* Links Columns */}
           {Object.entries(footerLinks).map(([category, links]) => (
             <div key={category}>
-              <h3 className="text-gray-900 dark:text-white font-bold mb-4">
+              <h3 className="text-gray-900 dark:text-white font-bold mb-4 text-base">
                 {category}
               </h3>
               <ul className="space-y-3">
@@ -85,7 +85,7 @@ const Footer = () => {
                     <motion.a
                       whileHover={{ x: 5 }}
                       href={link.href}
-                      className="text-gray-600 dark:text-gray-400 hover:text-cyber-blue transition-colors inline-block"
+                      className="text-gray-700 dark:text-gray-400 hover:text-cyber-blue dark:hover:text-cyber-blue transition-colors inline-block text-sm"
                     >
                       {link.name}
                     </motion.a>
